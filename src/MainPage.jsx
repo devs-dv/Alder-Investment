@@ -175,13 +175,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     }),
     up: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
-      y: "-46.5vh",
+      y: "-49vh",
       opacity: 0,
       transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
     }),
     stop: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
-      y: "-46.5vh",
+      y: "-49vh",
       opacity: 0,
     }),
     final: ({ scrolled, isMobile }) => ({
@@ -195,25 +195,25 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const designLogoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
     right: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(47vw - 200px)",
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: 0,
       opacity: 1,
       transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] }, // Increased duration for right movement
     }),
     pause: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(47vw - 200px)",
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: 0,
       opacity: 1,
     }),
     up: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(47vw - 200px)",
-      y: "-46.5vh",
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+      y: "-49vh",
       opacity: 0,
       transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
     }),
     stop: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(47vw - 200px)",
-      y: "-46.5vh",
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+      y: "-49vh",
       opacity: 0,
     }),
     final: ({ scrolled, isMobile }) => ({
