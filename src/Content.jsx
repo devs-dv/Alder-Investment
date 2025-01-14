@@ -8,7 +8,7 @@ const Content = ({ language }) => (
       <div className="relative z-10 p-3 md:p-6">
         {language ? (
           <div className="lg:flex flex-col max-md:mb-20 ">
-            <h2 className="text-xl flex-1 md:text-3xl lg:text-2xl mb-3 md:mb-5 tracking-wide">
+            <h2 className="text-xl flex-1 mb-3 md:mb-5 tracking-wide">
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
