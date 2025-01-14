@@ -130,11 +130,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     }
   };
 
-  const squareSize = 160;
+  const rectangleWidth = 160;
+  const rectangleHeight = 240;
   const getClipPath = (scale) => {
-    const size = squareSize * scale;
-    const x = `calc(50% - ${size / 2}px)`;
-    const y = `calc(50% - ${size / 2}px)`;
+    const width = rectangleWidth * scale;
+    const height = rectangleHeight * scale;
+    const x = `calc(50% - ${width / 2}px)`;
+    const y = `calc(50% - ${height / 2}px)`;
     return `polygon(
       0% 0%,
       100% 0%,
@@ -142,9 +144,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       0% 100%,
       0% ${y},
       ${x} ${y},
-      ${x} calc(${y} + ${size}px),
-      calc(${x} + ${size}px) calc(${y} + ${size}px),
-      calc(${x} + ${size}px) ${y},
+      ${x} calc(${y} + ${height}px),
+      calc(${x} + ${width}px) calc(${y} + ${height}px),
+      calc(${x} + ${width}px) ${y},
       ${x} ${y},
       0% ${y}
     )`;
@@ -157,15 +159,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       clipPath: getClipPath(isMobile ? 15 : screenSize === "xl" ? 25 : 15),
     },
   };
-
-  // const fullscreenVariants = {
-  //   initial: {
-  //     clipPath: getClipPath(isMobile ? 15 : screenSize === "xl" ? 25 : 15),
-  //   },
-  //   animate: {
-  //     clipPath: getClipPath(isMobile ? 30 : screenSize === "xl" ? 40 : 30),
-  //   },
-  // };
 
   const logoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
@@ -450,47 +443,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </a>
                 </motion.div>
               </div>
-              {/* <div className="lg:w-[1200px] lg:mx-auto">
-                <div className="flex-1 text-center"> */}
               <nav className="hidden lg:flex items-center text-center gap-1 justify-center mt-6 max-w-7xl">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
-                  {/* About Us */}
-                  {/* {location.pathname === "/" ? (
-                    <ScrollLink
-                      to="aboutus"
-                      spy={true}
-                      smooth={true}
-                      duration={400}
-                      offset={-46}
-                      className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "aboutus" ||
-                        (activeSection === "home" && "aboutus" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                      style={{ fontWeight: "300" }}
-                    >
-                      {language ? "About Us" : "About Us"}
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      to="#aboutus"
-                      className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "aboutus" ||
-                        (activeSection === "home" && "aboutus" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                    >
-                      {language ? "About Us" : "About Us"}
-                    </Link>
-                  )} */}
-
-                  {/* Philosophy */}
                   {location.pathname === "/" ? (
                     <ScrollLink
                       to="philosophy"
@@ -528,7 +482,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     </Link>
                   )}
 
-                  {/* Services */}
                   {location.pathname === "/" ? (
                     <ScrollLink
                       to="services"
@@ -566,7 +519,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     </Link>
                   )}
 
-                  {/* People */}
                   {location.pathname === "/" ? (
                     <ScrollLink
                       to="people"
@@ -602,7 +554,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     </Link>
                   )}
 
-                  {/* News */}
                   <Link
                     to="/news"
                     className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
@@ -618,7 +569,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     {language ? "News" : "News"}
                   </Link>
 
-                  {/* Contact Us */}
                   {location.pathname === "/" ? (
                     <ScrollLink
                       to="contact"
@@ -653,19 +603,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       {language ? "Contact Us" : "Contact Us"}
                     </Link>
                   )}
-
-                  {/* <Link to="/admin" className="uppercase text-white">
-                    Admin
-                  </Link> */}
                 </div>
 
                 {scrolled && scrollDirection === "down" && (
                   <div className="hidden lg:flex items-center gap-2 ml-4">
-                    {/* <div
-                      className={`w-2 h-2 rounded-full ${
-                        activeSection === "aboutus" ? "bg-white" : "bg-gray-400"
-                      }`}
-                    /> */}
                     <div
                       className={`w-[0.25rem] h-[0.25rem] rounded-full ${
                         activeSection === "philosophy"
@@ -698,8 +639,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </div>
                 )}
               </nav>
-              {/* </div>
-              </div> */}
             </div>
             <div className="flex items-center gap-4">
               <motion.div
@@ -747,23 +686,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <DesignLogo className="w-24 h-auto text-white" />
               </div>
               <nav className="flex flex-col items-start gap-3 w-full">
-                {/* About Us */}
-                {/* <ScrollLink
-                  to="aboutus"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-46}
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "About Us" : "About Us"}
-                </ScrollLink> */}
-
-                {/* Philosophy */}
                 <ScrollLink
                   to="philosophy"
                   spy={true}
@@ -779,7 +701,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   {language ? "Our Philosophy" : "Our Philosophy"}
                 </ScrollLink>
 
-                {/* Services */}
                 <ScrollLink
                   to="services"
                   spy={true}
@@ -795,7 +716,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   {language ? "Our Services" : "Our Services"}
                 </ScrollLink>
 
-                {/* People */}
                 <ScrollLink
                   to="people"
                   spy={true}
@@ -811,7 +731,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   {language ? "Our People" : "Our People"}
                 </ScrollLink>
 
-                {/* News */}
                 <Link
                   to="/news"
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
@@ -823,7 +742,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   {language ? "News" : "News"}
                 </Link>
 
-                {/* Contact Us */}
                 <ScrollLink
                   to="contact"
                   spy={true}
