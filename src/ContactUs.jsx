@@ -60,7 +60,7 @@ export default function ContactUs({ language, setLanguage }) {
               onClick={() => setIsSidebarOpen(true)}
               text={language ? "Contact Us" : "문의하기"}
             />
-            <div className="flex flex-col gap-10 lg:max-w-xl">
+            <div className="flex flex-col gap-10 lg:max-w-3xl">
               <div className="flex justify-between">
                 <div>
                   <p className="">
@@ -79,20 +79,19 @@ export default function ContactUs({ language, setLanguage }) {
                   <a href="tel:+82-2-6012-2100" className="hover:underline">
                     +82-2-6012-2100
                   </a>
+                  <br />
+                  <p className="mt-4">
+                    {language
+                      ? "East tower 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, Republic of Korea"
+                      : "서울특별시 중구 을지로 5길 26, 동타워 12층, 대한민국"}
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place/tower+12F,+26+Eulji-ro+5-gil,+Jung+District,+Seoul,+South+Korea/@37.5674207,126.9851783,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca2ef4036d5d7:0xf00a04cff378d993!8m2!3d37.5674207!4d126.9851783?entry=tts&g_ep=EgoyMDI0MDUyOS4wKgBIAVAD"
+                    className="underline text-[#545454] hover:text-black"
+                  >
+                    {language ? "MAP" : "지도"}
+                  </a>
                 </div>
-              </div>
-              <div>
-                <p className="mb-2">
-                  {language
-                    ? "East tower 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, Republic of Korea"
-                    : "서울특별시 중구 을지로 5길 26, 동타워 12층, 대한민국"}
-                </p>
-                <a
-                  href="https://www.google.com/maps/place/tower+12F,+26+Eulji-ro+5-gil,+Jung+District,+Seoul,+South+Korea/@37.5674207,126.9851783,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca2ef4036d5d7:0xf00a04cff378d993!8m2!3d37.5674207!4d126.9851783?entry=tts&g_ep=EgoyMDI0MDUyOS4wKgBIAVAD"
-                  className="underline text-[#545454] hover:text-black"
-                >
-                  {language ? "MAP" : "지도"}
-                </a>
               </div>
             </div>
           </div>
