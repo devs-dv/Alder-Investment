@@ -176,8 +176,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     up: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: "-49vh",
-      opacity: 1,
-      transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
+      opacity: 0, // Change this to 0 to fade out
+      transition: {
+        duration: 3,
+        ease: [0.16, 1, 0.3, 1],
+        opacity: { duration: 1, ease: "easeOut" }, // Add specific transition for opacity
+      },
     }),
     stop: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
@@ -365,7 +369,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     }
                     custom={{ isMobile }}
                     transition={{
-                      duration: animationStep === 3 ? 0.5 : 1, // Increased from 1 to 2.5 for upward movement
+                      duration: animationStep === 3 ? 3 : 1, // Increased duration for upward movement
                       ease: smoothEasing,
                     }}
                   >
@@ -432,7 +436,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   initial="up"
                   animate="final"
                   custom={{ scrolled, isMobile }}
-                  transition={{ duration: 0.5, ease: smoothEasing }}
+                  transition={{
+                    duration: 0.5,
+                    ease: smoothEasing,
+                    delay: 2, // Add a delay to make it appear after the black logo has faded out
+                  }}
                   className="flex items-center"
                 >
                   <a href="/" className="flex items-center gap-4">
