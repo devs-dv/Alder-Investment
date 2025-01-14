@@ -56,14 +56,18 @@ function App() {
                   {/* Language Toggle Button */}
                   <div className="fixed top-5 right-48 z-[52] px-4 py-1 hidden lg:block text-white">
                     <button
-                      className={`${language ? "font-bold" : "font-extralight"}`}
+                      className={`${
+                        language ? "font-bold" : "font-extralight"
+                      }`}
                       onClick={() => setLanguage(true)}
                     >
                       ENG
                     </button>
                     /
                     <button
-                      className={`${language ? "font-extralight" : "font-bold"}`}
+                      className={`${
+                        language ? "font-extralight" : "font-bold"
+                      }`}
                       onClick={() => setLanguage(false)}
                     >
                       KR
@@ -129,7 +133,9 @@ function App() {
           <Route path="edit-news/:id" element={<EditNews />} />
         </Route>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
       <Toaster />
     </>
   );
