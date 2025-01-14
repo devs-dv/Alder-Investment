@@ -110,8 +110,8 @@ const Philosiphy = ({ language, setLanguage }) => {
           </div>
           {/* Video Section */}
           <div className="lg:w-[50%] ml-auto lg:-mr-4">
-            <div className="lg:sticky lg:top-16 pt-[0.75rem]">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[900px] relative">
+            <div className="lg:sticky lg:top-16 pt-[1.75rem]">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[600px] relative">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
