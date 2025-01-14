@@ -193,7 +193,7 @@ const ServicesSection = (object) => {
           {/* Desktop Images */}
           <div className="hidden lg:block lg:w-[55%] w-full relative lg:min-h-[1000px] h-[580px] overflow-hidden">
             <div
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === 0
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
@@ -213,7 +213,7 @@ const ServicesSection = (object) => {
               </div>
             </div>
             <div
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === 1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
@@ -233,7 +233,7 @@ const ServicesSection = (object) => {
               </div>
             </div>
             <div
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === 2
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
@@ -253,7 +253,7 @@ const ServicesSection = (object) => {
               </div>
             </div>
             <div
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === 3
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
@@ -273,7 +273,7 @@ const ServicesSection = (object) => {
               </div>
             </div>
             <div
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === -1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
