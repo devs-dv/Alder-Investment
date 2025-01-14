@@ -212,8 +212,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     up: ({ isMobile }) => ({
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: "-49vh",
-      opacity: 1,
-      transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
+      opacity: 0, // Change this to 0 to fade out
+      transition: {
+        duration: 3,
+        ease: [0.16, 1, 0.3, 1],
+        opacity: { duration: 1, ease: "easeOut" }, // Add specific transition for opacity
+      },
     }),
     stop: ({ isMobile }) => ({
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
@@ -224,7 +228,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       x: isMobile ? 5 : -1,
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
-      transition: { duration: 2, ease: [0.16, 1, 0.3, 1] }, // Added transition for final state
+      transition: {
+        duration: 2,
+        ease: [0.16, 1, 0.3, 1],
+        delay: 2, // Add a delay to make it appear after the black logo has faded out
+      },
     }),
   };
 
@@ -654,7 +662,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 initial="up"
                 animate="final"
                 custom={{ scrolled, isMobile }}
-                transition={{ duration: 0.5, ease: smoothEasing }}
+                transition={{
+                  duration: 0.5,
+                  ease: smoothEasing,
+                  delay: 2, // Add a delay to make it appear after the black logo has faded out
+                }}
                 className="hidden lg:block"
               >
                 <DesignLogo className="w-[115px] h-auto text-white" />
