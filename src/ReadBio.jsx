@@ -353,7 +353,7 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
                         ))}
                       </div>
                       {/* Contact Links */}
-                      <div className="flex items-center justify-between gap-x-4">
+                      {/* <div className="flex items-center justify-between gap-x-4">
                         <a
                           href={`mailto:${person.email}`}
                           className="underline"
@@ -362,14 +362,14 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
                         >
                           이메일
                         </a>
-                        {/* <a
+                        <a
                           href={`tel:${person.phone}`}
                           className="underline"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           +82-10-8918-180
-                        </a> */}
+                        </a>
                         <a
                           href={person.linkedin}
                           className="underline"
@@ -378,7 +378,7 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
                         >
                           링크드인
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </>
                 )}
