@@ -4,6 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Footer = () => {
   return (
+    // this is testing
     <div className="bg-[#e7e6e2] py-10 px-5 lg:px-10">
       <div className="w-full flex  max-md:gap-4 justify-between text-[#545454] mb-60">
         <div className="md:w-4/6">
@@ -32,7 +33,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/alder-partners-674336306/"
           className="underline"
         >
-          <div className="flex items-center justify-center   gap-3">
+          <div className="flex items-center justify-center text-[#565656] hover:text-black gap-3">
             LINKEDIN <MdArrowOutward className="text-xl" />
           </div>
         </a>

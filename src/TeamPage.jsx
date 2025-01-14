@@ -6,7 +6,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Hee-Dong Konstantin Kim",
-    nameKr: "김희동 콘스탄틴",
+    nameKr: "희동 콘스탄틴 김",
     title: "CEO",
     titleKr: "CEO",
     image: "1st.jpg",

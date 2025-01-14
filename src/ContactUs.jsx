@@ -35,7 +35,10 @@ export default function ContactUs({ language, setLanguage }) {
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           <div className="lg:w-[70%] text-[#545454] text-lg leading-relaxed">
-            <p className="" style={{ wordBreak: "keep-all" }}>
+            <p
+              className="font-light text-base"
+              style={{ wordBreak: "keep-all" }}
+            >
               {language ? (
                 <>
                   Whether you're a private individual, represent a family or a

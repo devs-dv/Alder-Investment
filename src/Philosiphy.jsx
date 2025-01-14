@@ -97,11 +97,11 @@ const Philosiphy = ({ language, setLanguage }) => {
           <div className="lg:w-[50%] lg:mr-10 lg:-ml-5 md:text-justify">
             {contentData.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="text-[#545454] space-y-2 md:space-y-4 mb-10">
+                <div className="text-[#545454] space-y-2 md:space-y-4 mb-16">
                   <h2 className="text-lg md:text-xl font-medium">
                     {item.english.title}
                   </h2>
-                  <p className="text-sm md:text-lg font-light">
+                  <p className="text-sm md:text-base font-light">
                     {item.english.description}
                   </p>
                 </div>
@@ -137,12 +137,12 @@ const Philosiphy = ({ language, setLanguage }) => {
           <div className="lg:w-[50%] lg:mr-10 lg:-ml-5 md:text-justify gap-4 md:gap-8">
             {contentData.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="text-[#545454] space-y-2 md:space-y-4 mb-10">
+                <div className="text-[#545454] space-y-2 md:space-y-4 mb-16">
                   <h2 className="text-lg md:text-xl font-medium">
                     {item.korean.title}
                   </h2>
                   <p
-                    className="text-sm md:text-lg font-medium"
+                    className="text-sm md:text-lg font-light"
                     style={{ wordBreak: "keep-all" }}
                   >
                     {item.korean.description}

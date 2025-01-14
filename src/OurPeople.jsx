@@ -45,7 +45,7 @@ const OurPeople = ({ language, setLanguage }) => {
           </h2>
 
           {language ? (
-            <p className="text-[#545454] text-justify ">
+            <p className="text-[#545454] text-justify text-base font-light">
               We seek professionals of exceptional caliber, whose expertise and
               insight align with our vision and strategy.
               <br /> Our team, shaped by distinguished experience at some of the
@@ -55,7 +55,7 @@ const OurPeople = ({ language, setLanguage }) => {
             </p>
           ) : (
             <p
-              className="text-[#545454] text-justify"
+              className="text-[#545454] text-justify text-base font-light"
               style={{ wordBreak: "keep-all" }}
             >
               우리는 회사의 비전과 전략에 부합하는 최고의 전문가들로 팀을

@@ -32,7 +32,7 @@ const AccordionItem = ({
       >
         <div className="overflow-hidden">
           <div className="pl-12 pb-6 pr-12">
-            <p className="text-[#545454] mb-4">{content}</p>
+            <p className="text-[#545454] mb-4 font-light">{content}</p>
             {/* {contactText && (
               <p className="text-[#545454]">
                 <a
@@ -164,7 +164,7 @@ const ServicesSection = (object) => {
         </h2>
         {object.language ? (
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
-            <h2 className="text-[#545454] text-lg">
+            <h2 className="text-[#545454] text-lg md:text-base font-light">
               Our multi-family office works with individuals, families and
               corporate entities, offering bespoke asset management services
               based on mitigating risk.
@@ -180,7 +180,7 @@ const ServicesSection = (object) => {
           // </div>
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
             <h2
-              className="text-[#545454] text-lg md:text-sm"
+              className="text-[#545454] text-base md:text-base font-light"
               style={{ wordBreak: "keep-all" }}
             >
               ALDER INVESTMENTS 는 초고액 자산가와 그들의 가족 및 사업체와
