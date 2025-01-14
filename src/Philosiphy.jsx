@@ -111,7 +111,7 @@ const Philosiphy = ({ language, setLanguage }) => {
           {/* Video Section */}
           <div className="lg:w-[50%] ml-auto lg:-mr-4">
             <div className="lg:sticky lg:top-16 pt-[3rem]">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[545px] relative">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
@@ -123,7 +123,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="mt-4">
+              <div className="mt-2">
                 <p className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90">
                   Growth is only sustainable when it's informed. We take a close
                   look at each client's portfolio to identify where risk is
@@ -156,7 +156,7 @@ const Philosiphy = ({ language, setLanguage }) => {
           {/* Video Section */}
           <div className="lg:w-[50%] ml-auto lg:-mr-4">
             <div className="lg:sticky lg:top-16 pt-[3rem]">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[545px] relative">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
@@ -168,7 +168,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="mt-4">
+              <div className="mt-2">
                 <p
                   className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90"
                   style={{ wordBreak: "keep-all" }}
