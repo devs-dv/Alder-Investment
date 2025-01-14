@@ -132,31 +132,54 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const rectangleWidth = 160;
   const rectangleHeight = 240;
-  const getClipPath = (scale) => {
-    const width = rectangleWidth * scale;
-    const height = rectangleHeight * scale;
-    const x = `calc(50% - ${width / 2}px)`;
-    const y = `calc(50% - ${height / 2}px)`;
-    return `polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      0% 100%,
-      0% ${y},
-      ${x} ${y},
-      ${x} calc(${y} + ${height}px),
-      calc(${x} + ${width}px) calc(${y} + ${height}px),
-      calc(${x} + ${width}px) ${y},
-      ${x} ${y},
-      0% ${y}
-    )`;
+
+  const getClipPath = (scale, isExpanding = false) => {
+    if (!isExpanding) {
+      // Initial rectangle shape
+      const width = rectangleWidth * scale;
+      const height = rectangleHeight * scale;
+      const x = `calc(50% - ${width / 2}px)`;
+      const y = `calc(50% - ${height / 2}px)`;
+      return `polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% ${y},
+        ${x} ${y},
+        ${x} calc(${y} + ${height}px),
+        calc(${x} + ${width}px) calc(${y} + ${height}px),
+        calc(${x} + ${width}px) ${y},
+        ${x} ${y},
+        0% ${y}
+      )`;
+    } else {
+      // Expanding animation using window dimensions
+      const width = window.innerWidth * (scale / 5);
+      const height = window.innerHeight * (scale / 5);
+      const x = `calc(50% - ${width / 2}px)`;
+      const y = `calc(50% - ${height / 2}px)`;
+      return `polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% ${y},
+        ${x} ${y},
+        ${x} calc(${y} + ${height}px),
+        calc(${x} + ${width}px) calc(${y} + ${height}px),
+        calc(${x} + ${width}px) ${y},
+        ${x} ${y},
+        0% ${y}
+      )`;
+    }
   };
 
   const squareVariants = {
     hidden: { clipPath: getClipPath(0) },
     visible: { clipPath: getClipPath(1) },
     scaling: {
-      clipPath: getClipPath(isMobile ? 15 : screenSize === "xl" ? 25 : 15),
+      clipPath: getClipPath(isMobile ? 8 : screenSize === "xl" ? 10 : 5, true),
     },
   };
 
@@ -336,7 +359,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               transition={{ duration: 1 }}
             />
 
-            {isFullscreen && (
+            {/* {isFullscreen && (
               <motion.div
                 key="fullscreen-mask"
                 className="fixed inset-0 z-51 bg-white"
@@ -347,7 +370,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 }}
                 animate={fullscreenControls}
               />
-            )}
+            )} */}
 
             {/* Loading content (logos) */}
             <motion.div
