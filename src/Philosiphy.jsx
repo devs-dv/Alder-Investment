@@ -144,7 +144,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                     {item.korean.title}
                   </h2>
                   <p
-                    className="text-[#545454] text-base md:text-base font-light"
+                    className="text-sm md:text-lg font-light"
                     style={{ wordBreak: "keep-all" }}
                   >
                     {item.korean.description}

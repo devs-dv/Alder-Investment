@@ -164,7 +164,7 @@ const ServicesSection = (object) => {
         </h2>
         {object.language ? (
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
-            <h2 className="text-[#545454] text-lg md:text-base font-light">
+            <h2 className="text-[#545454] text-sm md:text-lg font-light">
               Our multi-family office works with individuals, families and
               corporate entities, offering bespoke asset management services
               based on mitigating risk.
@@ -180,7 +180,7 @@ const ServicesSection = (object) => {
           // </div>
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
             <h2
-              className="text-[#545454] text-base md:text-base font-light"
+              className="text-[#545454] text-sm md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
               ALDER INVESTMENTS 는 초고액 자산가와 그들의 가족 및 사업체와
