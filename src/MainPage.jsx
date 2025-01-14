@@ -176,7 +176,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     up: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: "-49vh",
-      opacity: 0,
+      opacity: 1,
       transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
     }),
     stop: ({ isMobile }) => ({
@@ -208,7 +208,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     up: ({ isMobile }) => ({
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: "-49vh",
-      opacity: 0,
+      opacity: 1,
       transition: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Increased duration for upward movement
     }),
     stop: ({ isMobile }) => ({
