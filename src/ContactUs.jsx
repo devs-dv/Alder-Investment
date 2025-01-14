@@ -60,27 +60,32 @@ export default function ContactUs({ language, setLanguage }) {
               onClick={() => setIsSidebarOpen(true)}
               text={language ? "Contact Us" : "문의하기"}
             />
-            <div className="flex flex-col gap-10 lg:max-w-3xl">
+            <div className="flex flex-col gap-3 lg:max-w-2xl">
               <div className="flex justify-between">
-                <div>
-                  <p className="">
-                    {language ? "General Enquiries" : "일반 문의"}
-                  </p>
-                  <p className="">{language ? "Telephone" : "전화"}</p>
-                </div>
-                <div>
+                <p className="w-1/3">
+                  {language ? "General Enquiries" : "일반 문의"}
+                </p>
+                <div className="w-2/3">
                   <a
                     href="mailto:contact@alder-invest.com"
                     className="hover:underline"
                   >
                     contact@alder-invest.com
                   </a>
-                  <br />
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <p className="w-1/3">{language ? "Telephone" : "전화"}</p>
+                <div className="w-2/3">
                   <a href="tel:+82-2-6012-2100" className="hover:underline">
                     +82-2-6012-2100
                   </a>
-                  <br />
-                  <p className="mt-4">
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <p className="w-1/3">{language ? "Address" : "주소"}</p>
+                <div className="w-2/3">
+                  <p>
                     {language
                       ? "East tower 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, Republic of Korea"
                       : "서울특별시 중구 을지로 5길 26, 동타워 12층, 대한민국"}

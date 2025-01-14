@@ -5,7 +5,7 @@ const Content = ({ language }) => (
       <div className="relative z-10 p-3 md:p-6">
         {language ? (
           <div className="lg:flex flex-col max-md:mb-20 ">
-            <h2 className="text-xl flex-1 mb-3 md:mb-5 tracking-wide">
+            <h2 className="text-xs md:text-lg lg:text-base flex-1 mb-3 md:mb-5 tracking-wide">
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
@@ -15,18 +15,19 @@ const Content = ({ language }) => (
               {/* <p className="text-sm md:text-xl lg:text-sm opacity-90"> */}
               ALDER INVESTMENTS is an independent, boutique multi-family office
               specializing in customised private wealth management and related
-              services at the highest level for to a select clientele of the
-              most distinguished ultra-high net worth individuals, their
-              families, and their businesses. Our globally informed perspective
-              means we can see possibilities anywhere.
-              <br /> With an independent approach, we cast our vision into the
-              future to help all clients unlock sustainable, long-term growth
-              that can be passed down for generations to come.
+              services for a select clientele of the most distinguished
+              ultra-high net worth individuals, their families, and their
+              businesses. Our globally informed perspective means we can see
+              possibilities anywhere.
+              <br />
+              With an independent approach, we cast our vision into the future
+              to help our clients unlock sustainable, long-term growth that can
+              be passed down for generations to come.
             </p>
           </div>
         ) : (
           <div className="lg:flex flex-col max-md:mb-20">
-            <h2 className="text-2xl flex-1 md:text-3xl lg:text-2xl mb-3 md:mb-5 tracking-wide">
+            <h2 className="text-xs md:text-lg lg:text-base flex-1 mb-3 md:mb-5 tracking-wide">
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
