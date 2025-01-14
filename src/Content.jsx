@@ -5,11 +5,11 @@ const Content = ({ language }) => (
       <div className="text-sm md:text-lg font-light">
         {language ? (
           <div className="lg:flex flex-col max-md:mb-20 ">
-            <h2 className="text-xs md:text-lg lg:text-base flex-1 mb-3 md:mb-5 tracking-wide">
+            <h2 className="text-sm md:text-lg font-light">
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
-              className="text-xs md:text-lg lg:text-base opacity-90 font-light"
+              className="text-sm md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
               {/* <p className="text-sm md:text-xl lg:text-sm opacity-90"> */}
@@ -27,11 +27,11 @@ const Content = ({ language }) => (
           </div>
         ) : (
           <div className="lg:flex flex-col max-md:mb-20">
-            <h2 className="text-xs md:text-lg lg:text-base flex-1 mb-3 md:mb-5 tracking-wide">
+            <h2 className="text-sm md:text-lg font-light">
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
-              className="text-xs sm:break-words sm:text-justify md:text-xl lg:text-base opacity-90 font-light"
+              className="text-sm md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
               ALDER INVESTMENTS 는 세계적 네트워크와 글로벌 전문성을 바탕으로,
