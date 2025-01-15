@@ -2,7 +2,22 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
 export default async function handler(req, res) {
+  if (req.method === "GET") {
+    return res.status(200).json({ message: "API is working" });
+  } else if (req.method === "POST") {
+    // Your existing POST handling code here
+  } else {
+    res.setHeader("Allow", ["GET", "POST"]);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+
   if (req.method === "POST") {
     console.log("API Route Handler Started");
     console.log("Request Method:", req.method);
