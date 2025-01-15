@@ -71,9 +71,6 @@ export default async function handler(req, res) {
           <p><strong>Discussion Topic:</strong> ${discussionTopic}</p>
           <p><strong>Preferred Contact Method:</strong> ${contactMethod}</p>
           <p><strong>Message:</strong> ${message}</p>
-          <p><strong>Added to Mailing List:</strong> ${
-            mailingList ? "Yes" : "No"
-          }</p>
         `,
       });
 
