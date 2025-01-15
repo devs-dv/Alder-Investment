@@ -58,7 +58,7 @@ export default async function handler(req, res) {
 
       console.log("Preparing to send email via Resend...");
       const { data, error } = await resend.emails.send({
-        from: `${fullName}`,
+        from: `${fullName} <onboarding@resend.dev>`,
         to: "contact@alder-invest.com",
         reply_to: emailAddress,
         subject: "New Contact Form Submission",
