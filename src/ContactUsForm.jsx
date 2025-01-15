@@ -118,7 +118,7 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="fullName"
-                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
+                className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm"
               >
                 {language ? "Full Name*" : "성함*"}
               </label>
@@ -138,7 +138,7 @@ function ContactForm({ isOpen, onClose, language }) {
                 />
                 <label
                   htmlFor="phoneNumber"
-                  className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
+                  className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm"
                 >
                   {language ? "Phone Number*" : "연락처*"}
                 </label>
@@ -156,7 +156,7 @@ function ContactForm({ isOpen, onClose, language }) {
                 />
                 <label
                   htmlFor="organisation"
-                  className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
+                  className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm"
                 >
                   {language ? "Organisation" : "조직명"}
                 </label>
@@ -176,7 +176,7 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="emailAddress"
-                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
+                className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm"
               >
                 {language ? "Email Address*" : "이메일*"}
               </label>
@@ -251,7 +251,7 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="message"
-                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
+                className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm"
               >
                 {language ? "Your Message" : "메시지"}
               </label>

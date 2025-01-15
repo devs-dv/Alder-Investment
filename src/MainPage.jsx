@@ -488,8 +488,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="philosophy"
                       spy={true}
-                      smooth={true}
-                      duration={400}
+                      smooth={false}
+                      duration={0}
                       offset={-46}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
@@ -525,8 +525,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="services"
                       spy={true}
-                      smooth={true}
-                      duration={400}
+                      smooth={false}
+                      duration={0}
                       offset={-46}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
@@ -562,8 +562,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="people"
                       spy={true}
-                      smooth={true}
-                      duration={400}
+                      smooth={false}
+                      duration={0}
                       offset={-46}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
@@ -612,8 +612,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="contact"
                       spy={true}
-                      smooth={true}
-                      duration={400}
+                      smooth={false}
+                      duration={0}
                       offset={-46}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
@@ -728,8 +728,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="philosophy"
                   spy={true}
-                  smooth={true}
-                  duration={500}
+                  smooth={false}
+                  duration={0}
                   offset={-46}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
@@ -743,8 +743,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="services"
                   spy={true}
-                  smooth={true}
-                  duration={500}
+                  smooth={false}
+                  duration={0}
                   offset={-46}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
@@ -758,8 +758,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="people"
                   spy={true}
-                  smooth={true}
-                  duration={500}
+                  smooth={false}
+                  duration={0}
                   offset={-46}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
@@ -784,8 +784,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="contact"
                   spy={true}
-                  smooth={true}
-                  duration={500}
+                  smooth={false}
+                  duration={0}
                   offset={-46}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
