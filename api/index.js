@@ -2,22 +2,35 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// Remove the config export as we want body parsing
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 export default async function handler(req, res) {
-  if (req.method === "GET") {
-    return res.status(200).json({ message: "API is working" });
-  } else if (req.method === "POST") {
-    // Your existing POST handling code here
-  } else {
-    res.setHeader("Allow", ["GET", "POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+  // Set CORS headers
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+
+  // Handle OPTIONS request
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
   }
 
+  // Handle GET request
+  if (req.method === "GET") {
+    return res.status(200).json({ message: "API is working" });
+  }
+
+  // Handle POST request
   if (req.method === "POST") {
     console.log("API Route Handler Started");
     console.log("Request Method:", req.method);
@@ -34,6 +47,7 @@ export default async function handler(req, res) {
         message,
         mailingList,
       } = req.body;
+
       console.log("Received form data:", JSON.stringify(req.body, null, 2));
 
       console.log("Checking Resend API key...");
@@ -44,7 +58,7 @@ export default async function handler(req, res) {
 
       console.log("Preparing to send email via Resend...");
       const { data, error } = await resend.emails.send({
-        from: `${fullName} - ${emailAddress}`,
+        from: `${fullName} <onboarding@resend.dev>`,
         to: "contact@alder-invest.com",
         reply_to: emailAddress,
         subject: "New Contact Form Submission",
@@ -74,8 +88,9 @@ export default async function handler(req, res) {
       console.error("Unexpected error in API route:", error);
       return res.status(500).json({ error: "An unexpected error occurred" });
     }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
+
+  // Handle unsupported methods
+  res.setHeader("Allow", ["GET", "POST", "OPTIONS"]);
+  return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
 }
