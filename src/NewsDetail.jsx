@@ -148,11 +148,16 @@ export default function NewsDetail() {
             >
               <Button
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2"
+                className="w-full flex items-center justify-between px-4 py-2 group hover:bg-gray-50"
                 onClick={handlePdfClick}
               >
-                <FileText className="w-4 h-4" />
-                {pdfName} ({pdfSize})
+                <div className="flex items-center gap-2 min-w-0">
+                  <FileText className="w-4 h-4 flex-shrink-0" />
+                  <span className="truncate">{pdfName}</span>
+                </div>
+                <span className="text-sm text-gray-500 flex-shrink-0">
+                  ({pdfSize})
+                </span>
               </Button>
             </motion.div>
           )}
