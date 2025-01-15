@@ -79,10 +79,10 @@ const Philosiphy = ({ language, setLanguage }) => {
         description: [
           <p style={{ wordBreak: "keep-all" }}>
             We serve our clients, and our clients only. 우리는 오직 고객만을
-            위해 존재합니다. 대형 금융 그룹의 이해관계에 얽매이지 않은 독립적인
-            파트너로서, 모든 결정은 고객의 포트폴리오 가치를 높이는 데
-            집중합니다. 투자와 자산 관리 접근은 세심하고 신중하며, 투명성,
-            프라이버시, 그리고 안전성을 철저히 보장합니다.
+            위해 존재합니다. 외부 이해관계에 얽매이지 않은 독립적인 파트너로서,
+            모든 결정은 고객의 포트폴리오 가치를 높이는 데 집중합니다. 투자와
+            자산 관리 접근은 세심하고 신중하며, 투명성, 프라이버시, 그리고
+            안전성을 철저히 보장합니다.
           </p>,
         ],
       },
@@ -158,7 +158,7 @@ const Philosiphy = ({ language, setLanguage }) => {
             ))}
           </div>
           {/* Video Section */}
-          <div className="lg:w-[50%] ml-auto lg:-mr-4">
+          <div className="2xl:w-[43%] lg:w-[50%] ml-auto lg:-mr-4">
             <div className="lg:sticky lg:top-16 pt-[3rem]">
               <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
@@ -177,12 +177,10 @@ const Philosiphy = ({ language, setLanguage }) => {
                   className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90"
                   style={{ wordBreak: "keep-all" }}
                 >
-                  고객과의 특별하고 지속적으로 발전하는 관계를 예술적으로 표현한
-                  세련된 생성적 디지털 아트워크입니다. 초기 단계에서 유동적인
-                  이미지로 묘사하는 것으로 시작해, 수년간의 파트너십과 신뢰를
-                  통해 형성된 깊은 유대와 이해를 반영하여 점차 정교한 형태를
-                  담아냅니다. 끊임없이 변화하는 아트워크는 고객과 함께 이룬
-                  성과와 지속적인 성장을 상징하는 역동적인 표현물입니다.
+                  성장은 정보에 기반할 때만 지속 가능하다고 믿습니다. 우리는 각
+                  클라이언트의 포트폴리오를 면밀히 살펴보아 위험이 어디에 숨겨져
+                  있는지 파악합니다. 오늘날의 위험을 제대로 이해할 때만 지속
+                  가능한 성장이 이루어진다고 생각합니다.
                 </p>
               </div>
             </div>

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Menu, X } from "lucide-react";
 import { MdArrowOutward } from "react-icons/md";
 
 const NavBar = ({ language, setLanguage }) => {
@@ -13,10 +12,10 @@ const NavBar = ({ language, setLanguage }) => {
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -24,7 +23,7 @@ const NavBar = ({ language, setLanguage }) => {
     { name: "Our Philosophy", id: "philosophy" },
     { name: "Our Services", id: "services" },
     { name: "Our People", id: "people" },
-    { name: "News", id: "news" },
+    { name: "News", path: "/news" },
     { name: "Contact Us", id: "contact" },
   ];
 
@@ -35,18 +34,24 @@ const NavBar = ({ language, setLanguage }) => {
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center">
             <img
-              src="nav logo_white.png"
+              src="/nav logo_white.png"
               className="md:w-[300px] w-[250px]"
               alt="Logo"
             />
           </Link>
-          <nav className="hidden lg:block">
+          <nav className="hidden lg:block ml-12">
             <div className="flex gap-8">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   className="text-white uppercase hover:text-gray-300"
-                  onClick={() => handleNavigateAndScroll(link.id)}
+                  onClick={() => {
+                    if (link.path) {
+                      navigate(link.path);
+                    } else {
+                      handleNavigateAndScroll(link.id);
+                    }
+                  }}
                 >
                   {language ? link.name : link.name}
                 </button>
@@ -57,7 +62,7 @@ const NavBar = ({ language, setLanguage }) => {
 
         {/* Language Selector and Menu */}
         <div className="flex justify-between items-center gap-10">
-          <div className="">
+          <div className="mr-10">
             <div className="hidden lg:flex text-white">
               <button
                 onClick={() => setLanguage(true)}
@@ -100,7 +105,11 @@ const NavBar = ({ language, setLanguage }) => {
                   key={link.name}
                   className="text-white text-xl uppercase"
                   onClick={() => {
-                    handleNavigateAndScroll(link.id);
+                    if (link.path) {
+                      navigate(link.path);
+                    } else {
+                      handleNavigateAndScroll(link.id);
+                    }
                     setMobileMenuOpen(false);
                   }}
                 >

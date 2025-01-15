@@ -646,35 +646,31 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
                 {scrolled && scrollDirection === "down" && (
                   <div className="hidden lg:flex items-center gap-2 ml-4">
-                    <div
-                      className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                        activeSection === "philosophy"
-                          ? "bg-white"
-                          : "bg-gray-400"
-                      }`}
-                    />
-                    <div
-                      className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                        activeSection === "services"
-                          ? "bg-white"
-                          : "bg-gray-400"
-                      }`}
-                    />
-                    <div
-                      className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                        activeSection === "people" ? "bg-white" : "bg-gray-400"
-                      }`}
-                    />
-                    <div
-                      className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                        activeSection === "news" ? "bg-white" : "bg-gray-400"
-                      }`}
-                    />
-                    <div
-                      className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                        activeSection === "contact" ? "bg-white" : "bg-gray-400"
-                      }`}
-                    />
+                    {["philosophy", "services", "people", "contact"].map(
+                      (section) => {
+                        const element = document.getElementById(section);
+                        const isFullyVisible =
+                          element &&
+                          (() => {
+                            const rect = element.getBoundingClientRect();
+                            const visibleHeight =
+                              Math.min(rect.bottom, window.innerHeight) -
+                              Math.max(rect.top, 0);
+                            return visibleHeight >= rect.height * 0.5;
+                          })();
+
+                        return (
+                          <div
+                            key={section}
+                            className={`w-[0.25rem] h-[0.25rem] rounded-full ${
+                              activeSection === section && isFullyVisible
+                                ? "bg-white"
+                                : "bg-gray-400"
+                            }`}
+                          />
+                        );
+                      }
+                    )}
                   </div>
                 )}
               </nav>
