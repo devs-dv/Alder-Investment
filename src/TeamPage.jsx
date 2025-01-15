@@ -151,7 +151,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
               <h2 className="text-lg font-bold">
                 {language ? member.name : member.nameKr}
               </h2>
-              <p className="mt-2 text-sm">
+              <p className="mt-2 text-sm text-gray-500">
                 {language ? member.title : member.titleKr}
               </p>
               <ReadBioButton

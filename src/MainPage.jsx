@@ -61,6 +61,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   }, []);
 
   useEffect(() => {
+    // Skip animations if not on home page
+    if (location.pathname !== "/") {
+      setAnimationStep(5);
+      setLoading(false);
+      return;
+    }
+
     if (isMobile) {
       const timer1 = setTimeout(() => setAnimationStep(1), 500);
       const timer2 = setTimeout(() => setAnimationStep(2), 1500);
@@ -96,7 +103,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         clearTimeout(timer5);
       };
     }
-  }, [setLoading, isMobile]);
+  }, [setLoading, isMobile, location.pathname]);
 
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
@@ -215,7 +222,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       x: isMobile ? -5 : 1,
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
-      transition: { duration: 2, ease: [0.16, 1, 0.3, 1] }, // Added transition for final state
+      transition: {
+        duration: location.pathname === "/" ? 2 : 0, // No animation on route changes
+        ease: [0.16, 1, 0.3, 1],
+      },
     }),
   };
 
@@ -252,16 +262,22 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: location.pathname === "/" ? 2 : 0, // No animation on route changes
         ease: [0.16, 1, 0.3, 1],
-        delay: 2, // Add a delay to make it appear after the black logo has faded out
+        delay: location.pathname === "/" ? 2 : 0, // No delay on route changes
       },
     }),
   };
 
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: location.pathname === "/" ? 0.8 : 0, // No animation on route changes
+      },
+    },
   };
 
   const mobileMenuVariants = {
@@ -455,9 +471,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               : "bg-transparent"
           }`}
           variants={headerVariants}
-          initial="hidden"
-          animate={animationStep >= 4 ? "visible" : "hidden"}
-          transition={{ duration: 0.8, ease: smoothEasing }}
+          initial={location.pathname === "/" ? "hidden" : "visible"} // Skip initial animation on routes
+          animate="visible"
+          transition={{ duration: location.pathname === "/" ? 0.8 : 0 }} // No animation on route changes
         >
           <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-4 md:gap-24">

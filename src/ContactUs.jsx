@@ -68,7 +68,7 @@ export default function ContactUs({ language, setLanguage }) {
                 <div className="w-2/3">
                   <a
                     href="mailto:contact@alder-invest.com"
-                    className="hover:underline"
+                    className="hover:underline text-base md:text-lg"
                   >
                     contact@alder-invest.com
                   </a>
@@ -77,7 +77,10 @@ export default function ContactUs({ language, setLanguage }) {
               <div className="flex justify-between">
                 <p className="w-1/3">{language ? "Telephone" : "전화"}</p>
                 <div className="w-2/3">
-                  <a href="tel:+82-2-6012-2100" className="hover:underline">
+                  <a
+                    href="tel:+82-2-6012-2100"
+                    className="hover:underline text-base md:text-lg"
+                  >
                     +82-2-6012-2100
                   </a>
                 </div>
@@ -85,14 +88,14 @@ export default function ContactUs({ language, setLanguage }) {
               <div className="flex justify-between">
                 <p className="w-1/3">{language ? "Address" : "주소"}</p>
                 <div className="w-2/3">
-                  <p>
+                  <p className="text-base md:text-lg">
                     {language
                       ? "East tower 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, Republic of Korea"
                       : "서울특별시 중구 을지로 5길 26, 동관 12층, 대한민국"}
                   </p>
                   <a
                     href="https://www.google.com/maps/place/tower+12F,+26+Eulji-ro+5-gil,+Jung+District,+Seoul,+South+Korea/@37.5674207,126.9851783,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca2ef4036d5d7:0xf00a04cff378d993!8m2!3d37.5674207!4d126.9851783?entry=tts&g_ep=EgoyMDI0MDUyOS4wKgBIAVAD"
-                    className="underline text-[#545454] hover:text-black"
+                    className="text-base md:text-lg underline text-[#545454] hover:text-black"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
