@@ -94,7 +94,7 @@ const Philosiphy = ({ language, setLanguage }) => {
       <p className="text-[#545454] text-3xl py-10 lg:-ml-5"> OUR PHILOSOPHY</p>
       {language ? (
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-10">
-          <div className="lg:w-[50%] lg:mr-10 lg:-ml-5 md:text-justify">
+          <div className="lg:w-[50%] lg:mr-10 md:text-justify">
             {contentData.map((item, index) => (
               <React.Fragment key={index}>
                 <div className="text-[#545454] space-y-2 md:space-y-4 mb-16">
@@ -140,7 +140,7 @@ const Philosiphy = ({ language, setLanguage }) => {
         </div>
       ) : (
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-10">
-          <div className="lg:w-[50%] lg:mr-10 lg:-ml-5 md:text-justify">
+          <div className="lg:w-[50%] lg:mr-10 md:text-justify">
             {contentData.map((item, index) => (
               <React.Fragment key={index}>
                 <div className="text-[#545454] space-y-2 md:space-y-4 mb-16">

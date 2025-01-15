@@ -58,7 +58,7 @@ export default async function handler(req, res) {
 
       console.log("Preparing to send email via Resend...");
       const { data, error } = await resend.emails.send({
-        from: `${fullName} <onboarding@resend.dev>`,
+        from: `${fullName} - ${emailAddress}`,
         to: "contact@alder-invest.com",
         reply_to: emailAddress,
         subject: "New Contact Form Submission",
@@ -71,9 +71,6 @@ export default async function handler(req, res) {
           <p><strong>Discussion Topic:</strong> ${discussionTopic}</p>
           <p><strong>Preferred Contact Method:</strong> ${contactMethod}</p>
           <p><strong>Message:</strong> ${message}</p>
-          <p><strong>Added to Mailing List:</strong> ${
-            mailingList ? "Yes" : "No"
-          }</p>
         `,
       });
 
