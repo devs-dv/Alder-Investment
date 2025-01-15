@@ -61,8 +61,8 @@ const NavBar = ({ language, setLanguage }) => {
         </div>
 
         {/* Language Selector and Menu */}
-        <div className="flex justify-between items-center gap-10">
-          <div className="mr-10">
+        <div className="flex justify-between items-center">
+          <div>
             <div className="hidden lg:flex text-white">
               <button
                 onClick={() => setLanguage(true)}
@@ -85,7 +85,10 @@ const NavBar = ({ language, setLanguage }) => {
               <Menu size={24} />
             </button>
           </div>
-          <img src="logo.png" className="w-32 filter brightness-0 invert" />
+          <img
+            src="logo.png"
+            className="w-32 filter brightness-0 invert hidden md:block"
+          />
         </div>
       </div>
 
