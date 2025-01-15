@@ -9,6 +9,10 @@
       "destination": "/api"
     },
     {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
       "source": "/api/send-email",
       "destination": "/api/send-email"
     },
