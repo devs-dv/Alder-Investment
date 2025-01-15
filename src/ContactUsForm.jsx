@@ -37,7 +37,11 @@ function ContactForm({ isOpen, onClose, language }) {
 
     try {
       console.log("Sending request to API...");
-      const response = await axios.post("/api/send-email", formData);
+      const response = await axios.post("/api/send-email", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       console.log("API Response:", response.data);
       setSubmitSuccess(true);
       setFormData({
@@ -253,7 +257,7 @@ function ContactForm({ isOpen, onClose, language }) {
               </label>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="mailingList"
@@ -270,7 +274,7 @@ function ContactForm({ isOpen, onClose, language }) {
                   ? "Please check this box to be added to our mailing list"
                   : "이 확인란을 선택하면 메일링 리스트에 추가됩니다."}
               </label>
-            </div>
+            </div> */}
 
             <button
               type="submit"

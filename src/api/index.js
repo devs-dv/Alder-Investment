@@ -10,9 +10,16 @@ export default async function handler(request) {
   console.log("API Route Handler Started");
   console.log("Request Method:", request.method);
 
+  // Ensure we're only handling POST requests
   if (request.method !== "POST") {
     console.log("Method Not Allowed:", request.method);
-    return new Response("Method not allowed", { status: 405 });
+    return new Response("Method not allowed", {
+      status: 405,
+      headers: {
+        Allow: "POST",
+        "Content-Type": "text/plain",
+      },
+    });
   }
 
   try {
