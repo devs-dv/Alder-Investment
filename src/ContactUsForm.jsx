@@ -32,9 +32,13 @@ function ContactForm({ isOpen, onClose, language }) {
     setSubmitError(null);
     setSubmitSuccess(false);
 
+    console.log("Form submission started");
+    console.log("Form data being submitted:", formData);
+
     try {
+      console.log("Sending request to API...");
       const response = await axios.post("/api/send-email", formData);
-      console.log("Server response:", response.data);
+      console.log("API Response:", response.data);
       setSubmitSuccess(true);
       setFormData({
         fullName: "",
@@ -46,17 +50,22 @@ function ContactForm({ isOpen, onClose, language }) {
         message: "",
         mailingList: false,
       });
+      console.log("Form submission completed successfully");
     } catch (error) {
-      console.error(
-        "Error submitting form:",
-        error.response ? error.response.data : error.message
-      );
+      console.error("Form submission error:", error);
+      console.error("Error details:", {
+        response: error.response?.data,
+        status: error.response?.status,
+        headers: error.response?.headers,
+      });
       setSubmitError(
         error.response?.data?.error ||
+          error.response?.data?.details ||
           "An error occurred while submitting the form. Please try again."
       );
     } finally {
       setIsSubmitting(false);
+      console.log("Form submission process completed");
     }
   };
 
@@ -105,7 +114,7 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="fullName"
-                className="absolute left-0 text-[#545454] transition-all duration-300 ease-in-out transform top-[-1rem] text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-[-1rem] peer-focus:text-sm peer-not-placeholder-shown:top-[-1rem] peer-not-placeholder-shown:text-sm"
+                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
               >
                 {language ? "Full Name*" : "성함*"}
               </label>
@@ -125,7 +134,7 @@ function ContactForm({ isOpen, onClose, language }) {
                 />
                 <label
                   htmlFor="phoneNumber"
-                  className="absolute left-0 text-[#545454] transition-all duration-300 ease-in-out transform top-[-1rem] text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-[-1rem] peer-focus:text-sm peer-not-placeholder-shown:top-[-1rem] peer-not-placeholder-shown:text-sm"
+                  className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
                 >
                   {language ? "Phone Number*" : "연락처*"}
                 </label>
@@ -143,7 +152,7 @@ function ContactForm({ isOpen, onClose, language }) {
                 />
                 <label
                   htmlFor="organisation"
-                  className="absolute left-0 text-[#545454] transition-all duration-300 ease-in-out transform top-[-1rem] text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-[-1rem] peer-focus:text-sm peer-not-placeholder-shown:top-[-1rem] peer-not-placeholder-shown:text-sm"
+                  className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
                 >
                   {language ? "Organisation" : "조직명"}
                 </label>
@@ -163,7 +172,7 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="emailAddress"
-                className="absolute left-0 text-[#545454] transition-all duration-300 ease-in-out transform top-[-1rem] text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-[-1rem] peer-focus:text-sm peer-not-placeholder-shown:top-[-1rem] peer-not-placeholder-shown:text-sm"
+                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
               >
                 {language ? "Email Address*" : "이메일*"}
               </label>
@@ -238,13 +247,13 @@ function ContactForm({ isOpen, onClose, language }) {
               />
               <label
                 htmlFor="message"
-                className="absolute left-0 text-[#545454] transition-all duration-300 ease-in-out transform top-[-1rem] text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-[-1rem] peer-focus:text-sm peer-not-placeholder-shown:top-[-1rem] peer-not-placeholder-shown:text-sm"
+                className="absolute left-0 top-3 text-sm sm:text-base text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#545454] peer-focus:top-[-1rem] peer-focus:text-sm peer-focus:text-[#545454]"
               >
                 {language ? "Your Message" : "메시지"}
               </label>
             </div>
 
-            {/* <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="mailingList"
@@ -261,7 +270,7 @@ function ContactForm({ isOpen, onClose, language }) {
                   ? "Please check this box to be added to our mailing list"
                   : "이 확인란을 선택하면 메일링 리스트에 추가됩니다."}
               </label>
-            </div> */}
+            </div>
 
             <button
               type="submit"

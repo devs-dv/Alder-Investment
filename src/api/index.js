@@ -1,27 +1,25 @@
-import express from "express";
 import { Resend } from "resend";
-import cors from "cors";
-import dotenv from "dotenv";
 
-dotenv.config();
+export const config = {
+  runtime: "edge",
+};
 
-const app = express();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-app.use(cors());
-app.use(express.json());
+export default async function handler(request) {
+  console.log("API Route Handler Started");
+  console.log("Request Method:", request.method);
 
-const resendApiKey = process.env.RESEND_API_KEY;
-if (!resendApiKey) {
-  console.error("RESEND_API_KEY is not set in the environment variables");
-  process.exit(1);
-}
-
-const resend = new Resend(resendApiKey);
-
-app.post("/api/send-email", async (req, res) => {
-  console.log("Received request:", req.body);
+  if (request.method !== "POST") {
+    console.log("Method Not Allowed:", request.method);
+    return new Response("Method not allowed", { status: 405 });
+  }
 
   try {
+    console.log("Parsing request body...");
+    const body = await request.json();
+    console.log("Received form data:", JSON.stringify(body, null, 2));
+
     const {
       fullName,
       phoneNumber,
@@ -31,11 +29,17 @@ app.post("/api/send-email", async (req, res) => {
       contactMethod,
       message,
       mailingList,
-    } = req.body;
+    } = body;
 
-    console.log("Sending email with Resend...");
+    console.log("Checking Resend API key...");
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set in environment variables");
+      throw new Error("RESEND_API_KEY is not configured");
+    }
+
+    console.log("Preparing to send email via Resend...");
     const { data, error } = await resend.emails.send({
-      from: `${fullName} <onboarding@resend.dev>`,
+      from: `${fullName} ${emailAddress}`,
       to: "contact@alder-invest.com",
       reply_to: emailAddress,
       subject: "New Contact Form Submission",
@@ -55,18 +59,50 @@ app.post("/api/send-email", async (req, res) => {
     });
 
     if (error) {
-      console.error("Error sending email:", error);
-      return res.status(400).json({ error: error.message });
+      console.error("Resend API Error:", error);
+      return new Response(
+        JSON.stringify({
+          error: error.message,
+          details: "Error occurred while sending email via Resend",
+        }),
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     }
 
     console.log("Email sent successfully:", data);
-    res.status(200).json({ message: "Email sent successfully", data });
+    return new Response(
+      JSON.stringify({
+        message: "Email sent successfully",
+        data,
+        timestamp: new Date().toISOString(),
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   } catch (error) {
-    console.error("Unexpected error:", error);
-    res
-      .status(500)
-      .json({ error: "An unexpected error occurred while sending the email" });
+    console.error("Unexpected error in API route:", error);
+    console.error("Error stack:", error.stack);
+    return new Response(
+      JSON.stringify({
+        error: "An unexpected error occurred while sending the email",
+        details: error.message,
+        timestamp: new Date().toISOString(),
+      }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   }
-});
-
-export default app;
+}
