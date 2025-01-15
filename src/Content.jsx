@@ -2,7 +2,7 @@ const Content = ({ language }) => (
   <div className="absolute bottom-0 right-0 left-0 md:left-auto md:max-w-3xl lg:max-w-4xl p-2 md:p-12 lg:p-4 text-white z-20">
     <div className="relative">
       <div className="absolute inset-0 rounded-xl" />
-      <div className="text-sm md:text-lg font-light">
+      <div className="text-sm md:text-lg font-light !pl-3 md:pl-0">
         {language ? (
           <div className="lg:flex flex-col max-md:mb-20 ">
             <h2 className="text-sm md:text-lg font-light">
