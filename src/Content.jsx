@@ -18,11 +18,9 @@ const Content = ({ language }) => (
               services for a select clientele of the most distinguished
               ultra-high net worth individuals, their families, and their
               businesses. Our globally informed perspective means we can see
-              possibilities anywhere.
-              <br />
-              With an independent approach, we cast our vision into the future
-              to help our clients unlock sustainable, long-term growth that can
-              be passed down for generations to come.
+              possibilities anywhere. With an independent approach, we cast our
+              vision into the future to help our clients unlock sustainable,
+              long-term growth that can be passed down for generations to come.
             </p>
           </div>
         ) : (
@@ -34,10 +32,10 @@ const Content = ({ language }) => (
               className="text-sm md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
-              ALDER INVESTMENTS 는 세계적 네트워크와 글로벌 전문성을 바탕으로,
-              대형 금융사의 복잡한 이해관계에서 벗어난 독립적인 통찰력을 통해
-              최상위 수준의 맞춤형 자산 관리 솔루션을 제공하는 전문 부티크
-              패밀리 오피스입니다.
+              ALDER INVESTMENTS는 글로벌 네트워크와 전문성을 바탕으로, 대형
+              금융사의 복잡한 이해관계에서 벗어난 독립적인 통찰력을 통해 최상위
+              수준의 맞춤형 자산 관리 솔루션을 제공하는 전문 부티크 패밀리
+              오피스입니다.
               <br />
               성공적이고 영향력 있는 초고액 자산가와 그들의 가족 및 사업체를
               위한 선별적 고객층을 대상으로, 자산 관리뿐만 아니라 세대를

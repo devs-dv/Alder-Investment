@@ -103,11 +103,10 @@ const ServicesSection = (object) => {
       contentK: [
         <p className="" style={{ wordBreak: "keep-all" }}>
           고객의 자산이 더 큰 가치를 만들어내고, 미래를 탄탄하게 설계할 수
-          있도록 합니다. ALDER 는 한국 및 글로벌 네트워크를 기반으로 한 체계적인
+          있도록 합니다. 우리는 한국 및 글로벌 네트워크를 기반으로 한 체계적인
           딜소싱과 철저한 검증을 통해 다양한 스페셜 투자 자산군(비상장 기업,
           부동산, 사모채권 등)에 접근할 수 있는 기회를 제공합니다. 이러한
           독점적투자 기회는 자산의 다변화와 지속적인 성장을 원하는 고객에게
-          최적의 솔루션이 될 것입니다.
         </p>,
       ],
       contactText: "for unprecedented access to financial growth.",
@@ -139,8 +138,8 @@ const ServicesSection = (object) => {
           다음 세대가 중요한 시기에 준비될 수 있도록 체계적으로 지원합니다.
           세무, 법률, 투자은행 등 각 분야의 최고 전문가들과 협업하여, 고객의
           상황과 필요에 맞춘 종합적이고 전략적인 맞춤형 자문 서비스를
-          제공합니다. 단순한 조언에 그치지 않고, 고객과 함께 여정을 동행하며
-          최상의 결정을 내릴 수 있도록 끝까지 함께합니다.
+          제공합니다. 단순한 조언에서 멈추지 않고, 이를 통해 고객이 최적의
+          결정을 내릴 수 있도록 여정의 모든 순간에 동행합니다.
         </p>,
       ],
       contactText:
@@ -165,9 +164,9 @@ const ServicesSection = (object) => {
         {object.language ? (
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
             <h2 className="text-[#545454] text-sm md:text-lg font-light">
-              Our multi-family office works with individuals, families and
-              corporate entities, offering bespoke asset management services
-              based on mitigating risk.
+              Our multi-family office works with ultra-high net worth
+              individuals, families and corporate entities, offering bespoke
+              asset management services based on mitigating risk.
             </h2>
           </div>
         ) : (
@@ -183,9 +182,8 @@ const ServicesSection = (object) => {
               className="text-[#545454] text-sm md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
-              ALDER INVESTMENTS 는 초고액 자산가와 그들의 가족 및 사업체와
-              협력하여 리스크를 효과적으로 관리하고, 맞춤형 자산 관리 서비스를
-              제공합니다.
+              초고액 자산가와 그들의 가족 및 사업체를 대상으로 맞춤형 자산 관리
+              서비스를 제공하며, 리스크 관리에 중점을 둡니다.
             </h2>
           </div>
         )}

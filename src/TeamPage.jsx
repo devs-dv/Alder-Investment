@@ -16,7 +16,7 @@ const teamMembers = [
     name: "Junho Kim",
     nameKr: "김준호",
     title: "Partner",
-    titleKr: "파트너",
+    titleKr: "Partner",
     image: "2nd.jpg",
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = [
     name: "Kihyun Shin",
     nameKr: "신기현",
     title: "Chief Compliance Officer",
-    titleKr: "최고 준법 감시 책임자",
+    titleKr: "준법감시인",
     image: "3rd.jpg",
   },
   {
@@ -32,7 +32,7 @@ const teamMembers = [
     name: "Jinhee Kim",
     nameKr: "김진희",
     title: "Head of Operations",
-    titleKr: "운영 담당 책임자",
+    titleKr: "운용지원부장",
     image: "4th.jpg",
   },
   {
@@ -40,7 +40,7 @@ const teamMembers = [
     name: "Jihyun Seo",
     nameKr: "서지현",
     title: "Head of Administration",
-    titleKr: "행정 담당 책임자",
+    titleKr: "경영지원부장",
     image: "5th.jpg",
   },
   {
@@ -48,7 +48,7 @@ const teamMembers = [
     name: "Chanwoo Kang",
     nameKr: "강찬우",
     title: "Portfolio Manager",
-    titleKr: "포트폴리오 매니저",
+    titleKr: "투자운용부 매니저",
     image: "6th.jpg",
   },
   {
@@ -56,7 +56,7 @@ const teamMembers = [
     name: "Jinsu Lim",
     nameKr: "임진수",
     title: "Portfolio Manager",
-    titleKr: "포트폴리오 매니저",
+    titleKr: "투자운용부 매니저",
     image: "7th.jpg",
   },
 ];

@@ -32,6 +32,8 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/alder-partners-674336306/"
           className="underline"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="flex items-center justify-center text-[#565656] hover:text-black gap-3">
             LINKEDIN <MdArrowOutward className="text-xl" />

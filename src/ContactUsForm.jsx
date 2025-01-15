@@ -151,7 +151,7 @@ function ContactUsForm({ isOpen, onClose, language }) {
             <p className="mt-4 text-gray-600" style={{ wordBreak: "keep-all" }}>
               {language
                 ? "Tell us more about yourself using this form. Include any specific questions in the message field and we will do our best to respond to your query promptly."
-                : "본 양식에 귀하에 대한 소중한 정보를 기재해주시기 바랍니다. 메시지란에 질문을 작성해 주시면, 답변 드리겠습니다"}
+                : "본 양식에 귀하에 대한 소중한 정보를 기재해주시기 바랍니다. 메시지란에 질문을 작성해 주시면, 답변 드리겠습니다."}
             </p>
           </div>
 

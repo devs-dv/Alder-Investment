@@ -20,7 +20,7 @@ export default function Header() {
         animate="visible"
         transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
       >
-        {Array.from("ALDER News").map((letter, index) => (
+        {Array.from("ALDER NEWS").map((letter, index) => (
           <motion.span
             key={index}
             variants={letterVariants}

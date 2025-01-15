@@ -125,10 +125,14 @@ const Philosiphy = ({ language, setLanguage }) => {
               </div>
               <div className="mt-2">
                 <p className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90">
-                  Growth is only sustainable when it's informed. We take a close
-                  look at each client's portfolio to identify where risk is
-                  hiding beneath the surface. We believe that only when we
-                  properly understand risk today.
+                  An artful, generative digital painting representing our unique
+                  and ever-evolving relationship with our clients. The image
+                  reflects our metamorphic journey together from our first
+                  interaction, depicted as a fluid painting, to the deepened
+                  bond and understanding built through years of partnership and
+                  trust, which results in a more intricate painting. It is an
+                  ever-changing symbol, inspired by our shared values and
+                  collaborative growth.
                 </p>
               </div>
             </div>
@@ -173,10 +177,12 @@ const Philosiphy = ({ language, setLanguage }) => {
                   className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90"
                   style={{ wordBreak: "keep-all" }}
                 >
-                  성장은 정보에 기반할 때만 지속 가능하다고 믿습니다. 우리는 각
-                  클라이언트의 포트폴리오를 면밀히 살펴보아 위험이 어디에 숨겨져
-                  있는지 파악합니다. 오늘날의 위험을 제대로 이해할 때만 지속
-                  가능한 성장이 이루어진다고 생각합니다.
+                  고객과의 특별하고 지속적으로 발전하는 관계를 예술적으로 표현한
+                  세련된 생성적 디지털 아트워크입니다. 초기 단계에서 유동적인
+                  이미지로 묘사하는 것으로 시작해, 수년간의 파트너십과 신뢰를
+                  통해 형성된 깊은 유대와 이해를 반영하여 점차 정교한 형태를
+                  담아냅니다. 끊임없이 변화하는 아트워크는 고객과 함께 이룬
+                  성과와 지속적인 성장을 상징하는 역동적인 표현물입니다.
                 </p>
               </div>
             </div>
