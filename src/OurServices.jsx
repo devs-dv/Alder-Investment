@@ -107,6 +107,7 @@ const ServicesSection = (object) => {
           딜소싱과 철저한 검증을 통해 다양한 스페셜 투자 자산군(비상장 기업,
           부동산, 사모채권 등)에 접근할 수 있는 기회를 제공합니다. 이러한
           독점적투자 기회는 자산의 다변화와 지속적인 성장을 원하는 고객에게
+          최적의 솔루션이 될 것입니다.
         </p>,
       ],
       contactText: "for unprecedented access to financial growth.",
