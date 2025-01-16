@@ -449,7 +449,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       {/* Header and Navigation */}
       <div className="relative z-[52]">
         <motion.header
-          className={`fixed top-0 left-0 right-0 flex items-center px-4 pb-5 transition-colors duration-200 border-b ${
+          className={`fixed top-0 left-0 right-0 flex items-center px-4 pb-5 transition-colors duration-200 ${
             scrolled
               ? "bg-black/50 backdrop-blur supports-[backdrop-filter]:bg-black/10"
               : "bg-transparent"
