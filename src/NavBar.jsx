@@ -39,7 +39,7 @@ const NavBar = ({ language, setLanguage }) => {
               alt="Logo"
             />
           </Link>
-          <nav className="hidden lg:block ml-12">
+          <nav className="hidden lg:block ml-[66px]">
             <div className="flex gap-8">
               {navLinks.map((link) => (
                 <button
@@ -61,7 +61,7 @@ const NavBar = ({ language, setLanguage }) => {
         </div>
 
         {/* Language Selector and Menu */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-[74px]">
           <div>
             <div className="hidden lg:flex text-white">
               <button
