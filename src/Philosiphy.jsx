@@ -124,7 +124,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                 </video>
               </div>
               <div className="mt-2">
-                <p className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90">
+                <p className="text-[#545454] font-light text-sm md:text-xl lg:text-[0.9375rem] opacity-90">
                   An artful, generative digital painting representing our unique
                   and ever-evolving relationship with our clients. The image
                   reflects our metamorphic journey together from our first
@@ -148,7 +148,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                     {item.korean.title}
                   </h2>
                   <p
-                    className="text-sm md:text-lg font-light"
+                    className="text-base md:text-lg font-light"
                     style={{ wordBreak: "keep-all" }}
                   >
                     {item.korean.description}
@@ -174,7 +174,7 @@ const Philosiphy = ({ language, setLanguage }) => {
               </div>
               <div className="mt-2">
                 <p
-                  className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90"
+                  className="text-[#545454] font-light text-sm md:text-xl lg:text-[0.9375rem] opacity-90"
                   style={{ wordBreak: "keep-all" }}
                 >
                   고객과 지속적으로 발전하는 관계를 이미지로 표현한 생성형

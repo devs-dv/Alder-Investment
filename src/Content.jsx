@@ -23,9 +23,11 @@ const Content = ({ language }) => (
           </div>
         ) : (
           <div className="lg:flex flex-col max-md:mb-20">
-            <h2 className="md:text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
+            <h2 className="md:text-lg font-light text-base">
+              WE ARE ALDER INVESTMENTS
+            </h2>
             <p
-              className="md:text-lg font-light"
+              className="md:text-lg font-light text-base"
               style={{ wordBreak: "keep-all" }}
             >
               ALDER INVESTMENTS는 글로벌 전문성과 외부 이해관계에 얽매이지 않은
