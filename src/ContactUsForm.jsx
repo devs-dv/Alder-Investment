@@ -90,6 +90,7 @@ function ContactForm({ isOpen, onClose, language }) {
         <button
           onClick={onClose}
           className="absolute right-6 top-6 text-gray-400 hover:text-gray-600"
+          aria-label="Close Sidebar"
         >
           <X className="h-6 w-6" />
         </button>

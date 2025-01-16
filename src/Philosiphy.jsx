@@ -91,7 +91,9 @@ const Philosiphy = ({ language, setLanguage }) => {
 
   return (
     <section className="bg-[#e7e6e2] py-16 px-5 md:px-10" id="philosophy">
-      <p className="text-[#545454] text-3xl py-10 pb-0 mb-5"> OUR PHILOSOPHY</p>
+      <h2 className="text-left text-3xl uppercase mb-2 lg:mb-5 text-[#545454]">
+        OUR PHILOSOPHY
+      </h2>
       {language ? (
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-10">
           <div className="lg:w-[50%] lg:mr-10 md:text-justify">

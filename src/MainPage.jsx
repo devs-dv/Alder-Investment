@@ -478,10 +478,16 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   }}
                   className="flex items-center"
                 >
-                  <a href="/" className="flex items-center gap-4">
+                  <a
+                    href="/"
+                    className="flex items-center gap-4"
+                    aria-label="Home"
+                  >
+                    <span className="sr-only">Home</span>
                     <img
                       src="nav logo_white.png"
                       className="md:w-[300px] w-[250px] mb-0.5"
+                      alt="Logo"
                     />
                   </a>
                 </motion.div>
