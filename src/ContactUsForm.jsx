@@ -215,6 +215,14 @@ function ContactForm({ isOpen, onClose, language }) {
                   {language ? "General queries / Other" : "일반 문의/기타"}
                 </option>
               </select>
+              <label
+                htmlFor="discussionTopic"
+                className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm sr-only"
+              >
+                {language
+                  ? "What would you like to discuss with us?"
+                  : "귀하께서 원하시는 상담 분야를 선택해주십시오?"}
+              </label>
             </div>
 
             <div className="relative">
@@ -237,6 +245,14 @@ function ContactForm({ isOpen, onClose, language }) {
                   {language ? "Email" : "이메일"}
                 </option>
               </select>
+              <label
+                htmlFor="contactMethod"
+                className="absolute left-0 -top-2 text-sm text-[#545454] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm [&:has(+input:not(:placeholder-shown))]:-top-2 [&:has(+input:not(:placeholder-shown))]:text-sm sr-only"
+              >
+                {language
+                  ? "How would you like to be contacted?"
+                  : "귀하께 연락드릴 방법을 선택해 주십시오."}
+              </label>
             </div>
 
             <div className="relative">

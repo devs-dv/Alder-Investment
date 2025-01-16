@@ -84,7 +84,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               >
                 <img
                   src="nav logo_white.png"
-                  className="md:w-[300px] w-[250px] ml-px"
+                  className="md:w-[300px] w-[250px] md:ml-px -ml-[4px] mb-[3px] md:mb-0"
                   alt="Logo"
                 />
               </Link>
