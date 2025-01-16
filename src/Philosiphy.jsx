@@ -110,8 +110,8 @@ const Philosiphy = ({ language, setLanguage }) => {
           </div>
           {/* Video Section */}
           <div className="2xl:w-[43%] lg:w-[50%] ml-auto ">
-            <div className="lg:sticky lg:top-16 pt-[3rem] px-4 lg:px-8">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
+            <div className="lg:sticky lg:top-16 pt-[3rem]">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative px-4 lg:px-10">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
@@ -124,7 +124,10 @@ const Philosiphy = ({ language, setLanguage }) => {
                 </video>
               </div>
               <div className="mt-2">
-                <p className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90">
+                <p
+                  className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90  px-4 lg:px-10"
+                  style={{ wordBreak: "keep-all" }}
+                >
                   An artful, generative digital painting representing our unique
                   and ever-evolving relationship with our clients. The image
                   reflects our metamorphic journey together from our first

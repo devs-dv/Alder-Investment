@@ -248,13 +248,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       opacity: 0,
     }),
     final: ({ scrolled, isMobile }) => ({
-      x: isMobile ? 5 : -1,
+      x: isMobile ? -5 : 1,
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
       transition: {
         duration: 2,
         ease: [0.16, 1, 0.3, 1],
-        delay: 2, // Add a delay to make it appear after the black logo has faded out
       },
     }),
   };
@@ -684,7 +683,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 transition={{
                   duration: 0.5,
                   ease: smoothEasing,
-                  delay: 2, // Add a delay to make it appear after the black logo has faded out
+                  delay: 2,
                 }}
                 className="hidden lg:block"
               >

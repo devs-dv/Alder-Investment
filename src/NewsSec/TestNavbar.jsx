@@ -27,7 +27,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
   ];
 
   return (
-    <header className="flex items-center px-4 h-[72px] transition-colors duration-200">
+    <header className="sticky top-0 flex items-center px-4 h-[72px] transition-colors duration-200 z-[9999] backdrop-blur supports-[backdrop-filter]:bg-black/30 text-white">
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center gap-4 md:gap-24">
           <div className="">
@@ -43,7 +43,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
                 }}
               >
                 <img
-                  src="navlogo_black.png"
+                  src="nav logo_white.png"
                   className="md:w-[300px] w-[250px] ml-px"
                   alt="Logo"
                 />
@@ -56,7 +56,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  className="uppercase cursor-pointer transition-colors duration-200 p-0 m-0"
+                  className="uppercase cursor-pointer transition-colors duration-200 p-0 m-0 hover:text-gray-300 "
                   onClick={() => {
                     if (link.path) {
                       navigate(link.path);

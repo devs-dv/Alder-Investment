@@ -5,11 +5,13 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useActiveSection } from "./utils/useActiveSection";
 import NavBar from "./NavBar";
+import { TestNavbar } from "./NewsSec/TestNavbar";
 
 const TermsAndConditions = (object) => {
   //console.log(object)
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [triggerLoading, setTriggerLoading] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +38,13 @@ const TermsAndConditions = (object) => {
 
   return (
     <>
-      <NavBar language={object.language} setLanguage={object.setLanguage} />
+      {/* <NavBar language={object.language} setLanguage={object.setLanguage} /> */}
+
+      <TestNavbar
+        language={object.language}
+        setLanguage={object.setLanguage}
+        setTriggerLoading={setTriggerLoading}
+      />
 
       <div
         className={`min-h-[75vh] md:flex px-5 lg:px-10 gap-5 md:py-20 bg-[#E7E6E2] text-[#545454]`}
