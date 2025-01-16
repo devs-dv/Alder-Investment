@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import NavBar from "../NavBar";
 import Header from "./components/Header";
 import InsightItem from "./components/InsightItem";
+import { TestNavbar } from "./TestNavbar";
 
 export default function AlderNewsBulletin() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -96,7 +97,12 @@ export default function AlderNewsBulletin() {
 
   return (
     <div className="" style={{ backgroundColor: "#e7e6e2", color: "#545454" }}>
-      <NavBar
+      {/* <NavBar
+        language={language}
+        setLanguage={setLanguage}
+        setTriggerLoading={setTriggerLoading}
+      /> */}
+      <TestNavbar
         language={language}
         setLanguage={setLanguage}
         setTriggerLoading={setTriggerLoading}
