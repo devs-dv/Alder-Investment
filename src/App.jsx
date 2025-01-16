@@ -34,7 +34,7 @@ function ProtectedRoute({ children }) {
 }
 
 function App() {
-  const [language, setLanguage] = useState(false); // true = English, false = Korean
+  const [language, setLanguage] = useState(true); // true = English, false = Korean
   const [loading, setLoading] = useState(true);
 
   return (

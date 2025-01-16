@@ -36,7 +36,7 @@ export default function ContactUs({ language, setLanguage }) {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           <div className="lg:w-[70%] text-[#545454] text-lg leading-relaxed">
             <p
-              className="text-[#545454] text-sm md:text-lg font-light"
+              className="text-[#545454] md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
               {language ? (
@@ -60,12 +60,12 @@ export default function ContactUs({ language, setLanguage }) {
               onClick={() => setIsSidebarOpen(true)}
               text={language ? "Contact Us" : "문의하기"}
             />
-            <div className="flex flex-col gap-3 lg:max-w-2xl">
+            <div className="flex flex-col gap-3 lg:max-w-4xl">
               <div className="flex justify-between">
                 <p className="w-1/3">
                   {language ? "General Enquiries" : "일반 문의"}
                 </p>
-                <div className="w-2/3">
+                <div className="w-2/3 lg:w-[800px]">
                   <a
                     href="mailto:contact@alder-invest.com"
                     className="hover:underline text-base md:text-lg"
@@ -74,9 +74,10 @@ export default function ContactUs({ language, setLanguage }) {
                   </a>
                 </div>
               </div>
+
               <div className="flex justify-between">
                 <p className="w-1/3">{language ? "Telephone" : "전화"}</p>
-                <div className="w-2/3">
+                <div className="w-2/3 lg:w-[800px]">
                   <a
                     href="tel:+82-2-6012-2100"
                     className="hover:underline text-base md:text-lg"
@@ -85,9 +86,10 @@ export default function ContactUs({ language, setLanguage }) {
                   </a>
                 </div>
               </div>
+
               <div className="flex justify-between">
                 <p className="w-1/3">{language ? "Address" : "주소"}</p>
-                <div className="w-2/3">
+                <div className="w-2/3 lg:w-[800px]">
                   <p className="text-base md:text-lg">
                     {language
                       ? "East tower 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, Republic of Korea"

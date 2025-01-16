@@ -109,9 +109,9 @@ const Philosiphy = ({ language, setLanguage }) => {
             ))}
           </div>
           {/* Video Section */}
-          <div className="2xl:w-[43%] lg:w-[50%] ml-auto ">
+          <div className="2xl:w-[43%] lg:w-[50%] ml-auto lg:-mr-4">
             <div className="lg:sticky lg:top-16 pt-[3rem]">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative px-4 lg:px-10">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
@@ -124,10 +124,7 @@ const Philosiphy = ({ language, setLanguage }) => {
                 </video>
               </div>
               <div className="mt-2">
-                <p
-                  className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90  px-4 lg:px-10"
-                  style={{ wordBreak: "keep-all" }}
-                >
+                <p className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90">
                   An artful, generative digital painting representing our unique
                   and ever-evolving relationship with our clients. The image
                   reflects our metamorphic journey together from our first
@@ -161,9 +158,9 @@ const Philosiphy = ({ language, setLanguage }) => {
             ))}
           </div>
           {/* Video Section */}
-          <div className="2xl:w-[43%] lg:w-[50%] ml-auto">
-            <div className="lg:sticky lg:top-16 pt-[3rem] ">
-              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative px-4 lg:px-10">
+          <div className="2xl:w-[43%] lg:w-[50%] ml-auto lg:-mr-4">
+            <div className="lg:sticky lg:top-16 pt-[3rem]">
+              <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
@@ -177,7 +174,7 @@ const Philosiphy = ({ language, setLanguage }) => {
               </div>
               <div className="mt-2">
                 <p
-                  className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90 px-4 lg:px-10"
+                  className="text-[#545454] font-light text-sm md:text-xl lg:text-base opacity-90"
                   style={{ wordBreak: "keep-all" }}
                 >
                   고객과 지속적으로 발전하는 관계를 이미지로 표현한 생성형

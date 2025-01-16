@@ -104,7 +104,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
                       handleNavigateAndScroll(link.id);
                     }
                   }}
-                  style={{ fontWeight: "400" }}
+                  style={{ fontWeight: "300" }}
                 >
                   {language ? link.name : link.name}
                 </button>

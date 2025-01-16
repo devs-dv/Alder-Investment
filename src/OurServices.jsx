@@ -164,23 +164,16 @@ const ServicesSection = (object) => {
         </h2>
         {object.language ? (
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
-            <h2 className="text-[#545454] text-sm md:text-lg font-light">
+            <h2 className="text-[#545454] md:text-lg font-light">
               Our multi-family office works with ultra-high net worth
               individuals, families and corporate entities, offering bespoke
               asset management services based on mitigating risk.
             </h2>
           </div>
         ) : (
-          // <div className="mb-20">
-          //   <h2 className="text-[#545454] text-base font-medium lg:max-w-[475px]">
-          //     ALDER INVESTMENTS 의 멀티패밀리 오피스는 개인, 패밀리 및 법인과
-          //     협력하여 리스크를 효과적으로 관리하고, 고객에게 맞춤형 자산 관리
-          //     서비스를 제공합니다.
-          //   </h2>
-          // </div>
           <div className=" mb-5 lg:mb-11 lg:w-[54.3%] lg:text-justify w-full">
             <h2
-              className="text-[#545454] text-sm md:text-lg font-light"
+              className="text-[#545454] md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
               초고액 자산가와 그들의 가족 및 사업체를 대상으로 맞춤형 자산 관리
@@ -278,7 +271,6 @@ const ServicesSection = (object) => {
                   : "opacity-0 -translate-y-full"
               }`}
             >
-              {/* <div className="w-[91.5%]"> */}
               <div>
                 <img
                   src={defaultImage}
@@ -289,35 +281,42 @@ const ServicesSection = (object) => {
             </div>
           </div>
           {/* Mobile Image */}
-          <div className="block lg:hidden w-full mb-8 overflow-hidden">
+          <div className="block lg:hidden w-full mb-8 overflow-hidden relative h-[400px]">
+            {content.map((item, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                  openItem === index
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-full"
+                }`}
+                style={{
+                  zIndex: openItem === index ? 1 : 0,
+                }}
+              >
+                <img
+                  src={item.mobileImage}
+                  alt={item.title}
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
+            ))}
             <div
-              className={`transition-all duration-500 ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === -1
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-full"
+                  : "opacity-0 translate-y-full"
               }`}
+              style={{
+                zIndex: openItem === -1 ? 1 : 0,
+              }}
             >
               <img
                 src={defaultImage}
                 alt="Services Overview"
-                className="w-full h-[400px] lg:h-[920px] object-cover"
+                className="w-full h-[400px] object-cover"
               />
             </div>
-            {openItem !== -1 && (
-              <div
-                className={`transition-all duration-500 ease-in-out ${
-                  openItem !== -1
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-full"
-                }`}
-              >
-                <img
-                  src={content[openItem]?.mobileImage}
-                  alt={content[openItem]?.title}
-                  className="w-full h-[400px] lg:h-[580px] -mt-96 object-cover"
-                />
-              </div>
-            )}
           </div>
           {object.language ? (
             <div className="w-full lg:text-lg lg:w-[40%]">

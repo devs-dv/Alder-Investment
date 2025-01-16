@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   motion,
   AnimatePresence,
@@ -189,7 +189,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: 0,
       opacity: 1,
-      transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] }, // Increased duration for left movement
+      transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
     pause: ({ isMobile }) => ({
       x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
@@ -203,7 +203,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       transition: {
         duration: 3,
         ease: [0.16, 1, 0.3, 1],
-        opacity: { duration: 1, ease: "easeOut" }, // Add specific transition for opacity
+        opacity: { duration: 1, ease: "easeOut" },
       },
     }),
     stop: ({ isMobile }) => ({
@@ -215,7 +215,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       x: isMobile ? -5 : 1,
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
-      transition: { duration: 2, ease: [0.16, 1, 0.3, 1] }, // Added transition for final state
+      transition: { duration: loading ? 2 : 0, ease: [0.16, 1, 0.3, 1] },
     }),
   };
 
@@ -225,7 +225,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: 0,
       opacity: 1,
-      transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] }, // Increased duration for right movement
+      transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
     pause: ({ isMobile }) => ({
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
@@ -235,11 +235,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     up: ({ isMobile }) => ({
       x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: "-49vh",
-      opacity: 0, // Change this to 0 to fade out
+      opacity: 0,
       transition: {
         duration: 3,
         ease: [0.16, 1, 0.3, 1],
-        opacity: { duration: 1, ease: "easeOut" }, // Add specific transition for opacity
+        opacity: { duration: 1, ease: "easeOut" },
       },
     }),
     stop: ({ isMobile }) => ({
@@ -248,11 +248,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       opacity: 0,
     }),
     final: ({ scrolled, isMobile }) => ({
-      x: isMobile ? -5 : 1,
+      x: isMobile ? -5 : -1,
       y: isMobile ? 10 : scrolled ? 12 : 12,
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: loading ? 2 : 0,
         ease: [0.16, 1, 0.3, 1],
       },
     }),
@@ -399,7 +399,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     }
                     custom={{ isMobile }}
                     transition={{
-                      duration: animationStep === 3 ? 3 : 1, // Increased duration for upward movement
+                      duration: animationStep === 3 ? 3 : 1,
                       ease: smoothEasing,
                     }}
                   >
@@ -428,7 +428,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     }
                     custom={{ isMobile }}
                     transition={{
-                      duration: animationStep === 3 ? 0.5 : 1, // Increased from 1 to 2.5 for upward movement
+                      duration: animationStep === 3 ? 0.5 : 1,
                       ease: smoothEasing,
                     }}
                   >
@@ -448,15 +448,17 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       {/* Header and Navigation */}
       <div className="relative z-[52]">
         <motion.header
-          className={`fixed top-0 left-0 right-0 flex items-center px-4 pb-5 transition-colors duration-200 ${
+          className={`fixed top-0 left-0 right-0 flex items-center px-4 pb-[22px] h-[72px] transition-colors duration-200 ${
             scrolled
               ? "bg-black/50 backdrop-blur supports-[backdrop-filter]:bg-black/10"
               : "bg-transparent"
           }`}
           variants={headerVariants}
           initial="hidden"
-          animate={animationStep >= 4 ? "visible" : "hidden"}
-          transition={{ duration: 0.8, ease: smoothEasing }}
+          animate={
+            loading ? (animationStep >= 4 ? "visible" : "hidden") : "visible"
+          }
+          transition={{ duration: loading ? 0.8 : 0, ease: smoothEasing }}
         >
           <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-4 md:gap-24">
@@ -476,12 +478,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   <a href="/" className="flex items-center gap-4">
                     <img
                       src="nav logo_white.png"
-                      className="md:w-[300px] w-[250px]"
+                      className="md:w-[300px] w-[250px] mb-0.5"
                     />
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden lg:flex items-center text-center gap-1 justify-center mt-6 max-w-7xl">
+              <nav className="hidden lg:flex items-center text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
                   {location.pathname === "/" ? (
                     <ScrollLink
@@ -687,7 +689,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 }}
                 className="hidden lg:block"
               >
-                <DesignLogo className="w-[115px] h-auto text-white" />
+                <DesignLogo className="w-[115px] mb-0.5 h-auto text-white" />
               </motion.div>
               <button
                 className="lg:hidden  text-white  mt-5"
