@@ -1,16 +1,14 @@
 const Content = ({ language }) => (
   <div className="absolute bottom-0 right-0 md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl p-2 md:p-12 lg:p-4 text-white z-20">
     <div className="relative">
-      <div className="absolute inset-0 rounded-xl" />
       <div className="md:text-lg font-light !pl-3 md:pl-0">
         {language ? (
-          <div className="lg:flex flex-col max-md:mb-20 ">
+          <div className="lg:flex flex-col">
             <h2 className="md:text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
             <p
               className="md:text-lg font-light"
               style={{ wordBreak: "keep-all" }}
             >
-              {/* <p className="text-sm md:text-xl lg:text-sm opacity-90"> */}
               ALDER INVESTMENTS is an independent, boutique multi-family office
               specializing in customised private wealth management and related
               services for a select clientele of the most distinguished
@@ -22,7 +20,7 @@ const Content = ({ language }) => (
             </p>
           </div>
         ) : (
-          <div className="lg:flex flex-col max-md:mb-20">
+          <div className="lg:flex flex-col">
             <h2 className="md:text-lg font-light text-base">
               WE ARE ALDER INVESTMENTS
             </h2>

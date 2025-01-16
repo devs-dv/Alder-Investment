@@ -305,29 +305,32 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
-              opacity: isMobile
-                ? animationStep >= 4
+              opacity: loading
+                ? isMobile
+                  ? animationStep >= 4
+                    ? 1
+                    : 0
+                  : animationStep >= 5
                   ? 1
                   : 0
-                : animationStep >= 5
-                ? 1
-                : 0,
+                : 1,
             }}
             transition={{ duration: 0.8, ease: smoothEasing }}
           >
             <Heading />
-            {/* <Content language={language} /> */}
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
-              opacity: isMobile
-                ? animationStep >= 4
+              opacity: loading
+                ? isMobile
+                  ? animationStep >= 4
+                    ? 1
+                    : 0
+                  : animationStep >= 5
                   ? 1
                   : 0
-                : animationStep >= 5
-                ? 1
-                : 0,
+                : 1,
             }}
             transition={{ duration: 3, ease: smoothEasing }}
           >

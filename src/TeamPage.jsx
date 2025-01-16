@@ -86,7 +86,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
   };
 
   return (
-    <>
+    <div id="people" className="team-page">
       <div className="bg-[#E7E6E2] lg:ml-auto hidden md:block ">
         {/* Team Scroller Section */}
         <div className="overflow-x-auto custom-scrollbar" ref={containerRef}>
@@ -163,6 +163,6 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

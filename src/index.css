@@ -2,19 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::-webkit-scrollbar {
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
   display: none;
 }
 
+/* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-body {
-  overflow-y: scroll;
-  padding-right: calc(100vw - 100%);
-} */
+/* Custom scrollbar for team page */
+#people .custom-scrollbar::-webkit-scrollbar {
+  display: block;
+  height: 4px; /* Height for horizontal scrollbar */
+}
+
+#people .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4c4c4c; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+#people .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+#people .custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #e7e6e2; /* Track color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Restore scrollbar for team section */
+#people {
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
+}
 
 * {
   font-family: "Favorit Hangul", sans-serif;
@@ -42,23 +65,23 @@ body {
   font-style: normal;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  height: 4px; /* Height for horizontal scrollbar */
+/* .custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #4c4c4c; /* Thumb color */
-  border-radius: 4px; /* Rounded corners */
+  background-color: #4c4c4c;
+  border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Darker color on hover */
+  background-color: #555;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background-color: #e7e6e2; /* Track color */
-  border-radius: 4px; /* Rounded corners */
-}
+  background-color: #e7e6e2;
+  border-radius: 4px;
+} */
 
 @layer base {
   :root {
