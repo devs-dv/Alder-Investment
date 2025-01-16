@@ -109,8 +109,8 @@ const Philosiphy = ({ language, setLanguage }) => {
             ))}
           </div>
           {/* Video Section */}
-          <div className="2xl:w-[43%] lg:w-[50%] ml-auto lg:-mr-4">
-            <div className="lg:sticky lg:top-16 pt-[3rem]">
+          <div className="2xl:w-[43%] lg:w-[50%] ml-auto ">
+            <div className="lg:sticky lg:top-16 pt-[3rem] px-4 lg:px-8">
               <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
@@ -158,8 +158,8 @@ const Philosiphy = ({ language, setLanguage }) => {
             ))}
           </div>
           {/* Video Section */}
-          <div className="2xl:w-[43%] lg:w-[50%] ml-auto lg:-mr-4">
-            <div className="lg:sticky lg:top-16 pt-[3rem]">
+          <div className="2xl:w-[43%] lg:w-[50%] ml-auto">
+            <div className="lg:sticky lg:top-16 pt-[3rem]  px-4 lg:px-8">
               <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
                 <video
                   className="w-full h-full object-cover"
