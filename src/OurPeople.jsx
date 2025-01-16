@@ -39,13 +39,13 @@ const OurPeople = ({ language, setLanguage }) => {
 
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10">
         {/* Left Section */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 ">
           <h2 className="text-[#4A4A4A] mb-4 text-3xl font-medium hidden lg:block">
             {language ? contentData.englishTitle : contentData.koreanTitle}
           </h2>
 
           {language ? (
-            <p className="text-[#545454] md:text-lg font-light">
+            <p className="text-[#545454] md:text-lg font-light max-w-[650px]">
               We seek professionals of exceptional caliber, whose expertise and
               insight align with our vision and strategy.
               <br /> Our team, shaped by distinguished experience at some of the
@@ -55,7 +55,7 @@ const OurPeople = ({ language, setLanguage }) => {
             </p>
           ) : (
             <p
-              className="text-[#545454] md:text-lg font-light"
+              className="text-[#545454] md:text-lg font-light max-w-[650px]"
               style={{ wordBreak: "keep-all" }}
             >
               회사의 비전과 전략에 부합하는 최고의 전문가들로 팀을 구성합니다.

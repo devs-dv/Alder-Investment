@@ -38,7 +38,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <>
+    <div className="">
       <ScrollToTop />
       <Routes>
         <Route
@@ -137,7 +137,7 @@ function App() {
       </Routes>
 
       <Toaster />
-    </>
+    </div>
   );
 }
 

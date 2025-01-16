@@ -6,7 +6,7 @@ const Philosiphy = ({ language, setLanguage }) => {
       english: {
         title: "A New Perspective on Possibility",
         description:
-          "We see the world a little differently. Our experienced team blends expertise from leading global institutions with international experience, allowing us to lead with clear-eyed insights that spark growth, mitigate risk and unlock possibility anywhere",
+          "We see the world a little differently. Our experienced team blends expertise from leading global institutions with international experience, allowing us to lead with clear-eyed insights that spark growth, mitigate risk and unlock possibility anywhere.",
       },
       korean: {
         title: "가능성을 여는 새로운 관점",
@@ -44,7 +44,7 @@ const Philosiphy = ({ language, setLanguage }) => {
             포트폴리오 진단을 통해 각 고객의 자산을 깊이 있게 분석하고, 잠재된
             리스크와 새로운 가능성을 찾아냅니다. 고객이 기회와 리스크를 명확하게
             이해하고 원하는 미래를 설계할 수 있도록 맞춤화된 금융 전략을
-            정교하게 수립합니다
+            정교하게 수립합니다.
           </p>,
         ],
       },
