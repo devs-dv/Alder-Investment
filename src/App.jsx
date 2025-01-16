@@ -96,7 +96,7 @@ function App() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/terms"
           element={
             <>
@@ -107,7 +107,7 @@ function App() {
               <Footer language={language} />
             </>
           }
-        />
+        /> */}
         <Route
           path="/news"
           element={

@@ -153,9 +153,9 @@ const NavBar = ({ language, setLanguage, setLoading }) => {
             <Link to="/privacy" className="underline text-nowrap">
               PRIVACY POLICY
             </Link>
-            <Link to="/terms" className="underline text-nowrap">
+            {/* <Link to="/terms" className="underline text-nowrap">
               TERMS OF CONDITIONS
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

@@ -19,12 +19,12 @@ const Footer = () => {
           >
             PRIVACY POLICY
           </Link>
-          <Link
+          {/* <Link
             to="/terms"
             className="underline text-[#565656] hover:text-black max-md:text-center"
           >
             TERMS OF CONDITIONS
-          </Link>
+          </Link> */}
         </div>
         <p className="text-[#565656] uppercase -ml-14 max-md:text-center">
           © 2025 Alder Investments

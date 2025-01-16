@@ -1,6 +1,10 @@
-import { DesignLogo } from "@/icons";
+import { DesignLogo, Logo } from "@/icons";
+import { AnimatePresence, cubicBezier } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { MdArrowOutward } from "react-icons/md";
 
 export function TestNavbar({ language, setLanguage, setLoading }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,6 +20,42 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const smoothEasing = cubicBezier(0.45, 0, 0.55, 1);
+
+  const toggleBodyScroll = (disable) => {
+    if (disable) {
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100%";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.height = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+  };
+
+  const mobileMenuVariants = {
+    hidden: { y: "-100%", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: smoothEasing,
+      },
+    },
+    exit: {
+      y: "-100%",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: smoothEasing,
+      },
+    },
   };
 
   const navLinks = [
@@ -92,8 +132,94 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
           <div className="hidden lg:block mr-[1px]">
             <DesignLogo className="w-[115px] h-auto" />
           </div>
+          <button
+            className="lg:hidden  text-white"
+            onClick={() => {
+              setMobileMenuOpen(!mobileMenuOpen);
+              toggleBodyScroll(!mobileMenuOpen);
+            }}
+          >
+            <Menu size={30} />
+          </button>
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <AnimatePresence>
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/90 flex flex-col items-start justify-start pt-20 px-6 overflow-y-auto h-screen"
+            variants={mobileMenuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <button
+              className="absolute top-6 right-6 text-white"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                toggleBodyScroll(false);
+              }}
+            >
+              <X size={24} />
+            </button>
+            <div className="flex items-center gap-4 mb-12 mt-4">
+              <Logo className="w-24 h-auto text-white" />
+              <DesignLogo className="w-24 h-auto text-white" />
+            </div>
+            <nav className="flex flex-col items-start gap-3 w-full">
+              {navLinks.map((link) => (
+                <button
+                  key={link.name}
+                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full text-left"
+                  onClick={() => {
+                    if (link.path) {
+                      navigate(link.path);
+                    } else {
+                      handleNavigateAndScroll(link.id);
+                    }
+                    setMobileMenuOpen(false);
+                    toggleBodyScroll(false);
+                  }}
+                >
+                  {language ? link.name : link.name}
+                </button>
+              ))}
+            </nav>
+
+            <div className="text-white gap-2 underline flex flex-col absolute bottom-10">
+              <div className="text-white">
+                <button
+                  className={` ${language ? "" : "text-[#90908D]"}`}
+                  onClick={() => setLanguage(true)}
+                >
+                  ENG
+                </button>
+                /
+                <button
+                  className={` ${language ? "text-[#90908D]" : ""}`}
+                  onClick={() => setLanguage(false)}
+                >
+                  KR
+                </button>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/alder-partners-674336306/"
+                className="underline"
+              >
+                <div className="flex gap-3">
+                  LINKEDIN <MdArrowOutward className="text-xl" />
+                </div>
+              </a>
+              <Link to="/privacy" className="underline">
+                PRIVACY POLICY
+              </Link>
+              {/* <Link to="/terms" className="underline">
+                TERMS OF CONDITIONS
+              </Link> */}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      )}
     </header>
   );
 }

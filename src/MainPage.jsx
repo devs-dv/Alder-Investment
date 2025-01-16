@@ -822,9 +822,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <Link to="/privacy" className="underline">
                   PRIVACY POLICY
                 </Link>
-                <Link to="/terms" className="underline">
+                {/* <Link to="/terms" className="underline">
                   TERMS OF CONDITIONS
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           )}
