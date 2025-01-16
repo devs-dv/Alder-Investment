@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { MdArrowOutward } from "react-icons/md";
 
-const NavBar = ({ language, setLanguage }) => {
+const NavBar = ({ language, setLanguage, setLoading }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -32,7 +32,16 @@ const NavBar = ({ language, setLanguage }) => {
       <div className="flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-8">
-          <Link to="/" className="flex items-center">
+          <Link
+            to="/"
+            className="flex items-center"
+            onClick={() => {
+              if (location.pathname !== "/") {
+                setLoading(true);
+                setTimeout(() => setLoading(false), 3000);
+              }
+            }}
+          >
             <img
               src="/nav logo_white.png"
               className="md:w-[300px] w-[250px]"

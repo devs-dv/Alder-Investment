@@ -20,6 +20,8 @@ export default function AlderNewsBulletin() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [language, setLanguage] = useState(true); // true for English, false for Korean
+  const [triggerLoading, setTriggerLoading] = useState(false);
   const itemsPerPage = 6;
 
   useEffect(() => {
@@ -94,7 +96,11 @@ export default function AlderNewsBulletin() {
 
   return (
     <div className="" style={{ backgroundColor: "#e7e6e2", color: "#545454" }}>
-      <NavBar />
+      <NavBar
+        language={language}
+        setLanguage={setLanguage}
+        setTriggerLoading={setTriggerLoading}
+      />
       <div className="max-w-6xl mx-auto p-8">
         <Header />
         <main className="mt-12">
@@ -112,7 +118,7 @@ export default function AlderNewsBulletin() {
             transition={{ duration: 0.5, staggerChildren: 0.1 }}
           >
             <AnimatePresence>
-              {loading ? (
+              {loading || triggerLoading ? (
                 <div className="col-span-2 text-center">Loading...</div>
               ) : paginatedItems.length > 0 ? (
                 paginatedItems.map((item, index) => (
