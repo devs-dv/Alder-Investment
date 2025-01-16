@@ -4,6 +4,10 @@
     {
       "source": "/api/send-email",
       "destination": "/api"
+    },
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
