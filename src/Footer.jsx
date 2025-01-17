@@ -26,7 +26,7 @@ const Footer = () => {
             TERMS OF CONDITIONS
           </Link> */}
         </div>
-        <p className="text-[#565656] uppercase -ml-14 max-md:text-center">
+        <p className="text-[#565656] uppercase md:-ml-14 max-md:text-center">
           © 2025 Alder Investments
         </p>
         <a
