@@ -9,15 +9,15 @@ const peopleData = [
     role: "CEO",
     roleK: "최고 경영자",
     bio: [
-      "After years working alongside family offices and ultra-high-net-worth individuals in Europe, Hee-Dong identified critical opportunities to address unmet needs in Korea's wealth management sector. With the support of one of Korea’s influential families, ALDER INVESTMENTS was formed based on two principles: global standards & access and independent integrity.",
+      "After years working alongside family offices and ultra-high-net-worth individuals in Europe, Hee-Dong met Chairman Joon-Yup Lee, an heir to a venerable entrepreneurial dynasty in Korea. Following strategic discussions and review, they identified critical opportunities to address unmet needs in Korea's wealth management sector.  Hence, ALDER INVESTMENTS was formed based on two principles: global standards & access and independent integrity.",
       "Recognising the limited exposure Korean UHNWs have to global markets and investment opportunities, ALDER INVESTMENTS focuses on providing truly independent, client-focused investment advice and management at the highest level —free from conflicts of interest — while prioritising each family's unique needs and goals.",
       "Prior to ALDER INVESTMENTS, Hee-Dong worked at Kingsley Capital Partners LLP (London), Invision Private Equity, the Boston Consulting Group and as Head of M&A of Swiss healthcare group AMEOS.",
       "Hee-Dong has a B.Sc. degree in Business Mathematics and Statistics from the London School of Economics and Political Science (LSE) and an MBA from Harvard Business School.",
     ],
     bioK: [
-      "유럽에서 패밀리 오피스와 초고액 자산가들과 긴밀히 협력해 온 김희동 대표는 한국 자산관리 시장의 가능성과 성장 잠재력을 확인했습니다. 한국의 영향력 있는 한 가문의 지원을 받아, 글로벌 접근성과 독립적 판단이라는 두 가지 원칙을 기반으로 ALDER INVESTMENTS가 설립되었습니다.",
+      "유럽에서 패밀리 오피스와 초고액자산가들과 긴밀히 협력하며 풍부한 경험을 쌓아온 김희동 대표는 한국의 유서 깊은 기업가 가문의 후계자인 이준엽 회장을 만나게 되었습니다. 두 사람은 심도 있는 전략적 검토를 통해 한국 자산관리 시장에서 충족되지 않은 핵심 니즈를 발견하고, 시장의 가능성과 높은 성장 잠재력을 확인했습니다. 이러한 비전을 바탕으로, 글로벌 접근성과 독립적 신뢰라는 두 가지 원칙을 중심에 두고 ALDER INVESTMENTS를 설립하게 되었습니다.",
       "그는 한국의 초고액자산가들이 글로벌 시장에서 투자 기회를 충분히 접근하지 못하고 있다는 점에 주목했습니다. 이러한 경험을 바탕으로, 독립성과 글로벌 접근성을 핵심 원칙으로 삼아 ALDER INVESTMENTS를 설립했으며, 각 패밀리의 고유한 요구사항과 목표를 최우선으로 고려하는 맞춤형 투자 자문과 자산 관리 서비스를 제공하고 있습니다.",
-      "김 대표는 ALDER INVESTMENTS를 설립하기 전, Kingsley Capital Partners(런던), Invision Private Equity, Boston Consulting Group, 그리고 스위스 헬스케어 그룹 AMEOS에서 M&A 총괄로 근무했습니다. ",
+      "김 대표는 ALDER INVESTMENTS를 설립하기 전, Kingsley Capital Partners(런던), Invision Private Equity, Boston Consulting Group, 그리고 스위스 헬스케어 그룹 AMEOS에서 M&A 총괄로 근무했습니다.",
       "그는 런던정경대(LSE)에서 비즈니스 수학 및 통계학 학사 학위를, Harvard Business School에서 MBA를 취득하였습니다.",
     ],
     email: "hk.kim@alderpartners.co.kr",

@@ -54,367 +54,555 @@ const PrivacyPolicy = (object) => {
         </div>
         {object.language ? (
           <div className="flex-[3]">
-            <p>
-              <strong>
-                This website collects some Personal Data from its Users.
-              </strong>
-            </p>
-            <p>
-              This document can be printed for reference by using the print
-              command in the settings of any browser.
-            </p>
-            <p>
-              <strong>Owner and Data Controller</strong>
-            </p>
-            <p>
-              Alder Investement
-              <br />
-              East 12F, 26, Eulji-ro 5-gil, Jung-gu, Seoul, 04539, Republic of
-              Korea
-            </p>
-            <p>
-              <strong>Types of Data collected</strong>
-            </p>
-            <p>
-              Among the types of Personal Data that this Application collects,
-              by itself or through third parties, there are: Usage Data;
-              Trackers; answers to questions; clicks; keypress events; motion
-              sensor events; mouse movements; scroll position; touch events;
-              email address.
-            </p>
-            <p>
-              Complete details on each type of Personal Data collected are
-              provided in the dedicated sections of this privacy policy or by
-              specific explanation texts displayed prior to the Data collection.
-              Personal Data may be freely provided by the User, or, in case of
-              Usage Data, collected automatically when using this Application.
-              Unless specified otherwise, all Data requested by this Application
-              is mandatory and failure to provide this Data may make it
-              impossible for this Application to provide its services. In cases
-              where this Application specifically states that some Data is not
-              mandatory, Users are free not to communicate this Data without
-              consequences to the availability or the functioning of the
-              Service. Users who are uncertain about which Personal Data is
-              mandatory are welcome to contact the Owner. Any use of Cookies –
-              or of other tracking tools — by this Application or by the owners
-              of third-party services used by this Application serves the
-              purpose of providing the Service required by the User, in addition
-              to any other purposes described in the present document and in the
-              Cookie Policy.
-            </p>
-            <p>
-              Users are responsible for any third-party Personal Data obtained,
-              published or shared through this Application.
-            </p>
-            <p>
-              <strong>Mode and place of processing the Data</strong>
-            </p>
-            <p>
-              <em>Methods of processing</em>
-            </p>
-            <p>
-              The Owner takes appropriate security measures to prevent
-              unauthorised access, disclosure, modification, or unauthorised
-              destruction of the Data. The Data processing is carried out using
-              computers and/or IT-enabled tools, following organisational
-              procedures and modes strictly related to the purposes indicated.
-              In addition to the Owner, in some cases, the Data may be
-              accessible to certain types of persons in charge, involved with
-              the operation of this Application (administration, sales,
-              marketing, legal, system administration) or external parties (such
-              as third-party technical service providers, mail carriers, hosting
-              providers, IT companies, communications agencies) appointed, if
-              necessary, as Data Processors by the Owner. The updated list of
-              these parties may be requested from the Owner at any time.
-            </p>
-            <p>
-              <em>Place</em>
-            </p>
-            <p>
-              The Data is processed at the Owner's operating offices and in any
-              other places where the parties involved in the processing are
-              located. Depending on the User's location, data transfers may
-              involve transferring the User's Data to a country other than their
-              own. To find out more about the place of processing of such
-              transferred Data, Users can check the section containing details
-              about the processing of Personal Data.
-            </p>
-            <p>
-              <em>Retention time</em>
-            </p>
-            <p>
-              Unless specified otherwise in this document, Personal Data shall
-              be processed and stored for as long as required by the purpose
-              they have been collected for and may be retained for longer due to
-              applicable legal obligation or based on the Users’ consent.
-            </p>
-            <p>
-              <strong>The purposes of processing</strong>
-            </p>
-            <p>
-              The Data concerning the User is collected to allow the Owner to
-              provide its Service, comply with its legal obligations, respond to
-              enforcement requests, protect its rights and interests (or those
-              of its Users or third parties), detect any malicious or fraudulent
-              activity, as well as the following: Spam and bots protection,
-              Analytics, Displaying content from external platforms and
-              Contacting the User.
-            </p>
-            <p>
-              <strong>Cookie Policy</strong>
-            </p>
-            <p>
-              This Application uses Trackers. To learn more, Users may consult
-              the{" "}
-              <a href="https://www.iubenda.com/private/privacy-policy/2796243/cookie-policy?preview=true&amp;ifr=true&amp;height=800&amp;newmarkup=no&amp;an=no">
-                Cookie Policy
-              </a>
-              .
-            </p>
-            <p>
-              <strong>Further Information for Users</strong>
-            </p>
-            <p>
-              <em>Legal basis of processing</em>
-            </p>
-            <p>
-              The Owner may process Personal Data relating to Users if one of
-              the following applies:
-            </p>
-            <ul className="list-disc">
-              <li>
-                Users have given their consent for one or more specific
-                purposes.
-              </li>
-              <li>
-                Provision of Data is necessary for the performance of an
-                agreement with the User and/or for any pre-contractual
-                obligations thereof;
-              </li>
-              <li>
-                Processing is necessary for compliance with a legal obligation
-                to which the Owner is subject;
-              </li>
-              <li>
-                Processing is related to a task that is carried out in the
-                public interest or in the exercise of official authority vested
-                in the Owner;
-              </li>
-              <li>
-                Processing is necessary for the purposes of the legitimate
-                interests pursued by the Owner or by a third party.
-              </li>
-            </ul>
-            <p>
-              In any case, the Owner will gladly help to clarify the specific
-              legal basis that applies to the processing, and in particular
-              whether the provision of Personal Data is a statutory or
-              contractual requirement, or a requirement necessary to enter into
-              a contract.
-            </p>
-            <p>
-              <em>Further information about retention time</em>
-            </p>
-            <p>
-              Unless specified otherwise in this document, Personal Data shall
-              be processed and stored for as long as required by the purpose
-              they have been collected for and may be retained for longer due to
-              applicable legal obligation or based on the Users’ consent.
-            </p>
-            <p>Therefore:</p>
-            <ul>
-              <li>
-                Personal Data collected for purposes related to the performance
-                of a contract between the Owner and the User shall be retained
-                until such contract has been fully performed.
-              </li>
-              <li>
-                Personal Data collected for the purposes of the Owner’s
-                legitimate interests shall be retained as long as needed to
-                fulfill such purposes. Users may find specific information
-                regarding the legitimate interests pursued by the Owner within
-                the relevant sections of this document or by contacting the
-                Owner.
-              </li>
-            </ul>
-            <p>
-              The Owner may be allowed to retain Personal Data for a longer
-              period whenever the User has given consent to such processing, as
-              long as such consent is not withdrawn. Furthermore, the Owner may
-              be obliged to retain Personal Data for a longer period whenever
-              required to fulfil a legal obligation or upon order of an
-              authority. Once the retention period expires, Personal Data shall
-              be deleted. Therefore, the right of access, the right to erasure,
-              the right to rectification and the right to data portability
-              cannot be enforced after expiration of the retention period.
-            </p>
-            <p>
-              <em>
-                The rights of Users based on the General Data Protection
-                Regulation (GDPR)
-              </em>
-            </p>
-            <p>
-              Users may exercise certain rights regarding their Data processed
-              by the Owner.
-            </p>
-            <p>
-              In particular, Users have the right to do the following, to the
-              extent permitted by law:
-            </p>
-            <ul className="list-disc">
-              <li>
-                <strong>Withdraw their consent at any time.</strong> Users have
-                the right to withdraw consent where they have previously given
-                their consent to the processing of their Personal Data.
-              </li>
-              <li>
-                <strong>Object to processing of their Data.</strong> Users have
-                the right to object to the processing of their Data if the
-                processing is carried out on a legal basis other than consent.
-              </li>
-              <li>
-                <strong>Access their Data.</strong> Users have the right to
-                learn if Data is being processed by the Owner, obtain disclosure
-                regarding certain aspects of the processing and obtain a copy of
-                the Data undergoing processing.
-              </li>
-              <li>
-                <strong>Verify and seek rectification.</strong> Users have the
-                right to verify the accuracy of their Data and ask for it to be
-                updated or corrected.
-              </li>
-              <li>
-                <strong>Restrict the processing of their Data.</strong> Users
-                have the right to restrict the processing of their Data. In this
-                case, the Owner will not process their Data for any purpose
-                other than storing it.
-              </li>
-              <li>
-                <strong>
-                  Have their Personal Data deleted or otherwise removed.
-                </strong>{" "}
-                Users have the right to obtain the erasure of their Data from
-                the Owner.
-              </li>
-              <li>
-                <strong>
-                  Receive their Data and have it transferred to another
-                  controller.
-                </strong>{" "}
-                Users have the right to receive their Data in a structured,
-                commonly used and machine-readable format and, if technically
-                feasible, to have it transmitted to another controller without
-                any hindrance.
-              </li>
-              <li>
-                <strong>Lodge a complaint.</strong> Users have the right to
-                bring a claim before their competent data protection authority.
-              </li>
-            </ul>
-            <p>
-              Users are also entitled to learn about the legal basis for Data
-              transfers abroad including to any international organization
-              governed by public international law or set up by two or more
-              countries, such as the UN, and about the security measures taken
-              by the Owner to safeguard their Data.
-            </p>
-            <p>
-              <em>Details about the right to object to processing</em>
-            </p>
-            <p>
-              <strong>
-                Where Personal Data is processed for a public interest, in the
-                exercise of an official authority vested in the Owner or for the
-                purposes of the legitimate interests pursued by the Owner, Users
-                may object to such processing by providing a ground related to
-                their particular situation to justify the objection.
-              </strong>
-            </p>
-            <p>
-              <strong>
-                Users must know that, however, should their Personal Data be
-                processed for direct marketing purposes, they can object to that
-                processing at any time, free of charge and without providing any
-                justification. Where the User objects to processing for direct
-                marketing purposes, the Personal Data will no longer be
-                processed for such purposes. To learn whether the Owner is
-                processing Personal Data for direct marketing purposes, Users
-                may refer to the relevant sections of this document.
-              </strong>
-            </p>
-            <p>
-              <em>How to exercise these rights</em>
-            </p>
-            <p>
-              Any requests to exercise User rights can be directed to the Owner
-              through the contact details provided in this document. Such
-              requests are free of charge and will be answered by the Owner as
-              early as possible and always within one month, providing Users
-              with the information required by law. Any rectification or erasure
-              of Personal Data or restriction of processing will be communicated
-              by the Owner to each recipient, if any, to whom the Personal Data
-              has been disclosed unless this proves impossible or involves
-              disproportionate effort. At the Users’ request, the Owner will
-              inform them about those recipients.
-            </p>
-            <p>
-              <strong>
-                Additional information about Data collection and processing
-              </strong>
-            </p>
-            <p>
-              <em>Legal action</em>
-            </p>
-            <p>
-              The User's Personal Data may be used for legal purposes by the
-              Owner in Court or in the stages leading to possible legal action
-              arising from improper use of this Application or the related
-              Services. The User declares to be aware that the Owner may be
-              required to reveal personal data upon request of public
-              authorities.
-            </p>
-            <p>
-              <em>Additional information about User's Personal Data</em>
-            </p>
-            <p>
-              In addition to the information contained in this privacy policy,
-              this Application may provide the User with additional and
-              contextual information concerning particular Services or the
-              collection and processing of Personal Data upon request.
-            </p>
-            <p>
-              <em>System logs and maintenance</em>
-            </p>
-            <p>
-              For operation and maintenance purposes, this Application and any
-              third-party services may collect files that record interaction
-              with this Application (System logs) or use other Personal Data
-              (such as the IP Address) for this purpose.
-            </p>
-            <p>
-              <em>Information not contained in this policy</em>
-            </p>
-            <p>
-              More details concerning the collection or processing of Personal
-              Data may be requested from the Owner at any time. Please see the
-              contact information at the beginning of this document.
-            </p>
-            <p>
-              <em>Changes to this privacy policy</em>
-            </p>
-            <p>
-              The Owner reserves the right to make changes to this privacy
-              policy at any time by notifying its Users on this page and
-              possibly within this Application and/or - as far as technically
-              and legally feasible - sending a notice to Users via any contact
-              information available to the Owner. It is strongly recommended to
-              check this page often, referring to the date of the last
-              modification listed at the bottom. Should the changes affect
-              processing activities performed on the basis of the User’s
-              consent, the Owner shall collect new consent from the User, where
-              required.
-            </p>
+            <div className="">
+              <div className="mb-8">
+                <h1 className="text-3xl font-bold text-gray-800 mb-4">
+                  Personal Information Processing Guidelines
+                </h1>
+              </div>
+
+              <div className="flex-[3]">
+                <ul className="list-decimal ml-6 space-y-6">
+                  <li>
+                    <span className="font-bold">General Provisions</span>
+                    <p className="mt-2">
+                      Alder Investments Ltd. has established the following
+                      processing policy to protect the personal information and
+                      rights of data subjects (customers) and to smoothly handle
+                      any issues related to personal information, in accordance
+                      with Article 30 of the Personal Information Protection Act
+                      and Article 27-2 of the Act on Promotion of Information
+                      and Communications Network Utilization and Information
+                      Protection.
+                    </p>
+                    <p className="mt-2">
+                      This policy may be changed according to the enactment or
+                      revision of relevant statutes or the operational policies
+                      of the government or the company, and any changes will be
+                      disclosed at the company's website.
+                    </p>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Items of Personal Information Collection, Methods, and
+                      Processing Purposes
+                    </span>
+                    <p className="mt-2">
+                      ※ Alder Investments Ltd. does not collect/store any
+                      personal customer information under any circumstances
+                      because it does not conduct direct sales or business with
+                      individual customers. However, 'cookie' information such
+                      as user access frequency and time, and service usage
+                      records are automatically collected during the process of
+                      using internet homepage services or when the company
+                      processes website user information.
+                    </p>
+                    <p className="mt-2">
+                      ※ Customer participation events, prize events, or requests
+                      for regular subscriptions to market information are
+                      conducted through the website, basic customer information
+                      (name, address, email, phone number, etc.) may be
+                      collected/stored for the purpose of the event. Even in
+                      such cases, Alder Investments Ltd.'s website does not
+                      collect any personal information beyond basic business
+                      card-level information.
+                    </p>
+
+                    <ul className="list-decimal ml-6 mt-4 space-y-4">
+                      <li>
+                        The items of other personal information collected and
+                        the purposes of processing are as follows:
+                        <ul className="list-[lower-alpha] ml-6 mt-2 space-y-4">
+                          <li>
+                            When it is inevitably necessary for the sale of
+                            collective investment schemes, the conclusion and
+                            execution of entrustment sales contracts with trust
+                            companies
+                            <ul className="list-[lower-roman] ml-6 mt-2">
+                              <li>
+                                <strong>Collection Items:</strong> Information
+                                about the responsible officers and employees of
+                                the sales and trust companies (name, company
+                                name, department, position, company address,
+                                phone number, email)
+                              </li>
+                              <li>
+                                <strong>Purpose of Processing:</strong>{" "}
+                                Execution of tasks related to the entrustment
+                                sale of collective investment schemes and trust
+                                business
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            When it is inevitably necessary for the conclusion
+                            and execution of an investment advisory contract
+                            <ul className="list-[lower-roman] ml-6 mt-2">
+                              <li>
+                                <strong>Collection Items:</strong> Information
+                                about the customer's responsible employees
+                                (name, company name, department, position,
+                                company address, phone number, email)
+                              </li>
+                              <li>
+                                <strong>Purpose of Processing:</strong>{" "}
+                                Execution of contracts and operation of
+                                investment advisory
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            When it is inevitably necessary for the execution of
+                            other operational tasks of the collective investment
+                            scheme
+                            <ul className="list-[lower-roman] ml-6 mt-2">
+                              <li>
+                                <strong>Collection Items:</strong> Information
+                                about the responsible employees of the
+                                investment trading/brokerage company or
+                                corporate investor (name, company name,
+                                department, position, company address, phone
+                                number, email)
+                              </li>
+                              <li>
+                                <strong>Purpose of Processing:</strong>{" "}
+                                Performing order tasks and providing information
+                                on requests from corporate investors
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            When 'cookie' information is automatically collected
+                            <ul className="list-[lower-roman] ml-6 mt-2">
+                              <li>
+                                <strong>Collection Items:</strong> A cookie is a
+                                very small text file sent by the server used to
+                                operate the website to the user's browser, and
+                                it is stored on the computer or mobile device
+                                used by the user to access the website. Alder
+                                Investments Ltd. will provide enhanced online
+                                experience to website users through cookies,
+                                particularly by analyzing users' access
+                                frequency, visit times, visit counts, and
+                                preferred technical environments, as well as
+                                assessing operation of the website.
+                              </li>
+                              <li>
+                                <strong>
+                                  Cookie Installation/Operation and Rejection:
+                                </strong>
+                                <p className="mt-2">
+                                  Users can choose about installing cookies.
+                                  Accordingly, users can set options in their
+                                  web browser to allow all cookies, verify when
+                                  a cookie is stored, or refuse the storage of
+                                  all cookies. However, refusing the storage of
+                                  cookies may limit the ability to receive some
+                                  personalized services.
+                                </p>
+                                <ul className="list-disc ml-6 mt-2">
+                                  <li>
+                                    {`For Internet Explorer: Tools menu at the top
+                                    of the web browser > Internet Options >
+                                    Privacy > Settings`}
+                                  </li>
+                                  <li>
+                                    {`For Chrome: Settings menu on the right side
+                                    of the web browser > Show advanced settings
+                                    > Content settings under Privacy > Cookies`}
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Processing and Retention Period of Personal Information
+                    </span>
+                    <p className="mt-2">
+                      The company shall destroy the relevant information without
+                      delay once it achieves the purpose of collecting and using
+                      personal information.
+                    </p>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Matters Concerning the Procedures and Methods for the
+                      Destruction of Personal Information
+                    </span>
+                    <p className="mt-2">
+                      The company, in principle, destroys the personal
+                      information without delay after the purpose of collection
+                      and use has been achieved, using the following methods:
+                    </p>
+                    <ul className="list-decimal ml-6 mt-2">
+                      <li>
+                        Personal information printed on paper: Shred with a
+                        shredder or incinerated for disposal
+                      </li>
+                      <li>
+                        Personal information stored in electronic file format:
+                        Permanently delete by using technical methods that make
+                        the records unrecoverable
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Matters Concerning the Provision of Personal Information
+                      to Third Parties
+                    </span>
+                    <ul className="list-decimal ml-6">
+                      <li>
+                        The company cannot provide the personal information
+                        provided by the customer to a third party other than the
+                        personal information handling trustee without the
+                        customer's consent. However, in the following cases, it
+                        may be provided within the scope of the collection
+                        purpose.
+                      </li>
+                      <ul className="list-decimal ml-6">
+                        <li>
+                          In cases where there are special provisions in the law
+                          or it is unavoidable to comply with statutory
+                          obligations
+                        </li>
+                        <li>
+                          In cases where the customer or his/her legal
+                          representative is unable to express intent or cannot
+                          obtain prior consent due to unknown address, etc., and
+                          it is deemed necessary for the urgent benefit of the
+                          customer's or third party's life, body, or property
+                        </li>
+                      </ul>
+                      <li>
+                        When the company obtains the customer's consent
+                        according to the above 1), it must inform the customer
+                        of the following matters, and if there are any changes
+                        to these matters, it must also inform and obtain
+                        consent.
+                      </li>
+                      <ul className="list-decimal ml-6">
+                        <li>Recipient of Personal Information</li>
+                        <li>
+                          Purpose of Use of Personal Information by the
+                          Recipient
+                        </li>
+                        <li>Items of Personal Information Provided</li>
+                        <li>
+                          Retention and Use Period of Personal Information by
+                          the Recipient
+                        </li>
+                        <li>
+                          The fact that there is a right to refuse consent and,
+                          if there are any disadvantages due to refusal, the
+                          details of such disadvantages
+                        </li>
+                      </ul>
+                      <li>
+                        The company may provide information to a third party
+                        beyond the purposes outlined in 1) and 2) in the
+                        following cases.
+                      </li>
+                      <ul className="list-decimal ml-6">
+                        <li>
+                          When separate consent is obtained from the customer
+                        </li>
+                        <li>When there are special provisions in the law</li>
+                        <li>
+                          In cases where the customer or his/her legal
+                          representative is unable to express intent or cannot
+                          be contacted due to an unknown address, and it is
+                          deemed necessary for the urgent benefit of the
+                          customer or a third party's life, body, or property.
+                        </li>
+                        <li>
+                          When it is necessary for purposes such as statistical
+                          compilation and academic research, and personal
+                          information is provided in a form that does not allow
+                          the identification of a specific individual.
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Matters Concerning the Delegation of Personal Information
+                      Processing
+                    </span>
+                    <p className="mt-2">
+                      The company, in principle, does not entrust the processing
+                      of personal information to others without the consent of
+                      the data subject.
+                    </p>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Matters concerning the rights, obligations of the
+                      customers, and methods of exercise
+                    </span>
+                    <p className="mt-2">
+                      Right to request inspection of personal information
+                    </p>
+                    <ul className="list-decimal ml-6 mt-2">
+                      <li>
+                        Right to request inspection of personal information
+                      </li>
+                      <ul>
+                        <li>
+                          The customer may request to inspect his/her personal
+                          information processed by the company.
+                        </li>
+                        <li>
+                          When the company receives a request for inspection
+                          from the customer, it must allow the customer to
+                          inspect the relevant personal information within 10
+                          days. If there is a legitimate reason for not being
+                          able to inspect, the company must inform the customer
+                          of the reason and may postpone the inspection. Once
+                          the reason ceases to exist, the inspection must be
+                          conducted without delay.
+                        </li>
+                        <li>
+                          The company may restrict or refuse inspection by
+                          informing the customer of the reason if it falls under
+                          any of the following circumstances.
+                        </li>
+                        <ul className="list-disc ml-6 mt-2">
+                          <li>
+                            When inspection is prohibited or restricted by law
+                          </li>
+                          <li>
+                            When there is a concern that it may harm another
+                            person's life or body, or unjustly infringe on
+                            another person's property and other interests
+                          </li>
+                        </ul>
+                      </ul>
+                      <li>
+                        Right to request correction or deletion of personal
+                        information
+                      </li>
+                      <ul className="list-decimal ml-6 mt-2">
+                        <li>
+                          Establishment and implementation of an internal
+                          management plan for the secure processing of personal
+                          information
+                        </li>
+                        <li>
+                          Measures to control access to personal information and
+                          restrict access rights
+                        </li>
+                        <li>
+                          Application of encryption technology or equivalent
+                          measures to securely store and transmit personal
+                          information
+                        </li>
+                        <li>
+                          Measures to preserve access logs and prevent forgery
+                          and alteration
+                        </li>
+                        <li>Installation and updating of security programs</li>
+                        <li>
+                          Physical measures such as preparing storage facilities
+                          or installing locking devices
+                        </li>
+                      </ul>
+                      <li>
+                        Right to Request Suspension of Personal Information
+                        Processing
+                      </li>
+                      <ul className="list-decimal ml-6 mt-2">
+                        <li>
+                          The customer may request the company to suspend the
+                          processing of his/her personal information.
+                        </li>
+                        <li>
+                          If the customer requests the suspension of his/her
+                          personal information processing, the company must
+                          immediately suspend all or part of the processing of
+                          personal information. However, in the following cases,
+                          the company may refuse the customer's request for
+                          suspension of processing.
+                        </li>
+                        <ul className="ml-6">
+                          <li>
+                            a. When there are special provisions in the law or
+                            it is unavoidable to comply with statutory
+                            obligations
+                          </li>
+                          <li>
+                            B. When there is a concern that it may harm another
+                            person's life or body, or unjustly infringe on
+                            another person's property and other interests
+                          </li>
+                          <li>
+                            c. When it is difficult to fulfill the contract,
+                            such as providing services agreed with the customer,
+                            if personal information is not processed, and the
+                            customer has not clearly expressed his/her intention
+                            to terminate the contract
+                          </li>
+                        </ul>
+                        <li>
+                          The company must promptly take necessary actions, such
+                          as the destruction of the relevant personal
+                          information, for personal information whose processing
+                          has been suspended at the customer's request.
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-bold">
+                      Matters concerning measures to ensure the security of
+                      personal information
+                    </span>
+                    <ul className="list-decimal ml-6">
+                      <li>
+                        Establishment and implementation of an internal
+                        management plan for the secure processing of personal
+                        information
+                      </li>
+                      <li>
+                        {" "}
+                        Measures to control access to personal information and
+                        restrict access rights
+                      </li>
+                      <li>
+                        Application of encryption technology or equivalent
+                        measures to securely store and transmit personal
+                        information
+                      </li>
+                      <li>
+                        Measures to preserve access logs and prevent forgery and
+                        alteration in response to personal information breach
+                        incidents
+                      </li>
+                      <li>
+                        {" "}
+                        Installation and updating of security programs for
+                        personal information
+                      </li>
+                      <li>
+                        Physical measures such as preparing storage facilities
+                        or installing locking devices for the safe storage of
+                        personal information
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span className="font-bold">
+                      Complaint services regarding personal information
+                    </span>
+                    The company designates and operates personal information
+                    handlers and managers as follows to protect customers'
+                    personal information and handle complaints related to
+                    personal information.
+                    <div className="mt-4 space-y-2">
+                      <p>① Name: Ki-Hyun Shin, Compliance Officer</p>
+                      <p>② Affiliation: Alder Investments Ltd.</p>
+                      <p>
+                        ③ Contact: (Main) 02-6012-2100, (Direct) 070-4272-8226
+                      </p>
+                    </div>
+                    <p>
+                      Customers can report any personal information
+                      protection-related complaints arising from the use of the
+                      company's services to the above-mentioned personal
+                      information protection manager or person in charge. The
+                      company will promptly verify the identified issues and
+                      take actions as quickly as possible if corrections are
+                      necessary. The company will always make every effort to
+                      protect the customer's personal information.
+                    </p>
+                    <p>
+                      Remedy for Infringement of Rights Regarding Personal
+                      Information
+                    </p>
+                    <p>
+                      The data subject can inquire about remedies and
+                      consultations for personal information infringement with
+                      the following organizations. The following organizations
+                      are separate from the company. If you are not satisfied
+                      with the company's own handling of personal information
+                      complaints or remedy results, or if you need more detailed
+                      assistance, please contact them.
+                    </p>
+                    <div className="mt-6">
+                      <p className="mb-4">
+                        For remedies and consultations regarding personal
+                        information infringement, you can contact:
+                      </p>
+                      <ul className="list-decimal ml-6 space-y-4">
+                        <li>
+                          Personal Information Infringement Report Center
+                          (Operated by Korea Internet & Security Agency)
+                          <ul className="list-disc ml-6">
+                            <li>
+                              Jurisdiction: Reporting personal information
+                              infringement, applying for consultation
+                            </li>
+                            <li>Website: privacy.kisa.or.kr</li>
+                            <li>Phone: (without area code) 118</li>
+                            <li>
+                              Address: (138-950) 135 Jungdae-ro, Songpa
+                              District, Seoul City, Korea Internet & Security
+                              Agency, Personal Information Infringement Report
+                              Center
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          Personal Information Infringement Report Center (Korea
+                          Internet & Security Agency)
+                          <ul className="list-disc ml-6 mt-2">
+                            <li>
+                              Jurisdiction: Application for personal information
+                              dispute mediation, collective dispute mediation
+                              (civil resolution)
+                            </li>
+                            <li>Website: privacy.kisa.or.kr</li>
+                            <li>Phone: (without area code) 118</li>
+                            <li>
+                              Address: (138-950) 135 Jungdae-ro, Songpa
+                              District, Seoul City, Korea Internet & Security
+                              Agency, Personal Information Infringement Report
+                              Center
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          Supreme Prosecutors' Office Cyber Crime Investigation
+                          Unit: 02-3480-3581 (www.spo.go.kr)
+                        </li>
+                        <li>
+                          National Police Agency Cyber Safety Bureau: Without
+                          area code 112 (emergency consultation, free) or
+                          without area code 182 (civil consultation, paid)
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <p>(http://cyberbureau.police.go.kr)</p>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="flex-[3]">
