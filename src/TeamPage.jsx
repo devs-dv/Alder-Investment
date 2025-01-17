@@ -5,7 +5,7 @@ import ReadBioButton from "./ReadBioButton";
 const teamMembers = [
   {
     id: 1,
-    name: "Konstantin Kim",
+    name: "Hee-Dong Konstantin Kim",
     nameKr: "희동 콘스탄틴 김",
     title: "CEO",
     titleKr: "CEO",
@@ -141,7 +141,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="flex flex-col items-center text-center "
+              className="flex flex-col items-center text-center"
             >
               <img
                 src={member.image}
@@ -149,7 +149,11 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                 className="w-40 h-40 mb-4 object-contain"
               />
               <h2 className="text-lg font-bold">
-                {language ? member.name : member.nameKr}
+                {language
+                  ? member.name === "Hee-Dong Konstantin Kim"
+                    ? "Konstantin Kim"
+                    : member.name
+                  : member.nameKr}
               </h2>
               <p className="mt-2 text-sm text-gray-500">
                 {language ? member.title : member.titleKr}

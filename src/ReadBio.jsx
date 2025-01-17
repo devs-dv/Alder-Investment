@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const peopleData = [
   {
-    name: "Konstantin Kim",
+    name: "Hee-Dong Konstantin Kim",
     nameK: "희동 콘스탄틴 김",
     image: "1st.jpg",
     role: "CEO",

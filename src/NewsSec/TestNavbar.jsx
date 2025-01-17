@@ -15,10 +15,28 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 72; // Height of the navbar
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
       }, 100);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 72; // Height of the navbar
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 

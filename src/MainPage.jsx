@@ -500,7 +500,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       spy={true}
                       smooth={false}
                       duration={0}
-                      offset={-46}
+                      offset={-72}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
@@ -537,7 +537,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       spy={true}
                       smooth={false}
                       duration={0}
-                      offset={-46}
+                      offset={-72}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
@@ -574,7 +574,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       spy={true}
                       smooth={false}
                       duration={0}
-                      offset={-46}
+                      offset={-72}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
@@ -624,7 +624,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       spy={true}
                       smooth={false}
                       duration={0}
-                      offset={-46}
+                      offset={-72}
                       className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
@@ -740,7 +740,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   spy={true}
                   smooth={false}
                   duration={0}
-                  offset={-46}
+                  offset={-72}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -755,7 +755,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   spy={true}
                   smooth={false}
                   duration={0}
-                  offset={-46}
+                  offset={-72}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -770,7 +770,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   spy={true}
                   smooth={false}
                   duration={0}
-                  offset={-46}
+                  offset={-72}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -796,7 +796,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   spy={true}
                   smooth={false}
                   duration={0}
-                  offset={-46}
+                  offset={-72}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);

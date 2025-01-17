@@ -14,7 +14,9 @@ const AccordionItem = ({
   return (
     <div className="border-t border-[#ccccc6]">
       <button
-        className="w-full flex items-center justify-between py-6 text-left"
+        className={`w-full flex items-center justify-between py-6 text-left, ${
+          isOpen ? "pb-2" : "pb-6"
+        }`}
         onClick={onClick}
       >
         <div className="flex items-center gap-8">
