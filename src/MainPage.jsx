@@ -492,7 +492,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden lg:flex items-center text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl">
+              <nav className="hidden lg:flex items-center text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
                   {location.pathname === "/" ? (
                     <ScrollLink

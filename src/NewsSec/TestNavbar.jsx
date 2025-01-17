@@ -109,7 +109,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center text-center gap-1 justify-center max-w-7xl">
+          <nav className="hidden lg:flex items-center text-center gap-1 justify-center max-w-7xl ">
             <div className="lg:flex justify-center items-center tracking-wide gap-6">
               {navLinks.map((link) => (
                 <button
