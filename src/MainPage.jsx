@@ -704,7 +704,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 className="lg:hidden  text-white  mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
-                  toggleBodyScroll(!mobileMenuOpen);
+                  // toggleBodyScroll(!mobileMenuOpen);
                 }}
               >
                 <Menu size={30} />
@@ -730,10 +730,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               >
                 <X size={24} />
               </button>
-              <div className="flex items-center gap-4 mb-12 mt-4">
+              <a href="/" className="flex items-center gap-4 mb-12 mt-4">
                 <Logo className="w-24 h-auto text-white" />
                 <DesignLogo className="w-24 h-auto text-white" />
-              </div>
+              </a>
               <nav className="flex flex-col items-start gap-3 w-full">
                 <ScrollLink
                   to="philosophy"

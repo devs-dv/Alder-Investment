@@ -183,9 +183,9 @@ const ServicesSection = (object) => {
             </h2>
           </div>
         )}
-        <div className="flex flex-col lg:flex-row items-start lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-start lg:gap-20 h-fit">
           {/* Desktop Images */}
-          <div className="hidden lg:block lg:w-[55%] w-full relative lg:min-h-[1000px] h-[580px] overflow-hidden">
+          <div className="hidden lg:block lg:w-[55%] w-full relative lg:h-[650px] h-[580px] overflow-hidden">
             <div
               className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                 openItem === 0
@@ -197,12 +197,12 @@ const ServicesSection = (object) => {
                 <img
                   src="https://kingsley-digital-git-dev-made-thoughts-projects.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F177c0d1400296a8aeede27eeceaf1317ff4fc893-1560x2224.png%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"
                   alt="Bespoke Investment Plans"
-                  className="w-full md:w-[50%] h-[570px] lg:h-[760px] object-cover"
+                  className="w-full md:w-[50%] h-[570px] lg:h-[650px] object-cover"
                 />
                 <img
                   src="https://kingsley-digital-git-dev-made-thoughts-projects.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F4a717556c25ee3f27035646cd38364dd4669573a-1328x1772.png%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75"
                   alt="Bespoke Investment Plans Additional"
-                  className="w-full md:w-[50%] h-[442px] lg:h-[560px] object-cover"
+                  className="w-full md:w-[50%] h-[442px] lg:h-[500px] object-cover"
                 />
               </div>
             </div>
@@ -217,12 +217,12 @@ const ServicesSection = (object) => {
                 <img
                   src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2Fb46001491d101ec4f56350c8ff181ea26b7cd0f7-1272x1700.jpg%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75"
                   alt="Bespoke Investment Plans"
-                  className="w-full md:w-[50%] h-[442px] lg:h-[560px] object-cover"
+                  className="w-full md:w-[50%] h-[442px] lg:h-[500px] object-cover"
                 />
                 <img
                   src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2Ff79929f328b188b5a42dbc2e090a1e18caee97c6-1200x1800.jpg%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"
                   alt="Bespoke Investment Plans Additional"
-                  className="w-full md:w-[50%] h-[570px] lg:h-[760px] object-cover"
+                  className="w-full md:w-[50%] h-[570px] lg:h-[650px] object-cover"
                 />
               </div>
             </div>
@@ -237,12 +237,12 @@ const ServicesSection = (object) => {
                 <img
                   src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F70ba3ca17248d1c78ab36933042dd866ddc56bfc-1066x1800.jpg%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"
                   alt="Exclusive Deals and Alternative Assets"
-                  className="w-full md:w-[50%] h-[570px] lg:h-[760px] object-cover"
+                  className="w-full md:w-[50%] h-[570px] lg:h-[650px] object-cover"
                 />
                 <img
                   src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2Fd0a4c0e1567214e376823f7ef48549f79f132b98-1348x1800.jpg%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75"
                   alt="Exclusive Deals and Alternative Assets Additional"
-                  className="w-full md:w-[50%] h-[442px] lg:h-[560px] object-cover"
+                  className="w-full md:w-[50%] h-[442px] lg:h-[500px] object-cover"
                 />
               </div>
             </div>
@@ -266,20 +266,19 @@ const ServicesSection = (object) => {
                 />
               </div>
             </div>
+
             <div
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out h-[540px] lg:h-[650px] w-full object-cover ${
                 openItem === -1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
               }`}
             >
-              <div>
-                <img
-                  src={defaultImage}
-                  alt="Services Overview"
-                  className=" h-[540px] lg:h-[650px] w-full object-cover"
-                />
-              </div>
+              <img
+                src={defaultImage}
+                alt="Services Overview"
+                className=" h-[540px] lg:h-[650px] w-full object-cover"
+              />
             </div>
           </div>
           {/* Mobile Image */}

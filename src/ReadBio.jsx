@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { li } from "framer-motion/client";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 const peopleData = [
   {
-    name: "Hee-Dong Konstantin Kim",
+    name: "Konstantin Kim",
     nameK: "희동 콘스탄틴 김",
     image: "1st.jpg",
     role: "CEO",

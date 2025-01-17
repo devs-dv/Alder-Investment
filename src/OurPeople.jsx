@@ -33,7 +33,7 @@ const OurPeople = ({ language, setLanguage }) => {
   return (
     <section className="bg-[#e7e6e2] py-16 px-5 md:px-10 lg:pr-40" id="people">
       {/* Title & Descriptions */}
-      <h2 className="text-[#4A4A4A] text-3xl font-medium lg:hidden pb-10">
+      <h2 className="text-[#4A4A4A] text-3xl font-medium lg:hidden pb-2 lg:pb-10">
         {language ? contentData.englishTitle : contentData.koreanTitle}
       </h2>
 

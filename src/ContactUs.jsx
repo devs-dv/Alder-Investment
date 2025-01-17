@@ -28,7 +28,7 @@ export default function ContactUs({ language, setLanguage }) {
             What does the future hold?{" "}
           </h1>
         ) : (
-          <h1 className="text-[#545454] font-medium text-4xl md:text-7xl mb-12 md:mb-24">
+          <h1 className="text-[#545454] font-medium text-4xl md:text-7xl mb-12">
             What does the future hold?{" "}
           </h1>
         )}

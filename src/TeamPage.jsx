@@ -5,7 +5,7 @@ import ReadBioButton from "./ReadBioButton";
 const teamMembers = [
   {
     id: 1,
-    name: "Hee-Dong Konstantin Kim",
+    name: "Konstantin Kim",
     nameKr: "희동 콘스탄틴 김",
     title: "CEO",
     titleKr: "CEO",
