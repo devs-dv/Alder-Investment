@@ -10,6 +10,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const handleNavigateAndScroll = (id) => {
     if (location.pathname !== "/") {
@@ -181,8 +182,10 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               <X size={24} />
             </button>
             <div className="flex items-center gap-4 mb-12 mt-4">
-              <Logo className="w-24 h-auto text-white" />
-              <DesignLogo className="w-24 h-auto text-white" />
+              <a href="/" className="flex items-center gap-4">
+                <Logo className="w-24 h-auto text-white" />
+                <DesignLogo className="w-24 h-auto text-white" />
+              </a>
             </div>
             <nav className="flex flex-col items-start gap-3 w-full">
               {navLinks.map((link) => (

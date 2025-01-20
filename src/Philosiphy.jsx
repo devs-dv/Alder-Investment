@@ -91,7 +91,7 @@ const Philosiphy = ({ language, setLanguage }) => {
 
   return (
     <section className="bg-[#e7e6e2] py-16 px-5 md:px-10" id="philosophy">
-      <h2 className="text-left text-3xl uppercase mb-2 lg:mb-5 text-[#545454]">
+      <h2 className="text-left text-3xl uppercase mb-6 lg:mb-10 text-[#545454]">
         OUR PHILOSOPHY
       </h2>
       {language ? (
