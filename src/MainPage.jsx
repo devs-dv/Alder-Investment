@@ -26,8 +26,28 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const fullscreenControls = useAnimation();
-
   const fullscreenAnimationDuration = 30; // in seconds
+
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      const direction = currentScrollY > lastScrollY ? "down" : "up";
+      const isScrolled = currentScrollY > 10;
+
+      setScrolled(isScrolled);
+      setScrollDirection(direction);
+      setIsScrollingDown(direction === "down");
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (animationStep === 4) {
@@ -261,6 +281,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
+    mobileVisible: { opacity: 1, y: 0 },
+    mobileHidden: { opacity: 0, y: 0 },
   };
 
   const mobileMenuVariants = {
@@ -462,10 +484,19 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           }`}
           variants={headerVariants}
           initial="hidden"
-          animate={
-            loading ? (animationStep >= 4 ? "visible" : "hidden") : "visible"
-          }
-          transition={{ duration: loading ? 0.8 : 0, ease: smoothEasing }}
+          animate={{
+            opacity: loading
+              ? animationStep >= 4
+                ? 1
+                : 0
+              : isMobile
+              ? isScrollingDown
+                ? 0
+                : 1
+              : 1,
+            y: loading || !isMobile ? 0 : isScrollingDown ? 30 : 0,
+          }}
+          transition={{ duration: loading ? 0.8 : 0.3, ease: smoothEasing }}
         >
           <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-4 md:gap-24">
