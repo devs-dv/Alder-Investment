@@ -14,7 +14,7 @@ const AccordionItem = ({
   return (
     <div className="border-t border-[#ccccc6]">
       <button
-        className={`w-full flex items-center justify-between py-6 text-left, ${
+        className={`w-full flex items-center justify-between py-6 text-left transition-all duration-300 ease-in-out ${
           isOpen ? "pb-2" : "pb-6"
         }`}
         onClick={onClick}
@@ -34,10 +34,27 @@ const AccordionItem = ({
       >
         <div className="overflow-hidden">
           <div className="pl-12 pb-6 pr-12">
-            <p className="text-[#545454] mb-4 font-light text-base">
-              {content}
-            </p>
-            {/* {contactText && (
+            {Array.isArray(content) ? (
+              content.map((item, idx) => (
+                <React.Fragment key={idx}>
+                  {typeof item === "string" ? (
+                    <p className="text-[#545454] mb-4 font-light text-base">
+                      {item}
+                    </p>
+                  ) : (
+                    React.cloneElement(item, {
+                      className: "text-[#545454] mb-4 font-light text-base",
+                      style: { ...item.props.style, wordBreak: "keep-all" },
+                    })
+                  )}
+                </React.Fragment>
+              ))
+            ) : (
+              <p className="text-[#545454] mb-4 font-light text-base">
+                {content}
+              </p>
+            )}
+            {contactText && (
               <p className="text-[#545454]">
                 <a
                   href="#contact"
@@ -47,12 +64,27 @@ const AccordionItem = ({
                 </a>
                 {contactText}
               </p>
-            )} */}
+            )}
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+AccordionItem.propTypes = {
+  number: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]).isRequired,
+  contactText: PropTypes.string,
+  isOpen: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  object: PropTypes.object.isRequired,
 };
 
 const ServicesSection = (object) => {
@@ -63,19 +95,18 @@ const ServicesSection = (object) => {
       title: "Bespoke Investment Plans",
       titleK: "고객 특성에 맞춘 개별 투자 솔루션",
       content: [
-        <p style={{ wordBreak: "keep-all" }}>
+        <p key="bespoke-1" style={{ wordBreak: "keep-all" }}>
           No two strategies are alike. Our investment plans are individually
           configured to suit the objectives and risk tolerance of each client.
           Designed with a comprehensive global asset allocation approach, they
           are grounded in a deep understanding of our clients' unique needs and
           risk tolerances. Through meticulous portfolio analysis, we identify
           opportunities while proactively managing risks to align with each
-          client’s financial aspirations.
+          client's financial aspirations.
         </p>,
       ],
-
       contentK: [
-        <p style={{ wordBreak: "keep-all" }}>
+        <p key="bespoke-k-1" style={{ wordBreak: "keep-all" }}>
           고객 한분 한분에게 다른 전략을 적용합니다. 각 고객의 목표와 리스크
           허용 범위을 철저하게 분석해 최적화된 맞춤형 투자 전략을 설계합니다.
           글로벌 자산 배분에 대한 종합적인 접근 방식을 바탕으로, 고객의 니즈와
@@ -96,8 +127,8 @@ const ServicesSection = (object) => {
       title: "Exclusive Opportunities",
       titleK: "독점적 투자 기회 ",
       content: [
-        <p style={{ wordBreak: "keep-all" }}>
-          Make your finances work harder for you and your family’s future.
+        <p key="exclusive-1" style={{ wordBreak: "keep-all" }}>
+          Make your finances work harder for you and your family's future.
           Through our wide network across Korea and around the globe, we provide
           clients with exclusive access to unique investment opportunities in
           special asset classes such as private equity, venture capital, real
@@ -105,7 +136,7 @@ const ServicesSection = (object) => {
         </p>,
       ],
       contentK: [
-        <p className="" style={{ wordBreak: "keep-all" }}>
+        <p key="exclusive-k-1" className="" style={{ wordBreak: "keep-all" }}>
           고객의 자산이 더 큰 가치를 만들어내고, 미래를 탄탄하게 설계할 수
           있도록 합니다. 우리는 한국 및 글로벌 네트워크를 기반으로 한 체계적인
           딜소싱과 철저한 검증을 통해 다양한 스페셜 투자 자산군(비상장 기업,
@@ -126,7 +157,7 @@ const ServicesSection = (object) => {
       title: "Advisory",
       titleK: "종합 자문 서비스",
       content: (
-        <p className="" style={{ wordBreak: "keep-all" }}>
+        <p key="advisory-1" className="" style={{ wordBreak: "keep-all" }}>
           We take an informed, generational view when advising family legacy. We
           work closely with each family, ensuring the next generation is primed
           for when the time comes. In order to provide the best possible
@@ -138,10 +169,10 @@ const ServicesSection = (object) => {
         </p>
       ),
       contentK: [
-        <p className="" style={{ wordBreak: "keep-all" }}>
+        <p key="advisory-k-1" className="" style={{ wordBreak: "keep-all" }}>
           가족의 자산과 유산 관리를 위해 세대에 걸친 장기적인 시각과 전문성을
           바탕으로 신뢰할 수 있는 솔루션을 제공합니다. 고객과 긴밀하게 협력하며,
-          다음 세대가 중요한 시기에 준비될 수 있도록 체계적으로 지원합니다.
+          다음 세대가 중요한 시기에 준비될 수 ��도록 체계적으로 지원합니다.
           세무, 법률, 투자은행, 컨시어지 서비스 등 각 분야의 최고 전문가들과
           협업하여, 고객의 상황과 필요에 맞춘 종합적이고 전략적인 맞춤형 자문
           서비스를 제공합니다. 단순한 조언에서 멈추지 않고, 이를 통해 고객이
@@ -251,34 +282,13 @@ const ServicesSection = (object) => {
             </div>
             <div
               className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                openItem === 3
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-full"
-              }`}
-            >
-              <div className="flex flex-col md:flex-row gap-3 h-full">
-                <img
-                  src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F42672d62cb9483d9fe45f4540dd156d403014dc4-1200x1800.jpg%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"
-                  alt="Portfolio Health Checks"
-                  className="w-full md:w-[55%] h-[560px] object-cover"
-                />
-                <img
-                  src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F3397fae6cae070b2db9173c67ae5b0f6110b5712-1274x1700.jpg%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75"
-                  alt="Portfolio Health Checks Additional"
-                  className="w-full md:w-[35%] h-[412px] object-cover"
-                />
-              </div>
-            </div>
-
-            <div
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out h-[540px] lg:h-[650px] w-full object-cover ${
                 openItem === -1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-full"
               }`}
             >
               <img
-                src={defaultImage}
+                src={defaultImage || "/placeholder.svg"}
                 alt="Services Overview"
                 className=" h-[540px] lg:h-[650px] w-full object-cover"
               />
@@ -299,7 +309,7 @@ const ServicesSection = (object) => {
                 }}
               >
                 <img
-                  src={item.mobileImage}
+                  src={item.mobileImage || "/placeholder.svg"}
                   alt={item.title}
                   className="w-full h-[400px] object-cover"
                 />
@@ -316,45 +326,29 @@ const ServicesSection = (object) => {
               }}
             >
               <img
-                src={defaultImage}
+                src={defaultImage || "/placeholder.svg"}
                 alt="Services Overview"
                 className="w-full h-[400px] object-cover"
               />
             </div>
           </div>
-          {object.language ? (
-            <div className="w-full lg:text-lg lg:w-[40%]">
-              {content.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  number={`0${index + 1}`}
-                  title={item.title}
-                  content={item.content}
-                  contactText={item.contactText}
-                  isOpen={openItem === index}
-                  onClick={() => setOpenItem(openItem === index ? -1 : index)}
-                  index={index}
-                  object={object}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="w-full lg:text-lg lg:w-[40%]">
-              {content.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  number={`0${index + 1}`}
-                  title={item.titleK}
-                  content={item.contentK}
-                  contactText={item.contactTextK}
-                  isOpen={openItem === index}
-                  onClick={() => setOpenItem(openItem === index ? -1 : index)}
-                  index={index}
-                  object={object}
-                />
-              ))}
-            </div>
-          )}
+          <div className="w-full lg:text-lg lg:w-[40%]">
+            {content.map((item, index) => (
+              <AccordionItem
+                key={`accordion-item-${index}`}
+                number={`0${index + 1}`}
+                title={object.language ? item.title : item.titleK}
+                content={object.language ? item.content : item.contentK}
+                contactText={
+                  object.language ? item.contactText : item.contactTextK
+                }
+                isOpen={openItem === index}
+                onClick={() => setOpenItem(openItem === index ? -1 : index)}
+                index={index}
+                object={object}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
