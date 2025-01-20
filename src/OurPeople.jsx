@@ -31,7 +31,7 @@ const OurPeople = ({ language, setLanguage }) => {
   };
 
   return (
-    <section className="bg-[#e7e6e2] py-16 px-5 md:px-10 lg:pr-40" id="people">
+    <section className="bg-[#e7e6e2] py-16 px-5 md:px-10" id="people">
       {/* Title & Descriptions */}
       <h2 className="text-[#4A4A4A] text-3xl font-medium lg:hidden pb-2 lg:pb-10">
         {language ? contentData.englishTitle : contentData.koreanTitle}
@@ -45,13 +45,13 @@ const OurPeople = ({ language, setLanguage }) => {
           </h2>
 
           {language ? (
-            <p className="text-[#545454] md:text-base font-light max-w-[650px]">
+            <p className="text-[#545454] md:text-base font-light md:w-[533px]">
               Our team consists of professionals of exceptional caliber, whose
               expertise and insight aligns with our vision and strategy.
             </p>
           ) : (
             <p
-              className="text-[#545454] md:text-base font-light max-w-[650px]"
+              className="text-[#545454] md:text-base font-light md:w-[533px]"
               style={{ wordBreak: "keep-all" }}
             >
               우리는 회사의 비전과 전략에 부합하는 뛰어난 전문성과 깊은 통찰력을
