@@ -66,7 +66,7 @@ const PrivacyPolicy = (object) => {
                   <li>
                     <span className="font-bold">General Provisions</span>
                     <p className="mt-2">
-                      ALDER INVESTMENTS LTD. has established the following
+                      Alder Investments Ltd. has established the following
                       processing policy to protect the personal information and
                       rights of data subjects (customers) and to smoothly handle
                       any issues related to personal information, in accordance
@@ -89,7 +89,7 @@ const PrivacyPolicy = (object) => {
                       Processing Purposes
                     </span>
                     <p className="mt-2">
-                      ※ ALDER INVESTMENTS LTD. does not collect/store any
+                      ※ Alder Investments Ltd. does not collect/store any
                       personal customer information under any circumstances
                       because it does not conduct direct sales or business with
                       individual customers. However, 'cookie' information such
@@ -104,7 +104,7 @@ const PrivacyPolicy = (object) => {
                       conducted through the website, basic customer information
                       (name, address, email, phone number, etc.) may be
                       collected/stored for the purpose of the event. Even in
-                      such cases, ALDER INVESTMENTS LTD.'s website does not
+                      such cases, Alder Investments Ltd.'s website does not
                       collect any personal information beyond basic business
                       card-level information.
                     </p>
@@ -112,7 +112,7 @@ const PrivacyPolicy = (object) => {
                     <ul className="list-decimal ml-6 mt-4 space-y-4">
                       <li>
                         The items of other personal information collected and
-                        the purposes of processing are as follows.
+                        the purposes of processing are as follows:
                         <ul className="list-[lower-alpha] ml-6 mt-2 space-y-4">
                           <li>
                             When it is inevitably necessary for the sale of
@@ -138,7 +138,7 @@ const PrivacyPolicy = (object) => {
 
                           <li>
                             When it is inevitably necessary for the conclusion
-                            and execution of an investment advisory contract.
+                            and execution of an investment advisory contract
                             <ul className="list-[lower-roman] ml-6 mt-2">
                               <li>
                                 <strong>Collection Items:</strong> Information
@@ -176,19 +176,15 @@ const PrivacyPolicy = (object) => {
                           </li>
 
                           <li>
-                            When 'cookie' information such as the user's access
-                            frequency and time, and service usage records is
-                            automatically collected while using internet
-                            homepage services or processing website user
-                            information .
+                            When 'cookie' information is automatically collected
                             <ul className="list-[lower-roman] ml-6 mt-2">
                               <li>
                                 <strong>Collection Items:</strong> A cookie is a
                                 very small text file sent by the server used to
                                 operate the website to the user's browser, and
                                 it is stored on the computer or mobile device
-                                used by the user to access the website. ALDER
-                                INVESTMENTS LTD. will provide enhanced online
+                                used by the user to access the website. Alder
+                                Investments Ltd. will provide enhanced online
                                 experience to website users through cookies,
                                 particularly by analyzing users' access
                                 frequency, visit times, visit counts, and
@@ -197,8 +193,14 @@ const PrivacyPolicy = (object) => {
                               </li>
                               <li>
                                 <strong>
-                                  Cookie Installation/Operation and Rejection:
+                                  Matters concerning the installation/operation
+                                  and rejection of devices automatically
+                                  collecting personal information
                                 </strong>
+                                <p>
+                                  Installation/operation and rejection of
+                                  cookies:
+                                </p>
                                 <p className="mt-2">
                                   Users can choose about installing cookies.
                                   Accordingly, users can set options in their
@@ -210,14 +212,52 @@ const PrivacyPolicy = (object) => {
                                 </p>
                                 <ul className="list-disc ml-6 mt-2">
                                   <li>
-                                    {`For Internet Explorer: Tools menu at the top of the web browser > Internet Options > Privacy > Settings`}
+                                    {`For Internet Explorer: Tools menu at the top
+                                    of the web browser > Internet Options >
+                                    Privacy > Settings`}
                                   </li>
                                   <li>
-                                    {`For Chrome: Settings menu on the right side of the web browser > Show advanced settings > Content settings under Privacy > Cookies`}
+                                    {`For Chrome: Settings menu on the right side
+                                    of the web browser > Show advanced settings
+                                    > Content settings under Privacy > Cookies`}
                                   </li>
                                 </ul>
                               </li>
                             </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        The company collects the above information by using the
+                        following methods. - Information of employees of the
+                        selling company, investmenttrading/brokerage company and
+                        corporate investors of the collective investment scheme
+                        is specified in contracts or related documents, or
+                        provided separately by the customer
+                      </li>
+                      <li>
+                        The company must use the personal information provided
+                        by the customer within the scope of the above purposes.
+                        However, in the following cases, it may be used beyond
+                        the scope of the purposes as an exception.
+                        <ul className="list-[lower-roman] ml-6 mt-2">
+                          <li>
+                            When separate consent is obtained from the customer
+                          </li>
+                          <li>When there are special provisions in the law</li>
+                          <li>
+                            In cases where the customer or his/her legal
+                            representative is unable to express intent or cannot
+                            be contacted due to an unknown address, and it is
+                            deemed necessary for the urgent benefit of the
+                            customer or a third party's life, body, or property
+                          </li>
+                          <li>
+                            When it is necessary for purposes such as
+                            statistical compilation and academic research, and
+                            personal information is provided in a form that does
+                            not allow the identification of a specific
+                            individual.
                           </li>
                         </ul>
                       </li>
@@ -243,7 +283,7 @@ const PrivacyPolicy = (object) => {
                     <p className="mt-2">
                       The company, in principle, destroys the personal
                       information without delay after the purpose of collection
-                      and use has been achieved, using the following methods:
+                      and use has been achieved, using the following methods.
                     </p>
                     <ul className="list-decimal ml-6 mt-2">
                       <li>
@@ -354,9 +394,7 @@ const PrivacyPolicy = (object) => {
                       Matters concerning the rights, obligations of the
                       customers, and methods of exercise
                     </span>
-                    <p className="mt-2">
-                      Right to request inspection of personal information
-                    </p>
+
                     <ul className="list-decimal ml-6 mt-2">
                       <li>
                         Right to request inspection of personal information
@@ -398,27 +436,27 @@ const PrivacyPolicy = (object) => {
                       </li>
                       <ul className="list-decimal ml-6 mt-2">
                         <li>
-                          Establishment and implementation of an internal
-                          management plan for the secure processing of personal
-                          information
+                          The customer may request the company to correct or
+                          delete his/her personal information. However, if the
+                          personal information is required as a subject of
+                          collection by another statute, deletion cannot be
+                          requested.
                         </li>
                         <li>
-                          Measures to control access to personal information and
-                          restrict access rights
+                          The company must promptly take necessary actions such
+                          as correction or deletion and inform the customer of
+                          the results when the customer requests correction or
+                          deletion of his/her personal information, unless a
+                          special procedure is prescribed by other statutes
                         </li>
                         <li>
-                          Application of encryption technology or equivalent
-                          measures to securely store and transmit personal
-                          information
+                          When the company deletes personal information, it must
+                          ensure that it cannot be recovered or reproduced.
                         </li>
                         <li>
-                          Measures to preserve access logs and prevent forgery
-                          and alteration
-                        </li>
-                        <li>Installation and updating of security programs</li>
-                        <li>
-                          Physical measures such as preparing storage facilities
-                          or installing locking devices
+                          The company may require the customer to submit
+                          evidence necessary to verify the correction or
+                          deletion request, if necessary.
                         </li>
                       </ul>
                       <li>
@@ -471,6 +509,12 @@ const PrivacyPolicy = (object) => {
                       Matters concerning measures to ensure the security of
                       personal information
                     </span>
+                    <p className="mt-2">
+                      The company is taking administrative, technical, and
+                      physical measures necessary to ensure security so that
+                      personal information is not lost, stolen, leaked, altered,
+                      or damaged.
+                    </p>
                     <ul className="list-decimal ml-6">
                       <li>
                         Establishment and implementation of an internal
@@ -507,18 +551,20 @@ const PrivacyPolicy = (object) => {
                     <span className="font-bold">
                       Complaint services regarding personal information
                     </span>
-                    The company designates and operates personal information
-                    handlers and managers as follows to protect customers'
-                    personal information and handle complaints related to
-                    personal information.
+                    <p className="mt-2">
+                      The company designates and operates personal information
+                      handlers and managers as follows to protect customers'
+                      personal information and handle complaints related to
+                      personal information.
+                    </p>
                     <div className="mt-4 space-y-2">
                       <p>① Name: Ki-Hyun Shin, Compliance Officer</p>
-                      <p>② Affiliation: Alder Investments Ltd.</p>
+                      <p>② Affiliation: ALDER INVESTMENTS LTD.</p>
                       <p>
                         ③ Contact: (Main) 02-6012-2100, (Direct) 070-4272-8226
                       </p>
                     </div>
-                    <p>
+                    <p className="mt-2">
                       Customers can report any personal information
                       protection-related complaints arising from the use of the
                       company's services to the above-mentioned personal
@@ -526,9 +572,9 @@ const PrivacyPolicy = (object) => {
                       company will promptly verify the identified issues and
                       take actions as quickly as possible if corrections are
                       necessary. The company will always make every effort to
-                      protect the customer's personal information.
+                      protect the customer's personal information
                     </p>
-                    <p>
+                    <p className="mt-2">
                       Remedy for Infringement of Rights Regarding Personal
                       Information
                     </p>
@@ -542,14 +588,12 @@ const PrivacyPolicy = (object) => {
                       assistance, please contact them.
                     </p>
                     <div className="mt-6">
-                      <p className="mb-4">
-                        For remedies and consultations regarding personal
-                        information infringement, you can contact:
-                      </p>
                       <ul className="list-decimal ml-6 space-y-4">
                         <li>
-                          Personal Information Infringement Report Center
-                          (Operated by Korea Internet & Security Agency)
+                          <strong>
+                            Personal Information Infringement Report Center
+                            (Operated by Korea Internet & Security Agency)
+                          </strong>
                           <ul className="list-disc ml-6">
                             <li>
                               Jurisdiction: Reporting personal information
@@ -566,8 +610,10 @@ const PrivacyPolicy = (object) => {
                           </ul>
                         </li>
                         <li>
-                          Personal Information Dispute Mediation Committee
-                          (Korea Internet & Security Agency)
+                          <strong>
+                            Personal Information Dispute Mediation Committee
+                            (Operated by Korea Internet & Security Agency)
+                          </strong>
                           <ul className="list-disc ml-6 mt-2">
                             <li>
                               Jurisdiction: Application for personal information
@@ -600,7 +646,7 @@ const PrivacyPolicy = (object) => {
                 </ul>
                 <a
                   href="http://cyberbureau.police.go.kr"
-                  className="underline md:ml-12"
+                  className="underline ml-12"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -990,7 +1036,7 @@ const PrivacyPolicy = (object) => {
                     국번없이 182(민원상담, 유료)
                     <a
                       href="http://cyberbureau.police.go.kr"
-                      className="underline"
+                      className="underline ml-1"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
