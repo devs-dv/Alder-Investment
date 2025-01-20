@@ -28,7 +28,7 @@ const peopleData = [
     name: "Junho Kim",
     nameK: "김준호",
     image: "2nd.jpg",
-    role: "Partner",
+    role: "Investment management",
     roleK: "최고 개발 책임자",
     bio: [
       "Junho Kim is a seasoned professional with extensive experience in equity research, due-diligence, and corporate strategy.",
@@ -54,7 +54,7 @@ const peopleData = [
     name: "Kihyun Shin",
     nameK: "신기현",
     image: "3rd.jpg",
-    role: "Chief Compliance Officer",
+    role: "Compliance",
     roleK: "준법감시인",
     bio: [
       "Kihyun brings over 20 years of distinguished expertise in compliance and legal affairs, dating back to 2000 when the role of dedicated compliance officers was first mandated for financial institutions in Korea. He possesses deep expertise and a wealth of experience in this field.",
@@ -76,8 +76,8 @@ const peopleData = [
     name: "Jinhee Kim",
     nameK: "김진희",
     image: "4th.jpg",
-    role: "Head of Operations",
-    roleK: "운용지원 부장",
+    role: "Fund operations",
+    roleK: "운용지원부장",
     bio: [
       <p>
         Jinhee previously worked in the investment operations team at DWS Asset
@@ -107,8 +107,8 @@ const peopleData = [
     name: "Jihyun Seo",
     nameK: "서지현",
     image: "5th.jpg",
-    role: "Head of Administration",
-    roleK: "경영지원 부장",
+    role: "Operations",
+    roleK: "경영지원부장",
     bio: [
       <p>
         Jihyun oversees all aspects of business support. She has served as a
@@ -133,8 +133,8 @@ const peopleData = [
     name: "Chanwoo Kang",
     nameK: "강찬우",
     image: "6th.jpg",
-    role: "Portfolio Manager",
-    roleK: "투자운용부 매니저",
+    role: "Investment management",
+    roleK: "포트폴리오 매니저",
     bio: [
       <p>
         Chanwoo Kang’s expertise is centered around conducting comprehensive
@@ -165,8 +165,8 @@ const peopleData = [
     name: "Jinsu Lim",
     nameK: "임진수",
     image: "7th.jpg",
-    role: "Portfolio Manager",
-    roleK: "투자운용부 매니저",
+    role: "Investment management",
+    roleK: "포트폴리오 매니저",
     bio: [
       <p>
         Jinsu Lim brings experience from the asset management sector, where he

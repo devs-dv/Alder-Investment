@@ -120,8 +120,9 @@ const Philosiphy = ({ language, setLanguage }) => {
                   loop
                   muted
                   playsInline
-                  src="LV3N.mp4"
+                  preload="auto"
                 >
+                  <source src="LV3N.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -169,8 +170,9 @@ const Philosiphy = ({ language, setLanguage }) => {
                   loop
                   muted
                   playsInline
-                  src="LV3N.mp4"
+                  preload="auto"
                 >
+                  <source src="LV3N.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

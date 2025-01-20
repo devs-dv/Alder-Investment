@@ -22,7 +22,7 @@ const OurPeople = ({ language, setLanguage }) => {
       },
       {
         name: "Junho Kim",
-        position: "Partner",
+        position: "Investment management",
         koreanName: "김준호",
         koreanPosition: "최고 개발 책임자",
         image: "2nd.jpg",
@@ -46,22 +46,16 @@ const OurPeople = ({ language, setLanguage }) => {
 
           {language ? (
             <p className="text-[#545454] md:text-base font-light max-w-[650px]">
-              We seek professionals of exceptional caliber, whose expertise and
-              insight align with our vision and strategy.
-              <br /> Our team, shaped by distinguished experience at some of the
-              world’s most esteemed institutions and organizations, has been
-              selected for their depth of knowledge and capabilities essential
-              to the journey of our clients.
+              Our team consists of professionals of exceptional caliber, whose
+              expertise and insight aligns with our vision and strategy.
             </p>
           ) : (
             <p
               className="text-[#545454] md:text-base font-light max-w-[650px]"
               style={{ wordBreak: "keep-all" }}
             >
-              회사의 비전과 전략에 부합하는 최고의 전문가들로 팀을 구성합니다.
-              세계적인 선도 기관과 조직에서 쌓아온 풍부한 경험을 보유한
-              전문가들은 뛰어난 금융 전문성과 실행력을 통해 고객에게 최상의
-              솔루션을 제공합니다.
+              우리는 회사의 비전과 전략에 부합하는 뛰어난 전문성과 깊은 통찰력을
+              지닌 전 문가들로 구성되어 있습니다
             </p>
           )}
         </div>

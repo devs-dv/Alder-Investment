@@ -298,10 +298,14 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
             className="absolute inset-0 w-full h-full object-cover scale-110"
             src="LV1.mp4"
             autoPlay
+            playsInline
             loop
             muted
-            playsInline
-          />
+            preload="auto"
+          >
+            <source src="LV1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -721,6 +725,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               animate="visible"
               exit="exit"
             >
+              {/* 
+                NOTE: To adjust the scrolling speed on mobile, modify the `duration` prop of the ScrollLink components below. 
+                Higher values will result in slower scrolling. The current value is set to 2000ms (1 second).
+              */}
               <button
                 className="absolute top-6 right-6 text-white"
                 onClick={() => {
@@ -738,9 +746,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="philosophy"
                   spy={true}
-                  smooth={false}
-                  duration={0}
-                  offset={-72}
+                  smooth={true}
+                  // Increased duration for slower scrolling on mobile
+                  offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -753,9 +761,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="services"
                   spy={true}
-                  smooth={false}
-                  duration={0}
-                  offset={-72}
+                  smooth={true}
+                  // Increased duration for slower scrolling on mobile
+                  offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -768,9 +776,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="people"
                   spy={true}
-                  smooth={false}
-                  duration={0}
-                  offset={-72}
+                  smooth={true}
+                  // Increased duration for slower scrolling on mobile
+                  offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -794,9 +802,9 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <ScrollLink
                   to="contact"
                   spy={true}
-                  smooth={false}
-                  duration={0}
-                  offset={-72}
+                  smooth={true}
+                  // Increased duration for slower scrolling on mobile
+                  offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
                     setMobileMenuOpen(false);

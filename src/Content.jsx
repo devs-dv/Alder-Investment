@@ -3,7 +3,7 @@ const Content = ({ language }) => (
     <div className="relative">
       <div className="text-base font-light max-md:pl-3 max-md:pr-3 md:pl-0">
         <div className="lg:flex flex-col text-base">
-          <h2 className="text-base font-light">WE ARE ALDER INVESTMENTS</h2>
+          <h2 className="text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
           <p
             className="text-base font-light max-md:text-sm"
             style={{ wordBreak: "keep-all" }}
@@ -22,12 +22,13 @@ const Content = ({ language }) => (
               </>
             ) : (
               <>
-                ALDER INVESTMENTS는 글로벌 전문성과 독립성을 기반으로 최상위
-                수준의 맞춤형 자산 관리 솔루션을 제공하는 전문 부티크 패밀리
-                오피스입니다. 선별된 성공적이고 영향력 있는 초고액 자산가와
-                그들의 가족 및 사업체를 대상으로, 자산 관리뿐만 아니라 세대를
-                이어가는 지속 가능한 성장을 목표로 한 맞춤형 투자 전략을
-                제공합니다.
+                ALDER INVESTMENTS 는 세계적으로 저명한 초고액 자산가와 그들의
+                가족 및 사업체 중 선별된 고객을 대상으로, 최상위 수준의 맞춤형
+                자산 관리 서비스 를 제공하는 독립적인 부티크 멀티패밀리
+                오피스입니다. 글로벌 전문성을 바 탕으로 전 세계에서 새로운
+                기회를 발굴하며, 독립적 접근 방식을 통해 고객 자산이 지속
+                가능하며 장기적인 성장을 이루고 이를 세대에 걸쳐 계승할 수
+                있도록 관리합니다.
               </>
             )}
           </p>
