@@ -283,6 +283,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     visible: { opacity: 1, y: 0 },
     mobileVisible: { opacity: 1, y: 0 },
     mobileHidden: { opacity: 0, y: 0 },
+    fadeIn: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: smoothEasing },
+    },
   };
 
   const mobileMenuVariants = {
@@ -484,18 +489,17 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           }`}
           variants={headerVariants}
           initial="hidden"
-          animate={{
-            opacity: loading
+          animate={
+            loading
               ? animationStep >= 4
-                ? 1
-                : 0
+                ? "fadeIn"
+                : "hidden"
               : isMobile
               ? isScrollingDown
-                ? 0
-                : 1
-              : 1,
-            y: loading || !isMobile ? 0 : isScrollingDown ? 30 : 0,
-          }}
+                ? "mobileHidden"
+                : "mobileVisible"
+              : "visible"
+          }
           transition={{ duration: loading ? 0.8 : 0.3, ease: smoothEasing }}
         >
           <div className="flex justify-between items-center w-full">
