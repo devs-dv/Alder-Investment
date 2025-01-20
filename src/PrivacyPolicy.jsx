@@ -106,7 +106,7 @@ const PrivacyPolicy = (object) => {
                       collected/stored for the purpose of the event. Even in
                       such cases, ALDER INVESTMENTS LTD.'s website does not
                       collect any personal information beyond basic business
-                      cardlevel information.
+                      card-level information.
                     </p>
 
                     <ul className="list-decimal ml-6 mt-4 space-y-4">
@@ -210,14 +210,10 @@ const PrivacyPolicy = (object) => {
                                 </p>
                                 <ul className="list-disc ml-6 mt-2">
                                   <li>
-                                    {`For Internet Explorer: Tools menu at the top
-                                    of the web browser > Internet Options >
-                                    Privacy > Settings`}
+                                    {`For Internet Explorer: Tools menu at the top of the web browser > Internet Options > Privacy > Settings`}
                                   </li>
                                   <li>
-                                    {`For Chrome: Settings menu on the right side
-                                    of the web browser > Show advanced settings
-                                    > Content settings under Privacy > Cookies`}
+                                    {`For Chrome: Settings menu on the right side of the web browser > Show advanced settings > Content settings under Privacy > Cookies`}
                                   </li>
                                 </ul>
                               </li>
@@ -482,7 +478,6 @@ const PrivacyPolicy = (object) => {
                         information
                       </li>
                       <li>
-                        {" "}
                         Measures to control access to personal information and
                         restrict access rights
                       </li>
@@ -497,7 +492,6 @@ const PrivacyPolicy = (object) => {
                         incidents
                       </li>
                       <li>
-                        {" "}
                         Installation and updating of security programs for
                         personal information
                       </li>
@@ -572,8 +566,8 @@ const PrivacyPolicy = (object) => {
                           </ul>
                         </li>
                         <li>
-                          Personal Information Infringement Report Center (Korea
-                          Internet & Security Agency)
+                          Personal Information Dispute Mediation Committee
+                          (Korea Internet & Security Agency)
                           <ul className="list-disc ml-6 mt-2">
                             <li>
                               Jurisdiction: Application for personal information
@@ -604,7 +598,14 @@ const PrivacyPolicy = (object) => {
                     </div>
                   </li>
                 </ul>
-                <p>(http://cyberbureau.police.go.kr)</p>
+                <a
+                  href="http://cyberbureau.police.go.kr"
+                  className="underline md:ml-12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (http://cyberbureau.police.go.kr)
+                </a>
               </div>
             </div>
           </div>
@@ -987,7 +988,14 @@ const PrivacyPolicy = (object) => {
                   <li>
                     경찰청 사이버안전국: 국번없이 112(긴급상담, 무료) 또는
                     국번없이 182(민원상담, 유료)
-                    (http://cyberbureau.police.go.kr)
+                    <a
+                      href="http://cyberbureau.police.go.kr"
+                      className="underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      (http://cyberbureau.police.go.kr)
+                    </a>
                   </li>
                 </ul>
               </ul>

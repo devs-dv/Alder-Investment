@@ -55,7 +55,7 @@ const OurPeople = ({ language, setLanguage }) => {
               style={{ wordBreak: "keep-all" }}
             >
               우리는 회사의 비전과 전략에 부합하는 뛰어난 전문성과 깊은 통찰력을
-              지닌 <br /> 전문가 들로 구성되어 있습니다
+              지닌 <br /> 전문가들로 구성되어 있습니다
             </p>
           )}
         </div>
