@@ -17,7 +17,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          const offset = 72; // Height of the navbar
+          const offset = window.innerWidth < 768 ? 20 : 72; // 20px for mobile, 72px for desktop
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
           window.scrollTo({
@@ -29,7 +29,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
     } else {
       const element = document.getElementById(id);
       if (element) {
-        const offset = 72; // Height of the navbar
+        const offset = window.innerWidth < 768 ? 20 : 72; // 20px for mobile, 72px for desktop
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({

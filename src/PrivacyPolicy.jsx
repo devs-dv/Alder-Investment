@@ -66,7 +66,7 @@ const PrivacyPolicy = (object) => {
                   <li>
                     <span className="font-bold">General Provisions</span>
                     <p className="mt-2">
-                      Alder Investments Ltd. has established the following
+                      ALDER INVESTMENTS LTD. has established the following
                       processing policy to protect the personal information and
                       rights of data subjects (customers) and to smoothly handle
                       any issues related to personal information, in accordance
@@ -89,7 +89,7 @@ const PrivacyPolicy = (object) => {
                       Processing Purposes
                     </span>
                     <p className="mt-2">
-                      ※ Alder Investments Ltd. does not collect/store any
+                      ※ ALDER INVESTMENTS LTD. does not collect/store any
                       personal customer information under any circumstances
                       because it does not conduct direct sales or business with
                       individual customers. However, 'cookie' information such
@@ -104,15 +104,15 @@ const PrivacyPolicy = (object) => {
                       conducted through the website, basic customer information
                       (name, address, email, phone number, etc.) may be
                       collected/stored for the purpose of the event. Even in
-                      such cases, Alder Investments Ltd.'s website does not
+                      such cases, ALDER INVESTMENTS LTD.'s website does not
                       collect any personal information beyond basic business
-                      card-level information.
+                      cardlevel information.
                     </p>
 
                     <ul className="list-decimal ml-6 mt-4 space-y-4">
                       <li>
                         The items of other personal information collected and
-                        the purposes of processing are as follows:
+                        the purposes of processing are as follows.
                         <ul className="list-[lower-alpha] ml-6 mt-2 space-y-4">
                           <li>
                             When it is inevitably necessary for the sale of
@@ -138,7 +138,7 @@ const PrivacyPolicy = (object) => {
 
                           <li>
                             When it is inevitably necessary for the conclusion
-                            and execution of an investment advisory contract
+                            and execution of an investment advisory contract.
                             <ul className="list-[lower-roman] ml-6 mt-2">
                               <li>
                                 <strong>Collection Items:</strong> Information
@@ -176,15 +176,19 @@ const PrivacyPolicy = (object) => {
                           </li>
 
                           <li>
-                            When 'cookie' information is automatically collected
+                            When 'cookie' information such as the user's access
+                            frequency and time, and service usage records is
+                            automatically collected while using internet
+                            homepage services or processing website user
+                            information .
                             <ul className="list-[lower-roman] ml-6 mt-2">
                               <li>
                                 <strong>Collection Items:</strong> A cookie is a
                                 very small text file sent by the server used to
                                 operate the website to the user's browser, and
                                 it is stored on the computer or mobile device
-                                used by the user to access the website. Alder
-                                Investments Ltd. will provide enhanced online
+                                used by the user to access the website. ALDER
+                                INVESTMENTS LTD. will provide enhanced online
                                 experience to website users through cookies,
                                 particularly by analyzing users' access
                                 frequency, visit times, visit counts, and
