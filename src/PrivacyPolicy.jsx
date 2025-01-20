@@ -188,8 +188,11 @@ const PrivacyPolicy = (object) => {
                           <div className="flex gap-2">
                             <span>④</span>
                             <li>
-                              When 'cookie' information is automatically
-                              collected
+                              When 'cookie' information such as the user's
+                              access frequency and time, and service usage
+                              records is automatically collected while using
+                              internet homepage services or processing website
+                              user information
                               <ul className="list-[lower-alpha] ml-6 mt-2">
                                 <li>
                                   <strong>Collection Items:</strong> A cookie is
