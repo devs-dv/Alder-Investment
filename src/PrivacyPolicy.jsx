@@ -113,118 +113,133 @@ const PrivacyPolicy = (object) => {
                       <li>
                         The items of other personal information collected and
                         the purposes of processing are as follows:
-                        <ul className="list-[lower-alpha] ml-6 mt-2 space-y-4">
-                          <li>
-                            When it is inevitably necessary for the sale of
-                            collective investment schemes, the conclusion and
-                            execution of entrustment sales contracts with trust
-                            companies
-                            <ul className="list-[lower-roman] ml-6 mt-2">
-                              <li>
-                                <strong>Collection Items:</strong> Information
-                                about the responsible officers and employees of
-                                the sales and trust companies (name, company
-                                name, department, position, company address,
-                                phone number, email)
-                              </li>
-                              <li>
-                                <strong>Purpose of Processing:</strong>{" "}
-                                Execution of tasks related to the entrustment
-                                sale of collective investment schemes and trust
-                                business
-                              </li>
-                            </ul>
-                          </li>
+                        <ul className="mt-2 space-y-4">
+                          <div className="flex gap-2">
+                            <span>①</span>
+                            <li>
+                              When it is inevitably necessary for the sale of
+                              collective investment schemes, the conclusion and
+                              execution of entrustment sales contracts with
+                              trust companies
+                              <ul className="list-[lower-alpha] ml-6 mt-2">
+                                <li>
+                                  <strong>Collection Items:</strong> Information
+                                  about the responsible officers and employees
+                                  of the sales and trust companies (name,
+                                  company name, department, position, company
+                                  address, phone number, email)
+                                </li>
+                                <li>
+                                  <strong>Purpose of Processing:</strong>{" "}
+                                  Execution of tasks related to the entrustment
+                                  sale of collective investment schemes and
+                                  trust business
+                                </li>
+                              </ul>
+                            </li>
+                          </div>
 
-                          <li>
-                            When it is inevitably necessary for the conclusion
-                            and execution of an investment advisory contract
-                            <ul className="list-[lower-roman] ml-6 mt-2">
-                              <li>
-                                <strong>Collection Items:</strong> Information
-                                about the customer's responsible employees
-                                (name, company name, department, position,
-                                company address, phone number, email)
-                              </li>
-                              <li>
-                                <strong>Purpose of Processing:</strong>{" "}
-                                Execution of contracts and operation of
-                                investment advisory
-                              </li>
-                            </ul>
-                          </li>
+                          <div className="flex gap-2">
+                            <span>②</span>
+                            <li>
+                              When it is inevitably necessary for the conclusion
+                              and execution of an investment advisory contract
+                              <ul className="list-[lower-alpha] ml-6 mt-2">
+                                <li>
+                                  <strong>Collection Items:</strong> Information
+                                  about the customer's responsible employees
+                                  (name, company name, department, position,
+                                  company address, phone number, email)
+                                </li>
+                                <li>
+                                  <strong>Purpose of Processing:</strong>{" "}
+                                  Execution of contracts and operation of
+                                  investment advisory
+                                </li>
+                              </ul>
+                            </li>
+                          </div>
 
-                          <li>
-                            When it is inevitably necessary for the execution of
-                            other operational tasks of the collective investment
-                            scheme
-                            <ul className="list-[lower-roman] ml-6 mt-2">
-                              <li>
-                                <strong>Collection Items:</strong> Information
-                                about the responsible employees of the
-                                investment trading/brokerage company or
-                                corporate investor (name, company name,
-                                department, position, company address, phone
-                                number, email)
-                              </li>
-                              <li>
-                                <strong>Purpose of Processing:</strong>{" "}
-                                Performing order tasks and providing information
-                                on requests from corporate investors
-                              </li>
-                            </ul>
-                          </li>
+                          <div className="flex gap-2">
+                            <span>③</span>
+                            <li>
+                              When it is inevitably necessary for the execution
+                              of other operational tasks of the collective
+                              investment scheme
+                              <ul className="list-[lower-alpha] ml-6 mt-2">
+                                <li>
+                                  <strong>Collection Items:</strong> Information
+                                  about the responsible employees of the
+                                  investment trading/brokerage company or
+                                  corporate investor (name, company name,
+                                  department, position, company address, phone
+                                  number, email)
+                                </li>
+                                <li>
+                                  <strong>Purpose of Processing:</strong>{" "}
+                                  Performing order tasks and providing
+                                  information on requests from corporate
+                                  investors
+                                </li>
+                              </ul>
+                            </li>
+                          </div>
 
-                          <li>
-                            When 'cookie' information is automatically collected
-                            <ul className="list-[lower-roman] ml-6 mt-2">
-                              <li>
-                                <strong>Collection Items:</strong> A cookie is a
-                                very small text file sent by the server used to
-                                operate the website to the user's browser, and
-                                it is stored on the computer or mobile device
-                                used by the user to access the website. Alder
-                                Investments Ltd. will provide enhanced online
-                                experience to website users through cookies,
-                                particularly by analyzing users' access
-                                frequency, visit times, visit counts, and
-                                preferred technical environments, as well as
-                                assessing operation of the website.
-                              </li>
-                              <li>
-                                <strong>
-                                  Matters concerning the installation/operation
-                                  and rejection of devices automatically
-                                  collecting personal information
-                                </strong>
-                                <p>
-                                  Installation/operation and rejection of
-                                  cookies:
-                                </p>
-                                <p className="mt-2">
-                                  Users can choose about installing cookies.
-                                  Accordingly, users can set options in their
-                                  web browser to allow all cookies, verify when
-                                  a cookie is stored, or refuse the storage of
-                                  all cookies. However, refusing the storage of
-                                  cookies may limit the ability to receive some
-                                  personalized services.
-                                </p>
-                                <ul className="list-disc ml-6 mt-2">
-                                  <li>
-                                    {`For Internet Explorer: Tools menu at the top
+                          <div className="flex gap-2">
+                            <span>④</span>
+                            <li>
+                              When 'cookie' information is automatically
+                              collected
+                              <ul className="list-[lower-alpha] ml-6 mt-2">
+                                <li>
+                                  <strong>Collection Items:</strong> A cookie is
+                                  a very small text file sent by the server used
+                                  to operate the website to the user's browser,
+                                  and it is stored on the computer or mobile
+                                  device used by the user to access the website.
+                                  Alder Investments Ltd. will provide enhanced
+                                  online experience to website users through
+                                  cookies, particularly by analyzing users'
+                                  access frequency, visit times, visit counts,
+                                  and preferred technical environments, as well
+                                  as assessing operation of the website.
+                                </li>
+                                <li>
+                                  <strong>
+                                    Matters concerning the
+                                    installation/operation and rejection of
+                                    devices automatically collecting personal
+                                    information
+                                  </strong>
+                                  <p>
+                                    Installation/operation and rejection of
+                                    cookies:
+                                  </p>
+                                  <p className="mt-2">
+                                    Users can choose about installing cookies.
+                                    Accordingly, users can set options in their
+                                    web browser to allow all cookies, verify
+                                    when a cookie is stored, or refuse the
+                                    storage of all cookies. However, refusing
+                                    the storage of cookies may limit the ability
+                                    to receive some personalized services.
+                                  </p>
+                                  <ul className="list-disc ml-6 mt-2">
+                                    <li>
+                                      {`For Internet Explorer: Tools menu at the top
                                     of the web browser > Internet Options >
                                     Privacy > Settings`}
-                                  </li>
-                                  <li>
-                                    {`For Chrome: Settings menu on the right side
+                                    </li>
+                                    <li>
+                                      {`For Chrome: Settings menu on the right side
                                     of the web browser > Show advanced settings
                                     > Content settings under Privacy > Cookies`}
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </div>
                         </ul>
                       </li>
                       <li>
@@ -240,25 +255,44 @@ const PrivacyPolicy = (object) => {
                         by the customer within the scope of the above purposes.
                         However, in the following cases, it may be used beyond
                         the scope of the purposes as an exception.
-                        <ul className="list-[lower-roman] ml-6 mt-2">
-                          <li>
-                            When separate consent is obtained from the customer
-                          </li>
-                          <li>When there are special provisions in the law</li>
-                          <li>
-                            In cases where the customer or his/her legal
-                            representative is unable to express intent or cannot
-                            be contacted due to an unknown address, and it is
-                            deemed necessary for the urgent benefit of the
-                            customer or a third party's life, body, or property
-                          </li>
-                          <li>
-                            When it is necessary for purposes such as
-                            statistical compilation and academic research, and
-                            personal information is provided in a form that does
-                            not allow the identification of a specific
-                            individual.
-                          </li>
+                        <ul className="mt-2">
+                          <div className="flex gap-2">
+                            <span>①</span>
+                            <li>
+                              When separate consent is obtained from the
+                              customer
+                            </li>
+                          </div>
+
+                          <div className="flex gap-2">
+                            <span>②</span>
+                            <li>
+                              When there are special provisions in the law
+                            </li>
+                          </div>
+
+                          <div className="flex gap-2">
+                            <span>③</span>
+                            <li>
+                              In cases where the customer or his/her legal
+                              representative is unable to express intent or
+                              cannot be contacted due to an unknown address, and
+                              it is deemed necessary for the urgent benefit of
+                              the customer or a third party's life, body, or
+                              property
+                            </li>
+                          </div>
+
+                          <div className="flex gap-2">
+                            <span>④</span>
+                            <li>
+                              When it is necessary for purposes such as
+                              statistical compilation and academic research, and
+                              personal information is provided in a form that
+                              does not allow the identification of a specific
+                              individual.
+                            </li>
+                          </div>
                         </ul>
                       </li>
                     </ul>
@@ -312,19 +346,27 @@ const PrivacyPolicy = (object) => {
                         may be provided within the scope of the collection
                         purpose.
                       </li>
-                      <ul className="list-decimal ml-6">
-                        <li>
-                          In cases where there are special provisions in the law
-                          or it is unavoidable to comply with statutory
-                          obligations
-                        </li>
-                        <li>
-                          In cases where the customer or his/her legal
-                          representative is unable to express intent or cannot
-                          obtain prior consent due to unknown address, etc., and
-                          it is deemed necessary for the urgent benefit of the
-                          customer's or third party's life, body, or property
-                        </li>
+                      <ul className="">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>
+                            In cases where there are special provisions in the
+                            law or it is unavoidable to comply with statutory
+                            obligations
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>
+                            In cases where the customer or his/her legal
+                            representative is unable to express intent or cannot
+                            obtain prior consent due to unknown address, etc.,
+                            and it is deemed necessary for the urgent benefit of
+                            the customer's or third party's life, body, or
+                            property
+                          </li>
+                        </div>
                       </ul>
                       <li>
                         When the company obtains the customer's consent
@@ -333,46 +375,81 @@ const PrivacyPolicy = (object) => {
                         to these matters, it must also inform and obtain
                         consent.
                       </li>
-                      <ul className="list-decimal ml-6">
-                        <li>Recipient of Personal Information</li>
-                        <li>
-                          Purpose of Use of Personal Information by the
-                          Recipient
-                        </li>
-                        <li>Items of Personal Information Provided</li>
-                        <li>
-                          Retention and Use Period of Personal Information by
-                          the Recipient
-                        </li>
-                        <li>
-                          The fact that there is a right to refuse consent and,
-                          if there are any disadvantages due to refusal, the
-                          details of such disadvantages
-                        </li>
+                      <ul className="">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>Recipient of Personal Information</li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>
+                            Purpose of Use of Personal Information by the
+                            Recipient
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>③</span>
+                          <li>Items of Personal Information Provided</li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>④</span>
+                          <li>
+                            Retention and Use Period of Personal Information by
+                            the Recipient
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>⑤</span>
+                          <li>
+                            The fact that there is a right to refuse consent
+                            and, if there are any disadvantages due to refusal,
+                            the details of such disadvantages
+                          </li>
+                        </div>
                       </ul>
                       <li>
                         The company may provide information to a third party
                         beyond the purposes outlined in 1) and 2) in the
                         following cases.
                       </li>
-                      <ul className="list-decimal ml-6">
-                        <li>
-                          When separate consent is obtained from the customer
-                        </li>
-                        <li>When there are special provisions in the law</li>
-                        <li>
-                          In cases where the customer or his/her legal
-                          representative is unable to express intent or cannot
-                          be contacted due to an unknown address, and it is
-                          deemed necessary for the urgent benefit of the
-                          customer or a third party's life, body, or property.
-                        </li>
-                        <li>
-                          When it is necessary for purposes such as statistical
-                          compilation and academic research, and personal
-                          information is provided in a form that does not allow
-                          the identification of a specific individual.
-                        </li>
+                      <ul className="">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>
+                            When separate consent is obtained from the customer
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>When there are special provisions in the law</li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>③</span>
+                          <li>
+                            In cases where the customer or his/her legal
+                            representative is unable to express intent or cannot
+                            be contacted due to an unknown address, and it is
+                            deemed necessary for the urgent benefit of the
+                            customer or a third party's life, body, or property.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>④</span>
+                          <li>
+                            When it is necessary for purposes such as
+                            statistical compilation and academic research, and
+                            personal information is provided in a form that does
+                            not allow the identification of a specific
+                            individual.
+                          </li>
+                        </div>
                       </ul>
                     </ul>
                   </li>
@@ -400,26 +477,37 @@ const PrivacyPolicy = (object) => {
                         Right to request inspection of personal information
                       </li>
                       <ul>
-                        <li>
-                          The customer may request to inspect his/her personal
-                          information processed by the company.
-                        </li>
-                        <li>
-                          When the company receives a request for inspection
-                          from the customer, it must allow the customer to
-                          inspect the relevant personal information within 10
-                          days. If there is a legitimate reason for not being
-                          able to inspect, the company must inform the customer
-                          of the reason and may postpone the inspection. Once
-                          the reason ceases to exist, the inspection must be
-                          conducted without delay.
-                        </li>
-                        <li>
-                          The company may restrict or refuse inspection by
-                          informing the customer of the reason if it falls under
-                          any of the following circumstances.
-                        </li>
-                        <ul className="list-disc ml-6 mt-2">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>
+                            The customer may request to inspect his/her personal
+                            information processed by the company.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>
+                            When the company receives a request for inspection
+                            from the customer, it must allow the customer to
+                            inspect the relevant personal information within 10
+                            days. If there is a legitimate reason for not being
+                            able to inspect, the company must inform the
+                            customer of the reason and may postpone the
+                            inspection. Once the reason ceases to exist, the
+                            inspection must be conducted without delay.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>③</span>
+                          <li>
+                            The company may restrict or refuse inspection by
+                            informing the customer of the reason if it falls
+                            under any of the following circumstances.
+                          </li>
+                        </div>
+                        <ul className="list-[lower-alpha] ml-14 mt-2">
                           <li>
                             When inspection is prohibited or restricted by law
                           </li>
@@ -434,48 +522,72 @@ const PrivacyPolicy = (object) => {
                         Right to request correction or deletion of personal
                         information
                       </li>
-                      <ul className="list-decimal ml-6 mt-2">
-                        <li>
-                          The customer may request the company to correct or
-                          delete his/her personal information. However, if the
-                          personal information is required as a subject of
-                          collection by another statute, deletion cannot be
-                          requested.
-                        </li>
-                        <li>
-                          The company must promptly take necessary actions such
-                          as correction or deletion and inform the customer of
-                          the results when the customer requests correction or
-                          deletion of his/her personal information, unless a
-                          special procedure is prescribed by other statutes
-                        </li>
-                        <li>
-                          When the company deletes personal information, it must
-                          ensure that it cannot be recovered or reproduced.
-                        </li>
-                        <li>
-                          The company may require the customer to submit
-                          evidence necessary to verify the correction or
-                          deletion request, if necessary.
-                        </li>
+                      <ul className="mt-2">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>
+                            The customer may request the company to correct or
+                            delete his/her personal information. However, if the
+                            personal information is required as a subject of
+                            collection by another statute, deletion cannot be
+                            requested.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>
+                            The company must promptly take necessary actions
+                            such as correction or deletion and inform the
+                            customer of the results when the customer requests
+                            correction or deletion of his/her personal
+                            information, unless a special procedure is
+                            prescribed by other statutes
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>③</span>
+                          <li>
+                            When the company deletes personal information, it
+                            must ensure that it cannot be recovered or
+                            reproduced.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>④</span>
+                          <li>
+                            The company may require the customer to submit
+                            evidence necessary to verify the correction or
+                            deletion request, if necessary.
+                          </li>
+                        </div>
                       </ul>
                       <li>
                         Right to Request Suspension of Personal Information
                         Processing
                       </li>
-                      <ul className="list-decimal ml-6 mt-2">
-                        <li>
-                          The customer may request the company to suspend the
-                          processing of his/her personal information.
-                        </li>
-                        <li>
-                          If the customer requests the suspension of his/her
-                          personal information processing, the company must
-                          immediately suspend all or part of the processing of
-                          personal information. However, in the following cases,
-                          the company may refuse the customer's request for
-                          suspension of processing.
-                        </li>
+                      <ul className="mt-2">
+                        <div className="flex gap-2">
+                          <span>①</span>
+                          <li>
+                            The customer may request the company to suspend the
+                            processing of his/her personal information.
+                          </li>
+                        </div>
+
+                        <div className="flex gap-2">
+                          <span>②</span>
+                          <li>
+                            If the customer requests the suspension of his/her
+                            personal information processing, the company must
+                            immediately suspend all or part of the processing of
+                            personal information. However, in the following
+                            cases, the company may refuse the customer's request
+                            for suspension of processing.
+                          </li>
+                        </div>
                         <ul className="ml-6">
                           <li>
                             a. When there are special provisions in the law or
@@ -483,7 +595,7 @@ const PrivacyPolicy = (object) => {
                             obligations
                           </li>
                           <li>
-                            B. When there is a concern that it may harm another
+                            b. When there is a concern that it may harm another
                             person's life or body, or unjustly infringe on
                             another person's property and other interests
                           </li>
@@ -495,12 +607,16 @@ const PrivacyPolicy = (object) => {
                             to terminate the contract
                           </li>
                         </ul>
-                        <li>
-                          The company must promptly take necessary actions, such
-                          as the destruction of the relevant personal
-                          information, for personal information whose processing
-                          has been suspended at the customer's request.
-                        </li>
+                        <div className="flex gap-2">
+                          <span>③</span>
+                          <li>
+                            The company must promptly take necessary actions,
+                            such as the destruction of the relevant personal
+                            information, for personal information whose
+                            processing has been suspended at the customer's
+                            request.
+                          </li>
+                        </div>
                       </ul>
                     </ul>
                   </li>
