@@ -301,7 +301,7 @@ const PrivacyPolicy = (object) => {
                     <p className="mt-2">
                       The company, in principle, destroys the personal
                       information without delay after the purpose of collection
-                      and use has been achieved, using the following methods:
+                      and use has been achieved, using the following methods.
                     </p>
                     <ul className=" ml-6 mt-2">
                       <li>
