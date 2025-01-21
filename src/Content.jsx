@@ -2,13 +2,11 @@ const Content = ({ language }) => (
   <>
     {language ? (
       <>
-        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl nest-hub:max-w-2xl p-2 md:p-12 lg:p-4 text-white z-20">
+        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl p-2 md:p-12 lg:p-4 text-white z-20">
           <div className="relative">
             <div className="text-base font-light max-md:pl-3 max-md:pr-3 md:pl-0">
               <div className="lg:flex flex-col text-base">
-                <h2 className="text-lg font-medium">
-                  WE ARE ALDER INVESTMENTS
-                </h2>
+                <h2 className="text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
                 <p
                   className="text-base font-light max-md:text-sm"
                   style={{ wordBreak: "keep-all" }}
@@ -20,8 +18,8 @@ const Content = ({ language }) => (
                   families, and their businesses. Our globally informed
                   perspective means we can see possibilities anywhere. With an
                   independent approach, we cast our vision into the future to
-                  help our clients unlock sustainable, long-term growth that
-                  cans be passed down for generations to come.
+                  help our clients unlock sustainable, long-term growth that can
+                  be passed down for generations to come.
                 </p>
               </div>
             </div>
@@ -30,13 +28,11 @@ const Content = ({ language }) => (
       </>
     ) : (
       <>
-        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl nest-hub:max-w-2xl p-2 md:p-12 lg:p-4 text-white z-20">
+        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl p-2 md:p-12 lg:p-4 text-white z-20">
           <div className="relative">
             <div className="text-base font-light max-md:pl-3 max-md:pr-3 md:pl-0">
               <div className="lg:flex flex-col text-base">
-                <h2 className="text-lg font-medium">
-                  WE ARE ALDER INVESTMENTS
-                </h2>
+                <h2 className="text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
                 <p
                   className="text-base font-light max-md:text-sm"
                   style={{ wordBreak: "keep-all" }}
