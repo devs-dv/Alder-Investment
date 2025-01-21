@@ -172,7 +172,7 @@ const ServicesSection = (object) => {
         <p key="advisory-k-1" className="" style={{ wordBreak: "keep-all" }}>
           가족의 자산과 유산 관리를 위해 세대에 걸친 장기적인 시각과 전문성을
           바탕으로 신뢰할 수 있는 솔루션을 제공합니다. 고객과 긴밀하게 협력하며,
-          다음 세대가 중요한 시기에 준비될 수 ��도록 체계적으로 지원합니다.
+          다음 세대가 중요한 시기에 준비될 수 있도록 체계적으로 지원합니다.
           세무, 법률, 투자은행, 컨시어지 서비스 등 각 분야의 최고 전문가들과
           협업하여, 고객의 상황과 필요에 맞춘 종합적이고 전략적인 맞춤형 자문
           서비스를 제공합니다. 단순한 조언에서 멈추지 않고, 이를 통해 고객이
@@ -339,9 +339,6 @@ const ServicesSection = (object) => {
                 number={`0${index + 1}`}
                 title={object.language ? item.title : item.titleK}
                 content={object.language ? item.content : item.contentK}
-                contactText={
-                  object.language ? item.contactText : item.contactTextK
-                }
                 isOpen={openItem === index}
                 onClick={() => setOpenItem(openItem === index ? -1 : index)}
                 index={index}
