@@ -46,7 +46,7 @@ const PrivacyPolicy = (object) => {
       <div
         className={`min-h-[80vh] md:flex px-5 lg:px-10 gap-5 md:py-20 bg-[#E7E6E2] text-[#545454]`}
       >
-        <div className="flex-1 max-md:py-2">
+        <div className="flex-1 py-2 md:py-0">
           <p className="text-3xl uppercase">
             {object.language ? "Privacy Policy" : "Privacy Policy"}{" "}
           </p>

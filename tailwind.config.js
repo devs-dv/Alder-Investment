@@ -9,8 +9,12 @@ export default {
       },
       screens: {
         // Custom media queries for Nest Hub devices
-        "nest-hub": { raw: "(width: 1024px) and (height: 600px)" },
-        "nest-hub-max": { raw: "(width: 1280px) and (height: 800px)" },
+        "nest-hub": {
+          raw: "(width: 1024px) and (height: 600px) and (pointer: coarse)",
+        },
+        "nest-hub-max": {
+          raw: "(width: 1280px) and (height: 800px) and (pointer: coarse)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
