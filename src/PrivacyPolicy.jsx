@@ -662,7 +662,7 @@ const PrivacyPolicy = (object) => {
                     </div>
                   </li>
                 </ul>
-                <p className="text-center">(http://cyberbureau.police.go.kr)</p>
+                <p className="ml-12">(http://cyberbureau.police.go.kr)</p>
               </div>
             </div>
           </div>
@@ -1084,7 +1084,7 @@ const PrivacyPolicy = (object) => {
                       (민사적해결)
                     </li>
                     <li>- 홈페이지: privacy.kisa.or.kr</li>
-                    <li>전화: (국번없이) 118</li>
+                    <li>- 전화: (국번없이) 118</li>
                     <li>
                       - 주소: (138-950) 서울시 송파구 중대로 135
                       한국인터넷진흥원 개인정보침해신고센터
@@ -1097,9 +1097,7 @@ const PrivacyPolicy = (object) => {
                     경찰청 사이버안전국: 국번없이 112(긴급상담, 무료) 또는
                     국번없이 182(민원상담, 유료)
                   </li>
-                  <p className="text-center">
-                    (http://cyberbureau.police.go.kr)
-                  </p>
+                  <p>(http://cyberbureau.police.go.kr)</p>
                 </ul>
               </ul>
             </div>

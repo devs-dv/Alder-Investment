@@ -439,7 +439,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     <img
                       src="navlogo_black.png"
-                      className="md:w-[300px] w-[250px]"
+                      className="md:w-[300px] w-[250px] nest-hub:w-[250px]"
                       alt="Navigation Logo"
                     />
                   </motion.div>
@@ -467,7 +467,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     }}
                   >
                     <DesignLogo
-                      className={`md:w-[115px] w-20 h-auto ${
+                      className={`md:w-[115px] nest-hub:w-[105px] w-20 h-auto ${
                         animationStep < 5 ? "text-black" : "text-white"
                       }`}
                     />
@@ -503,7 +503,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           transition={{ duration: loading ? 0.8 : 0.3, ease: smoothEasing }}
         >
           <div className="flex justify-between items-center w-full">
-            <div className="flex items-center gap-4 md:gap-24">
+            <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12">
               <div className="">
                 <motion.div
                   variants={logoVariants}
@@ -525,13 +525,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <span className="sr-only">Home</span>
                     <img
                       src="nav logo_white.png"
-                      className="md:w-[300px] w-[250px] mb-0.5"
+                      className="md:w-[300px] w-[250px] mb-0.5 nest-hub:w-[250px]"
                       alt="Logo"
                     />
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden lg:flex items-center text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
+              <nav className="hidden lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
                   {location.pathname === "/" ? (
                     <ScrollLink
@@ -737,7 +737,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 }}
                 className="hidden lg:block"
               >
-                <DesignLogo className="w-[115px] mb-0.5 h-auto text-white" />
+                <DesignLogo className="w-[115px] nest-hub:w-[105px] mb-0.5 h-auto text-white" />
               </motion.div>
               <button
                 className="lg:hidden  text-white  mt-5"
