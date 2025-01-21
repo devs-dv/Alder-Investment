@@ -531,7 +531,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
+              <nav className="hidden custom-lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
                   {location.pathname === "/" ? (
                     <ScrollLink
@@ -735,12 +735,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ease: smoothEasing,
                   delay: 2,
                 }}
-                className="hidden lg:block"
+                className="hidden custom-lg:block"
               >
                 <DesignLogo className="w-[115px] nest-hub:w-[105px] mb-0.5 h-auto text-white" />
               </motion.div>
               <button
-                className="lg:hidden  text-white  mt-5"
+                className="custom-lg:hidden  text-white mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
                   // toggleBodyScroll(!mobileMenuOpen);

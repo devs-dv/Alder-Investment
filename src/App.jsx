@@ -54,7 +54,7 @@ function App() {
               {!loading && (
                 <>
                   {/* Language Toggle Button */}
-                  <div className="fixed top-5 right-48 z-[52] nest-hub:right-28 px-4 py-1 hidden lg:block text-white">
+                  <div className="fixed top-5 right-48 z-[52] nest-hub:right-28 px-4 py-1 hidden custom-lg:block text-white">
                     <button
                       className={`${
                         language ? "font-bold" : "font-extralight"

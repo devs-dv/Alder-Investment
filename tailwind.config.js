@@ -15,6 +15,7 @@ export default {
         "nest-hub-max": {
           raw: "(width: 1280px) and (height: 800px) and (pointer: coarse)",
         },
+        "custom-lg": "1300px",
       },
       borderRadius: {
         lg: "var(--radius)",
