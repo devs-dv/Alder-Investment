@@ -208,45 +208,29 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const logoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
-    left: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "-5vw"
-        : isWidescreen
-        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
-        : "calc(-48.6vw + 200px)", // Original value for other screens
+    left: ({ isMobile }) => ({
+      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: 0,
       opacity: 1,
       transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
-    pause: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "-5vw"
-        : isWidescreen
-        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
-        : "calc(-48.6vw + 200px)", // Original value for other screens
+    pause: ({ isMobile }) => ({
+      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: 0,
       opacity: 1,
     }),
-    up: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "-5vw"
-        : isWidescreen
-        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
-        : "calc(-48.6vw + 200px)", // Original value for other screens
+    up: ({ isMobile }) => ({
+      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: "-49vh",
-      opacity: 0,
+      opacity: 0, // Change this to 0 to fade out
       transition: {
         duration: 3,
         ease: [0.16, 1, 0.3, 1],
         opacity: { duration: 1, ease: "easeOut" },
       },
     }),
-    stop: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "-5vw"
-        : isWidescreen
-        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
-        : "calc(-48.6vw + 200px)", // Original value for other screens
+    stop: ({ isMobile }) => ({
+      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
       y: "-49vh",
       opacity: 0,
     }),
@@ -260,31 +244,19 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const designLogoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
-    right: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "5vw"
-        : isWidescreen
-        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
-        : "calc(48.6vw - 200px)", // Original value for other screens
+    right: ({ isMobile }) => ({
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: 0,
       opacity: 1,
       transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
-    pause: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "5vw"
-        : isWidescreen
-        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
-        : "calc(48.6vw - 200px)", // Original value for other screens
+    pause: ({ isMobile }) => ({
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: 0,
       opacity: 1,
     }),
-    up: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "5vw"
-        : isWidescreen
-        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
-        : "calc(48.6vw - 200px)", // Original value for other screens
+    up: ({ isMobile }) => ({
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: "-49vh",
       opacity: 0,
       transition: {
@@ -293,12 +265,8 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         opacity: { duration: 1, ease: "easeOut" },
       },
     }),
-    stop: ({ isMobile, isWidescreen }) => ({
-      x: isMobile
-        ? "5vw"
-        : isWidescreen
-        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
-        : "calc(48.6vw - 200px)", // Original value for other screens
+    stop: ({ isMobile }) => ({
+      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
       y: "-49vh",
       opacity: 0,
     }),
