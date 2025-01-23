@@ -19,7 +19,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const [animationStep, setAnimationStep] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [isMobile, setIsMobile] = useState(false);
+  const [isWidescreen, setIsWidescreen] = useState(false);
+
   const [scrollDirection, setScrollDirection] = useState("down");
   const location = useLocation();
   const [screenSize, setScreenSize] = useState("default");
@@ -205,29 +208,45 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const logoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
-    left: ({ isMobile }) => ({
-      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
+    left: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "-5vw"
+        : isWidescreen
+        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
+        : "calc(-48.6vw + 200px)", // Original value for other screens
       y: 0,
       opacity: 1,
       transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
-    pause: ({ isMobile }) => ({
-      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
+    pause: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "-5vw"
+        : isWidescreen
+        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
+        : "calc(-48.6vw + 200px)", // Original value for other screens
       y: 0,
       opacity: 1,
     }),
-    up: ({ isMobile }) => ({
-      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
+    up: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "-5vw"
+        : isWidescreen
+        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
+        : "calc(-48.6vw + 200px)", // Original value for other screens
       y: "-49vh",
-      opacity: 0, // Change this to 0 to fade out
+      opacity: 0,
       transition: {
         duration: 3,
         ease: [0.16, 1, 0.3, 1],
         opacity: { duration: 1, ease: "easeOut" },
       },
     }),
-    stop: ({ isMobile }) => ({
-      x: isMobile ? "-5vw" : "calc(-48.6vw + 200px)",
+    stop: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "-5vw"
+        : isWidescreen
+        ? "calc(-48.6vw + 180px)" // Adjusted for widescreen
+        : "calc(-48.6vw + 200px)", // Original value for other screens
       y: "-49vh",
       opacity: 0,
     }),
@@ -241,19 +260,31 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
   const designLogoVariants = {
     center: { x: 0, y: 0, opacity: 1 },
-    right: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+    right: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "5vw"
+        : isWidescreen
+        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
+        : "calc(48.6vw - 200px)", // Original value for other screens
       y: 0,
       opacity: 1,
       transition: { duration: 2.5, ease: [0.16, 1, 0.3, 1] },
     }),
-    pause: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+    pause: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "5vw"
+        : isWidescreen
+        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
+        : "calc(48.6vw - 200px)", // Original value for other screens
       y: 0,
       opacity: 1,
     }),
-    up: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+    up: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "5vw"
+        : isWidescreen
+        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
+        : "calc(48.6vw - 200px)", // Original value for other screens
       y: "-49vh",
       opacity: 0,
       transition: {
@@ -262,8 +293,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         opacity: { duration: 1, ease: "easeOut" },
       },
     }),
-    stop: ({ isMobile }) => ({
-      x: isMobile ? "5vw" : "calc(48.6vw - 200px)",
+    stop: ({ isMobile, isWidescreen }) => ({
+      x: isMobile
+        ? "5vw"
+        : isWidescreen
+        ? "calc(48.6vw - 180px)" // Adjusted for widescreen
+        : "calc(48.6vw - 200px)", // Original value for other screens
       y: "-49vh",
       opacity: 0,
     }),
@@ -309,6 +344,19 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       },
     },
   };
+
+  useEffect(() => {
+    const checkWidescreen = () => {
+      setIsWidescreen(
+        window.matchMedia("(min-width: 1024px) and (max-width: 1310px)").matches
+      );
+    };
+
+    checkWidescreen();
+    window.addEventListener("resize", checkWidescreen);
+
+    return () => window.removeEventListener("resize", checkWidescreen);
+  }, []);
 
   return (
     <div className={`relative min-h-screen overflow-hidden bg-[#e7e6e2]`}>
@@ -431,7 +479,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                         ? "stop"
                         : "final"
                     }
-                    custom={{ isMobile }}
+                    custom={{ isMobile, isWidescreen }}
                     transition={{
                       duration: animationStep === 3 ? 3 : 1,
                       ease: smoothEasing,
@@ -439,7 +487,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     <img
                       src="navlogo_black.png"
-                      className="md:w-[300px] w-[250px] nest-hub:w-[250px]"
+                      className="md:w-[300px] w-[250px] nest-hub:w-[250px] widescreen:w-[250px]"
                       alt="Navigation Logo"
                     />
                   </motion.div>
@@ -460,14 +508,14 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                         ? "stop"
                         : "final"
                     }
-                    custom={{ isMobile }}
+                    custom={{ isMobile, isWidescreen }}
                     transition={{
                       duration: animationStep === 3 ? 0.5 : 1,
                       ease: smoothEasing,
                     }}
                   >
                     <DesignLogo
-                      className={`md:w-[115px] nest-hub:w-[105px] w-20 h-auto ${
+                      className={`md:w-[115px] nest-hub:w-[105px] widescreen:w-[105px] w-20 h-auto ${
                         animationStep < 5 ? "text-black" : "text-white"
                       }`}
                     />
@@ -503,7 +551,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           transition={{ duration: loading ? 0.8 : 0.3, ease: smoothEasing }}
         >
           <div className="flex justify-between items-center w-full">
-            <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12">
+            <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12 widescreen:gap-3">
               <div className="">
                 <motion.div
                   variants={logoVariants}
@@ -525,13 +573,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <span className="sr-only">Home</span>
                     <img
                       src="nav logo_white.png"
-                      className="md:w-[300px] w-[250px] mb-0.5 nest-hub:w-[250px]"
+                      className="md:w-[300px] w-[250px] mb-0.5 nest-hub:w-[250px] widescreen:w-[220px]"
                       alt="Logo"
                     />
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden custom-lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px">
+              <nav className="hidden xl:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px widescreen:text-left widescreen:text-sm">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
                   {location.pathname === "/" ? (
                     <ScrollLink
@@ -735,12 +783,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ease: smoothEasing,
                   delay: 2,
                 }}
-                className="hidden custom-lg:block"
+                className="hidden xl:block"
               >
-                <DesignLogo className="w-[115px] nest-hub:w-[105px] mb-0.5 h-auto text-white" />
+                <DesignLogo className="w-[115px] nest-hub:w-[105px] widescreen:w-[105px] mb-0.5 h-auto text-white" />
               </motion.div>
               <button
-                className="custom-lg:hidden  text-white mt-5"
+                className="xl:hidden block text-white mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
                   // toggleBodyScroll(!mobileMenuOpen);

@@ -16,6 +16,8 @@ export default {
           raw: "(width: 1280px) and (height: 800px) and (pointer: coarse)",
         },
         "custom-lg": "1300px",
+        // widescreen: { min: "1024px", max: "1310px" },
+        // "custom-xl": { min: "1310px", max: "1537px" },
       },
       borderRadius: {
         lg: "var(--radius)",

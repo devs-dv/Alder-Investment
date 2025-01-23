@@ -87,7 +87,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
   return (
     <header className="sticky top-0 flex items-center px-4 h-[72px] transition-colors duration-200 z-[9999] backdrop-blur supports-[backdrop-filter]:bg-black/30 text-white">
       <div className="flex justify-between items-center w-full">
-        <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12">
+        <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12 widescreen:gap-3">
           <div className="">
             <div className="flex items-center">
               <Link
@@ -102,14 +102,14 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               >
                 <img
                   src="nav logo_white.png"
-                  className="md:w-[300px] nest-hub:w-[250px] w-[250px] md:ml-px -ml-[4px] mb-[3px] md:mb-0"
+                  className="md:w-[300px] nest-hub:w-[250px] w-[250px] md:ml-px -ml-[4px] widescreen:w-[220px] mb-[3px] md:mb-0"
                   alt="Logo"
                 />
               </Link>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center max-w-7xl ">
+          <nav className="hidden xl:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center max-w-7xl widescreen:text-left widescreen:text-sm">
             <div className="lg:flex justify-center items-center tracking-wide gap-6">
               {navLinks.map((link) => (
                 <button
@@ -132,7 +132,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="fixed top-5 right-48 nest-hub:right-28 z-[52] px-4 py-1 hidden lg:block">
+          <div className="fixed top-5 right-48 nest-hub:right-28 z-[52] px-4 py-1 hidden xl:block widescreen:right-36">
             <button
               className={`${language ? "font-bold" : "font-extralight"}`}
               onClick={() => setLanguage(true)}
@@ -147,11 +147,11 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               KR
             </button>
           </div>
-          <div className="hidden lg:block mr-[1px]">
-            <DesignLogo className="w-[115px] h-auto nest-hub:w-[105px]" />
+          <div className="hidden xl:block mr-[1px]">
+            <DesignLogo className="w-[115px] h-auto nest-hub:w-[105px] widescreen:w-[105px]" />
           </div>
           <button
-            className="lg:hidden  text-white"
+            className="xl:hidden  text-white"
             onClick={() => {
               setMobileMenuOpen(!mobileMenuOpen);
               toggleBodyScroll(!mobileMenuOpen);
