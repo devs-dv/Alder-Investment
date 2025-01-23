@@ -109,7 +109,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
             </div>
           </div>
 
-          <nav className="hidden xl:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center max-w-7xl widescreen:text-left widescreen:text-sm">
+          <nav className="hidden custom-lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center max-w-7xl widescreen:text-left widescreen:text-sm">
             <div className="lg:flex justify-center items-center tracking-wide gap-6">
               {navLinks.map((link) => (
                 <button
@@ -132,7 +132,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="fixed top-5 right-48 nest-hub:right-28 z-[52] px-4 py-1 hidden xl:block widescreen:right-36">
+          <div className="fixed top-5 right-48 nest-hub:right-28 z-[52] px-4 py-1 hidden custom-lg:block widescreen:right-36">
             <button
               className={`${language ? "font-bold" : "font-extralight"}`}
               onClick={() => setLanguage(true)}
@@ -147,11 +147,11 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
               KR
             </button>
           </div>
-          <div className="hidden xl:block mr-[1px]">
+          <div className="hidden custom-lg:block mr-[1px]">
             <DesignLogo className="w-[115px] h-auto nest-hub:w-[105px] widescreen:w-[105px]" />
           </div>
           <button
-            className="xl:hidden  text-white"
+            className="custom-lg:hidden  text-white"
             onClick={() => {
               setMobileMenuOpen(!mobileMenuOpen);
               toggleBodyScroll(!mobileMenuOpen);
