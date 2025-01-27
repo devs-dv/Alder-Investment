@@ -15,6 +15,7 @@ const teamMembers = [
     id: 2,
     name: "Junho Kim",
     nameKr: "김준호",
+    position: "Managing Director",
     title: "Investment management",
     titleKr: "Investment management",
     image: "2nd.jpg",
@@ -23,6 +24,7 @@ const teamMembers = [
     id: 3,
     name: "Kihyun Shin",
     nameKr: "신기현",
+    position: "Managing Director",
     title: "Compliance",
     // titleKr: "준법감시인",
     titleKr: "Compliance",
@@ -32,6 +34,7 @@ const teamMembers = [
     id: 4,
     name: "Jinhee Kim",
     nameKr: "김진희",
+    position: "Vice President",
     title: "Fund operations",
     // titleKr: "운용지원부장",
     titleKr: "Fund operations",
@@ -41,6 +44,7 @@ const teamMembers = [
     id: 5,
     name: "Jihyun Seo",
     nameKr: "서지현",
+    position: "Vice President",
     title: "Operations",
     // titleKr: "경영지원부장",
     titleKr: "Operations",
@@ -50,6 +54,7 @@ const teamMembers = [
     id: 6,
     name: "Chanwoo Kang",
     nameKr: "강찬우",
+    position: "Senior Associate",
     title: "Investment management",
     // titleKr: "포트폴리오 매니저",
     titleKr: "Investment management",
@@ -59,6 +64,7 @@ const teamMembers = [
     id: 7,
     name: "Jinsu Lim",
     nameKr: "임진수",
+    position: "Senior Associate",
     title: "Investment management",
     // titleKr: "포트폴리오 매니저",
     titleKr: "Investment management",
@@ -114,6 +120,9 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                     {language ? (
                       <div>
                         <h2 className="text-xl text-gray-900">{member.name}</h2>
+                        <p className="text-sm mb-1 text-gray-500">
+                          {member.position}
+                        </p>
                         <p className="text-sm text-gray-500">{member.title}</p>
                       </div>
                     ) : (
@@ -129,7 +138,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                     <ReadBioButton
                       onClick={() => handleReadBio(member.name)}
                       text={language ? "Read Bio" : "이력 보기"}
-                      className="-ml-4"
+                      className="-ml-4 mt-2"
                     />
                   </div>
                 </div>

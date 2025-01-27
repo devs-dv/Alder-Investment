@@ -134,17 +134,17 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
         <div className="flex items-center gap-4">
           <div className="fixed top-5 right-48 nest-hub:right-28 z-[52] px-4 py-1 hidden custom-lg:block widescreen:right-36">
             <button
-              className={`${language ? "font-bold" : "font-extralight"}`}
+              className={`pr-1 ${language ? "font-bold" : "font-extralight"}`}
               onClick={() => setLanguage(true)}
             >
               ENG
             </button>
             /
             <button
-              className={`${language ? "font-extralight" : "font-bold"}`}
+              className={`pl-1 ${language ? "font-extralight" : "font-bold"}`}
               onClick={() => setLanguage(false)}
             >
-              KR
+              한국어
             </button>
           </div>
           <div className="hidden custom-lg:block mr-[1px]">
@@ -216,17 +216,17 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
             <div className="text-white gap-2 underline flex flex-col absolute bottom-10">
               <div className="text-white">
                 <button
-                  className={` ${language ? "" : "text-[#90908D]"}`}
+                  className={`pr-1 ${language ? "" : "text-[#90908D]"}`}
                   onClick={() => setLanguage(true)}
                 >
                   ENG
                 </button>
                 /
                 <button
-                  className={` ${language ? "text-[#90908D]" : ""}`}
+                  className={`pl-1 ${language ? "text-[#90908D]" : ""}`}
                   onClick={() => setLanguage(false)}
                 >
-                  KR
+                  한국어
                 </button>
               </div>
               <a

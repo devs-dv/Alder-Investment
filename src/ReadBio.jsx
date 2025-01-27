@@ -28,6 +28,7 @@ const peopleData = [
     name: "Junho Kim",
     nameK: "김준호",
     image: "2nd.jpg",
+    position: "Managing Director",
     role: "Investment management",
     roleK: "최고 개발 책임자",
     bio: [
@@ -54,6 +55,7 @@ const peopleData = [
     name: "Kihyun Shin",
     nameK: "신기현",
     image: "3rd.jpg",
+    position: "Managing Director",
     role: "Compliance",
     roleK: "준법감시인",
     bio: [
@@ -76,6 +78,7 @@ const peopleData = [
     name: "Jinhee Kim",
     nameK: "김진희",
     image: "4th.jpg",
+    position: "Vice President",
     role: "Fund operations",
     roleK: "운용지원부장",
     bio: [
@@ -107,6 +110,7 @@ const peopleData = [
     name: "Jihyun Seo",
     nameK: "서지현",
     image: "5th.jpg",
+    position: "Vice President",
     role: "Operations",
     roleK: "경영지원부장",
     bio: [
@@ -133,6 +137,7 @@ const peopleData = [
     name: "Chanwoo Kang",
     nameK: "강찬우",
     image: "6th.jpg",
+    position: "Senior Associate",
     role: "Investment management",
     roleK: "포트폴리오 매니저",
     bio: [
@@ -165,6 +170,7 @@ const peopleData = [
     name: "Jinsu Lim",
     nameK: "임진수",
     image: "7th.jpg",
+    position: "Senior Associate",
     role: "Investment management",
     roleK: "포트폴리오 매니저",
     bio: [
@@ -223,7 +229,7 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
         {isOpen && (
           <>
             <motion.div
-              className="fixed inset-0 bg-black/60"
+              className="fixed inset-0 bg-black/20"
               onClick={onClose}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -273,10 +279,11 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
                         className="w-80 h-auto"
                       />
                     </div>
-                    <div className="space-y-4 p-8 ">
+                    <div className="p-8">
                       <h2 className="text-2xl font-medium">{person.name}</h2>
+                      <p className="text-gray-600">{person.position}</p>
                       <p className="text-gray-600">{person.role}</p>
-                      <div className="space-y-4 pt-4">
+                      <div className="space-y-4 pt-6">
                         {person.bio.map((paragraph, index) => (
                           <p key={index} className="text-gray-700">
                             {paragraph}

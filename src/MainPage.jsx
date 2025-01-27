@@ -868,17 +868,17 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               <div className="text-white gap-2 underline flex flex-col absolute bottom-10">
                 <div className="text-white">
                   <button
-                    className={` ${language ? "" : "text-[#90908D]"}`}
+                    className={`pr-1 ${language ? "" : "text-[#90908D]"}`}
                     onClick={() => setLanguage(true)}
                   >
                     ENG
                   </button>
                   /
                   <button
-                    className={` ${language ? "text-[#90908D]" : ""}`}
+                    className={`pl-1 ${language ? "text-[#90908D]" : ""}`}
                     onClick={() => setLanguage(false)}
                   >
-                    KR
+                    한국어
                   </button>
                 </div>
                 <a

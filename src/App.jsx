@@ -56,7 +56,7 @@ function App() {
                   {/* Language Toggle Button */}
                   <div className="fixed top-5 right-48 z-[52] nest-hub:right-28 px-4 py-1 hidden widescreen:right-36 custom-lg:block text-white">
                     <button
-                      className={`${
+                      className={`pr-1 ${
                         language ? "font-bold" : "font-extralight"
                       }`}
                       onClick={() => setLanguage(true)}
@@ -65,12 +65,12 @@ function App() {
                     </button>
                     /
                     <button
-                      className={`${
+                      className={`pl-1 ${
                         language ? "font-extralight" : "font-bold"
                       }`}
                       onClick={() => setLanguage(false)}
                     >
-                      KR
+                      한국어
                     </button>
                   </div>
 
