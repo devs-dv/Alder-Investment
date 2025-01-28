@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./index.css";
 import ReadBioButton from "./ReadBioButton";
+import ReadBioButton2 from "./ReadBio2Button";
 
 const teamMembers = [
   {
@@ -139,7 +140,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                         </p>
                       </div>
                     )}
-                    <ReadBioButton
+                    <ReadBioButton2
                       onClick={() => handleReadBio(member.name)}
                       text={language ? "Read Bio" : "이력 보기"}
                       className={`-ml-4 mt-2 ${
@@ -185,7 +186,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                   {language ? member.title : member.titleKr}
                 </p>
               </div>
-              <ReadBioButton
+              <ReadBioButton2
                 onClick={() => handleReadBio(member.name)}
                 text={language ? "Read Bio" : "이력 보기"}
                 className={`mt-2 ${
