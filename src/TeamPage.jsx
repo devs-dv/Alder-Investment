@@ -138,7 +138,9 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                     <ReadBioButton
                       onClick={() => handleReadBio(member.name)}
                       text={language ? "Read Bio" : "이력 보기"}
-                      className="-ml-4 mt-2"
+                      className={`-ml-4 mt-2 ${
+                        member.name === "Hee-Dong Konstantin Kim" ? "mt-7" : ""
+                      }`}
                     />
                   </div>
                 </div>
@@ -162,20 +164,25 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                 alt={member.name}
                 className="w-40 h-40 mb-4 object-contain"
               />
-              <h2 className="text-lg font-bold">
-                {language
-                  ? member.name === "Hee-Dong Konstantin Kim"
-                    ? "Konstantin Kim"
-                    : member.name
-                  : member.nameKr}
-              </h2>
-              <p className="mt-2 text-sm text-gray-500">
-                {language ? member.title : member.titleKr}
-              </p>
+              <div>
+                <h2 className="text-lg font-bold">
+                  {language
+                    ? member.name === "Hee-Dong Konstantin Kim"
+                      ? "Konstantin Kim"
+                      : member.name
+                    : member.nameKr}
+                </h2>
+                <p className="text-sm mb-1 text-gray-500">{member.position}</p>
+                <p className="text-sm text-gray-500">
+                  {language ? member.title : member.titleKr}
+                </p>
+              </div>
               <ReadBioButton
                 onClick={() => handleReadBio(member.name)}
                 text={language ? "Read Bio" : "이력 보기"}
-                className="mt-2"
+                className={`mt-2 ${
+                  member.name === "Hee-Dong Konstantin Kim" ? "mt-7" : ""
+                }`}
               />
             </div>
           ))}
