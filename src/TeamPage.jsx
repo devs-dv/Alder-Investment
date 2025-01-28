@@ -26,7 +26,6 @@ const teamMembers = [
     nameKr: "신기현",
     position: "Managing Director",
     title: "Compliance",
-    // titleKr: "준법감시인",
     titleKr: "Compliance",
     image: "3rd.jpg",
   },
@@ -36,7 +35,6 @@ const teamMembers = [
     nameKr: "김진희",
     position: "Vice President",
     title: "Fund operations",
-    // titleKr: "운용지원부장",
     titleKr: "Fund operations",
     image: "4th.jpg",
   },
@@ -46,7 +44,6 @@ const teamMembers = [
     nameKr: "서지현",
     position: "Vice President",
     title: "Operations",
-    // titleKr: "경영지원부장",
     titleKr: "Operations",
     image: "5th.jpg",
   },
@@ -56,7 +53,6 @@ const teamMembers = [
     nameKr: "강찬우",
     position: "Senior Associate",
     title: "Investment management",
-    // titleKr: "포트폴리오 매니저",
     titleKr: "Investment management",
     image: "6th.jpg",
   },
@@ -66,7 +62,6 @@ const teamMembers = [
     nameKr: "임진수",
     position: "Senior Associate",
     title: "Investment management",
-    // titleKr: "포트폴리오 매니저",
     titleKr: "Investment management",
     image: "7th.jpg",
   },
@@ -109,16 +104,22 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                 style={{ flexShrink: 0 }}
               >
                 <div className="flex flex-col items-center py-6">
-                  <div className="w-40 h-auto overflow-hidden bg-white">
+                  <div
+                    className="w-40 h-auto overflow-hidden bg-white cursor-pointer"
+                    onClick={() => handleReadBio(member.name)}
+                  >
                     <img
-                      src={member.image}
+                      src={member.image || "/placeholder.svg"}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="text-left mt-4">
                     {language ? (
-                      <div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => handleReadBio(member.name)}
+                      >
                         <h2 className="text-xl text-gray-900">{member.name}</h2>
                         <p className="text-sm mb-1 text-gray-500">
                           {member.position}
@@ -126,7 +127,10 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                         <p className="text-sm text-gray-500">{member.title}</p>
                       </div>
                     ) : (
-                      <div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => handleReadBio(member.name)}
+                      >
                         <h2 className="text-xl text-gray-900">
                           {member.nameKr}
                         </h2>
@@ -160,11 +164,15 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
               className="flex flex-col items-center text-center"
             >
               <img
-                src={member.image}
+                src={member.image || "/placeholder.svg"}
                 alt={member.name}
-                className="w-40 h-40 mb-4 object-contain"
+                className="w-40 h-40 mb-4 object-contain cursor-pointer"
+                onClick={() => handleReadBio(member.name)}
               />
-              <div>
+              <div
+                className="cursor-pointer"
+                onClick={() => handleReadBio(member.name)}
+              >
                 <h2 className="text-lg font-bold">
                   {language
                     ? member.name === "Hee-Dong Konstantin Kim"
