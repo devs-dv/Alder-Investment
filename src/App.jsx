@@ -18,6 +18,7 @@ import ScrollToTop from "./ScrollToTop";
 import TermsAndConditions from "./TermsAndConditions";
 import Dashboard from "./Dashboard";
 import NewsDetail from "./NewsDetail";
+import { TailwindIndicator } from "./TailwindIndicator";
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -137,6 +138,7 @@ function App() {
       </Routes>
 
       <Toaster />
+      <TailwindIndicator />
     </div>
   );
 }

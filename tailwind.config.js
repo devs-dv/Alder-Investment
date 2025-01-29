@@ -18,6 +18,8 @@ export default {
         "custom-lg": "1300px",
         // widescreen: { min: "1024px", max: "1310px" },
         // "custom-xl": { min: "1310px", max: "1537px" },
+        "max-h-800": { raw: "(max-height: 800px)" },
+        "max-h-700": { raw: "(max-height: 700px)" },
       },
       borderRadius: {
         lg: "var(--radius)",

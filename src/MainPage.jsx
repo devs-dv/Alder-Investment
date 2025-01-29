@@ -1,19 +1,19 @@
-import { useState, useEffect, useRef } from "react";
 import {
-  motion,
   AnimatePresence,
   cubicBezier,
+  motion,
   useAnimation,
 } from "framer-motion";
-import { Logo, DesignLogo } from "./icons";
 import { Menu, X } from "lucide-react";
-import { useActiveSection } from "./utils/useActiveSection";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { DesignLogo, Logo } from "./icons";
+import { useActiveSection } from "./utils/useActiveSection";
 
-import Heading from "./Heading";
 import Content from "./Content";
+import Heading from "./Heading";
 
 const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const [animationStep, setAnimationStep] = useState(0);
@@ -307,7 +307,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       y: "-100%",
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: smoothEasing,
       },
     },
@@ -363,7 +363,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 : 1,
             }}
             transition={{ duration: 0.8, ease: smoothEasing }}
-            className="absolute inset-0 flex flex-col justify-center items-center"
+            className="flex flex-col items-start justify-center min-h-screen"
           >
             <Heading />
             <Content language={language} />
