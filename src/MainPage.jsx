@@ -865,7 +865,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   {language ? "Contact Us" : "Contact Us"}
                 </ScrollLink>
               </nav>
-              <div className="text-white gap-2 underline flex flex-col absolute bottom-10">
+              <div className="text-white gap-2 flex flex-col absolute bottom-10">
                 <div className="text-white">
                   <button
                     className={`pr-1 ${language ? "" : "text-[#90908D]"}`}
