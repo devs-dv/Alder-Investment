@@ -135,6 +135,9 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                         <h2 className="text-xl text-gray-900">
                           {member.nameKr}
                         </h2>
+                        <p className="text-sm mb-1 text-gray-500">
+                          {member.position}
+                        </p>
                         <p className="text-sm text-gray-500">
                           {member.titleKr}
                         </p>

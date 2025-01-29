@@ -363,10 +363,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 : 1,
             }}
             transition={{ duration: 0.8, ease: smoothEasing }}
+            className="absolute inset-0 flex flex-col justify-center items-center"
           >
             <Heading />
+            <Content language={language} />
           </motion.div>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{
               opacity: loading
@@ -380,9 +382,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 : 1,
             }}
             transition={{ duration: 3, ease: smoothEasing }}
-          >
-            <Content language={language} />
-          </motion.div>
+          ></motion.div> */}
         </motion.section>
       </div>
 
