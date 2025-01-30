@@ -328,9 +328,11 @@ const ReadBio = ({ isOpen, onClose, selectedName, language }) => {
                         className="w-80 h-auto"
                       />
                     </div>
-                    <div className="space-y-4 p-8 ">
+                    <div className="p-8">
                       <h2 className="text-2xl font-medium">{person.nameK}</h2>
+                      <p className="text-gray-600">{person.position}</p>
                       <p className="text-gray-600">{person.role}</p>
+
                       <div className="space-y-4 pt-4">
                         {person.bioK.map((paragraph, index) => (
                           <p

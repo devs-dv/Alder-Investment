@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReadBioButton = ({ onClick, text, className }) => {
+const ReadBioButton2 = ({ onClick, text, className }) => {
   return (
     <button
       className={`relative inline-flex items-center text-[#545454] w-fit group px-4 ${className}`}
@@ -17,4 +17,4 @@ const ReadBioButton = ({ onClick, text, className }) => {
   );
 };
 
-export default ReadBioButton;
+export default ReadBioButton2;
