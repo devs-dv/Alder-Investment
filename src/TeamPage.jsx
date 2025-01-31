@@ -140,7 +140,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                     <ReadMore
                       onClick={() => handleReadBio(member.name)}
                       text={language ? "Read Bio" : "이력 보기"}
-                      className={`-ml-4 mt-2 ${
+                      className={`mt-2 ${
                         member.name === "Hee-Dong Konstantin Kim" ? "mt-8" : ""
                       }`}
                     />
@@ -157,10 +157,7 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
       <div className="md:hidden">
         <div className="grid grid-cols-2 gap-2">
           {teamMembers.map((member) => (
-            <div
-              key={member.id}
-              className="flex flex-col items-center text-center"
-            >
+            <div key={member.id} className="flex flex-col text-left">
               <img
                 src={member.image || "/placeholder.svg"}
                 alt={member.name}

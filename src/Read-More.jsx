@@ -13,7 +13,7 @@ export default function ReadMore({ onClick, text, className }) {
 
   return (
     <button
-      className={`group inline-flex flex-col items-start gap-2 no-underline ${className}`}
+      className={`group inline-flex flex-col items-start  gap-2 no-underline ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
