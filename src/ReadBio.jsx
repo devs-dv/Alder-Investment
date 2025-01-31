@@ -29,7 +29,7 @@ const peopleData = [
     nameK: "김준호",
     image: "2nd.jpg",
     position: "Managing Director",
-    role: "Investment management",
+    role: "Investment Management",
     roleK: "최고 개발 책임자",
     bio: [
       "Junho Kim is a seasoned professional with extensive experience in equity research, due-diligence, and corporate strategy.",
@@ -79,7 +79,7 @@ const peopleData = [
     nameK: "김진희",
     image: "4th.jpg",
     position: "Vice President",
-    role: "Fund operations",
+    role: "Fund Operations",
     roleK: "운용지원부장",
     bio: [
       <p>
@@ -138,7 +138,7 @@ const peopleData = [
     nameK: "강찬우",
     image: "6th.jpg",
     position: "Senior Associate",
-    role: "Investment management",
+    role: "Investment Management",
     roleK: "포트폴리오 매니저",
     bio: [
       <p>
@@ -171,7 +171,7 @@ const peopleData = [
     nameK: "임진수",
     image: "7th.jpg",
     position: "Senior Associate",
-    role: "Investment management",
+    role: "Investment Management",
     roleK: "포트폴리오 매니저",
     bio: [
       <p>

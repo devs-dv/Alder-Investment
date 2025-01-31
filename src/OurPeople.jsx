@@ -22,7 +22,7 @@ const OurPeople = ({ language, setLanguage }) => {
       },
       {
         name: "Junho Kim",
-        position: "Investment management",
+        position: "Investment Management",
         koreanName: "김준호",
         koreanPosition: "최고 개발 책임자",
         image: "2nd.jpg",

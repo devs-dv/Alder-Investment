@@ -17,8 +17,8 @@ const teamMembers = [
     name: "Junho Kim",
     nameKr: "김준호",
     position: "Managing Director",
-    title: "Investment management",
-    titleKr: "Investment management",
+    title: "Investment Management",
+    titleKr: "Investment Management",
     image: "2nd.jpg",
   },
   {
@@ -35,8 +35,8 @@ const teamMembers = [
     name: "Jinhee Kim",
     nameKr: "김진희",
     position: "Vice President",
-    title: "Fund operations",
-    titleKr: "Fund operations",
+    title: "Fund Operations",
+    titleKr: "Fund Operations",
     image: "4th.jpg",
   },
   {
@@ -53,8 +53,8 @@ const teamMembers = [
     name: "Chanwoo Kang",
     nameKr: "강찬우",
     position: "Senior Associate",
-    title: "Investment management",
-    titleKr: "Investment management",
+    title: "Investment Management",
+    titleKr: "Investment Management",
     image: "6th.jpg",
   },
   {
@@ -62,8 +62,8 @@ const teamMembers = [
     name: "Jinsu Lim",
     nameKr: "임진수",
     position: "Senior Associate",
-    title: "Investment management",
-    titleKr: "Investment management",
+    title: "Investment Management",
+    titleKr: "Investment Management",
     image: "7th.jpg",
   },
 ];
