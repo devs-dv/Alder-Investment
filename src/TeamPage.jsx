@@ -157,7 +157,10 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
       <div className="md:hidden">
         <div className="grid grid-cols-2 gap-2">
           {teamMembers.map((member) => (
-            <div key={member.id} className="flex flex-col text-left">
+            <div
+              key={member.id}
+              className="flex flex-col items-center text-center"
+            >
               <img
                 src={member.image || "/placeholder.svg"}
                 alt={member.name}
