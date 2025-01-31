@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./index.css";
-import ReadBioButton from "./ReadBioButton";
+import ReadMore from "./Read-More";
 import ReadBioButton2 from "./ReadBio2Button";
 
 const teamMembers = [
@@ -122,10 +122,8 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                         onClick={() => handleReadBio(member.name)}
                       >
                         <h2 className="text-xl text-gray-900">{member.name}</h2>
-                        <p className="text-sm mb-1 text-gray-500">
-                          {member.position}
-                        </p>
-                        <p className="text-sm text-gray-500">{member.title}</p>
+                        <p className="mb-1 text-gray-500">{member.position}</p>
+                        <p className="text-gray-500">{member.title}</p>
                       </div>
                     ) : (
                       <div
@@ -135,19 +133,15 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                         <h2 className="text-xl text-gray-900">
                           {member.nameKr}
                         </h2>
-                        <p className="text-sm mb-1 text-gray-500">
-                          {member.position}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          {member.titleKr}
-                        </p>
+                        <p className="mb-1 text-gray-500">{member.position}</p>
+                        <p className="text-gray-500">{member.titleKr}</p>
                       </div>
                     )}
-                    <ReadBioButton2
+                    <ReadMore
                       onClick={() => handleReadBio(member.name)}
                       text={language ? "Read Bio" : "이력 보기"}
                       className={`-ml-4 mt-2 ${
-                        member.name === "Hee-Dong Konstantin Kim" ? "mt-7" : ""
+                        member.name === "Hee-Dong Konstantin Kim" ? "mt-8" : ""
                       }`}
                     />
                   </div>
@@ -184,12 +178,12 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                       : member.name
                     : member.nameKr}
                 </h2>
-                <p className="text-sm mb-1 text-gray-500">{member.position}</p>
-                <p className="text-sm text-gray-500">
+                <p className="mb-1 text-gray-500">{member.position}</p>
+                <p className="text-gray-500">
                   {language ? member.title : member.titleKr}
                 </p>
               </div>
-              <ReadBioButton2
+              <ReadMore
                 onClick={() => handleReadBio(member.name)}
                 text={language ? "Read Bio" : "이력 보기"}
                 className={`mt-2 ${

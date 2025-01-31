@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-[#e7e6e2] py-10 px-5 lg:px-10">
       <div className="w-full flex  max-md:gap-4 justify-between text-[#545454] mb-60">
         <div className="md:w-4/6">
-          <img src="flogo.png" alt="ALDER Investments logo" />
+          <img src="footer.png" alt="ALDER Investments logo" />
         </div>
       </div>
       <div className="flex flex-col gap-2 md:gap-0 items-center justify-center md:flex-row md:justify-between md:items-end">

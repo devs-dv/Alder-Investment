@@ -339,7 +339,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         >
           <video
             className="absolute inset-0 w-full h-full object-cover scale-110"
-            src="LV1.mp4"
+            src="MainPages.mp4"
             autoPlay
             playsInline
             loop
@@ -540,7 +540,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     <span className="sr-only">Home</span>
                     <img
-                      src="nav logo_white.png"
+                      src="header.png"
                       className="md:w-[300px] w-[250px] mb-0.5 nest-hub:w-[250px] widescreen:w-[220px]"
                       alt="Logo"
                     />
@@ -556,7 +556,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       smooth={false}
                       duration={0}
                       offset={-72}
-                      className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "philosophy" ||
@@ -572,7 +572,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ) : (
                     <Link
                       to="#philosophy"
-                      className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "philosophy" ||
@@ -593,7 +593,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       smooth={false}
                       duration={0}
                       offset={-72}
-                      className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "services" ||
@@ -609,7 +609,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ) : (
                     <Link
                       to="#services"
-                      className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "services" ||
@@ -630,7 +630,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       smooth={false}
                       duration={0}
                       offset={-72}
-                      className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "people" ||
@@ -645,7 +645,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ) : (
                     <Link
                       to="#people"
-                      className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "people" ||
@@ -660,7 +660,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
 
                   <Link
                     to="/news"
-                    className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
+                    className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
                       !scrolled ||
                       scrollDirection === "up" ||
                       activeSection === "news" ||
@@ -680,7 +680,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                       smooth={false}
                       duration={0}
                       offset={-72}
-                      className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "contact" ||
@@ -695,7 +695,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   ) : (
                     <Link
                       to="#contact"
-                      className={`text-white uppercase hover:text-gray-300 transition-colors duration-200 ${
+                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
                         !scrolled ||
                         scrollDirection === "up" ||
                         activeSection === "contact" ||
@@ -753,10 +753,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 }}
                 className="hidden custom-lg:block"
               >
-                <DesignLogo className="w-[115px] nest-hub:w-[105px] widescreen:w-[105px] mb-0.5 h-auto text-white" />
+                <DesignLogo className="w-[115px] nest-hub:w-[105px] widescreen:w-[105px] mb-0.5 h-auto text-[#898981]" />
               </motion.div>
               <button
-                className="custom-lg:hidden block text-white mt-5"
+                className="custom-lg:hidden block text-[#898981] mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
                   // toggleBodyScroll(!mobileMenuOpen);

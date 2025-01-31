@@ -101,7 +101,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
                 }}
               >
                 <img
-                  src="nav logo_white.png"
+                  src="header.png"
                   className="md:w-[300px] nest-hub:w-[250px] w-[250px] md:ml-px -ml-[4px] widescreen:w-[220px] mb-[3px] md:mb-0"
                   alt="Logo"
                 />
@@ -151,7 +151,7 @@ export function TestNavbar({ language, setLanguage, setLoading }) {
             <DesignLogo className="w-[115px] h-auto nest-hub:w-[105px] widescreen:w-[105px]" />
           </div>
           <button
-            className="custom-lg:hidden  text-white"
+            className="custom-lg:hidden  text-[#898981]"
             onClick={() => {
               setMobileMenuOpen(!mobileMenuOpen);
               toggleBodyScroll(!mobileMenuOpen);

@@ -190,7 +190,7 @@ const ServicesSection = (object) => {
     },
   ];
 
-  const defaultImage = "def.jpg";
+  const defaultImage = "services.jpeg";
 
   return (
     <section className="bg-[#e7e6e2] overflow-hidden" id="services">

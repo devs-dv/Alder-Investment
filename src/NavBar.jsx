@@ -44,7 +44,7 @@ const NavBar = ({ language, setLanguage, setLoading }) => {
               }}
             >
               <img
-                src="/nav logo_white.png"
+                src="/header.png"
                 className="md:w-[300px] w-[250px]"
                 alt="Logo"
               />
@@ -88,11 +88,11 @@ const NavBar = ({ language, setLanguage, setLoading }) => {
                 KR
               </button>
             </div>
-            <DesignLogo className="w-[115px] h-auto text-white hidden md:block" />
+            <DesignLogo className="w-[115px] h-auto text-[#898981] hidden md:block" />
           </div>
 
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-[#898981]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <Menu size={30} />
