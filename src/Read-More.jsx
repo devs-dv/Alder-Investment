@@ -19,7 +19,7 @@ export default function ReadMore({ onClick, text, className }) {
       onClick={onClick}
     >
       <div className="flex items-center gap-2">
-        <span className="text-xl text-gray-800">{text}</span>
+        <span className="text-gray-800">{text}</span>
         <div
           ref={lineRef}
           className="relative h-[1px] w-8 bg-gray-800 overflow-hidden"
