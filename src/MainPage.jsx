@@ -346,7 +346,13 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
             muted
             preload="auto"
           >
-            <source src="LV1.mp4" type="video/mp4" />
+            <source
+              src="LV1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
           <motion.div
