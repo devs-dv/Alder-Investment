@@ -171,22 +171,22 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
                 className="cursor-pointer"
                 onClick={() => handleReadBio(member.name)}
               >
-                <h2 className="text-lg font-bold">
+                <h2 className="text-base font-bold">
                   {language
                     ? member.name === "Hee-Dong Konstantin Kim"
                       ? "Konstantin Kim"
                       : member.name
                     : member.nameKr}
                 </h2>
-                <p className="mb-1 text-gray-500">{member.position}</p>
-                <p className="text-gray-500">
+                <p className="mb-1 text-sm text-gray-500">{member.position}</p>
+                <p className="text-gray-500 text-sm">
                   {language ? member.title : member.titleKr}
                 </p>
               </div>
               <ReadMore
                 onClick={() => handleReadBio(member.name)}
                 text={language ? "Read Bio" : "이력 보기"}
-                className={` ${
+                className={`text-sm ${
                   member.name === "Hee-Dong Konstantin Kim" ? "mt-7" : ""
                 }`}
               />
