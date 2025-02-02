@@ -5,7 +5,7 @@ import {
   useAnimation,
 } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
@@ -32,25 +32,27 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const fullscreenAnimationDuration = 30; // in seconds
 
   const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const videoRef = useRef(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+  // useEffect(() => {
+  //   let lastScrollY = window.pageYOffset;
 
-    const handleScroll = () => {
-      const currentScrollY = window.pageYOffset;
-      const direction = currentScrollY > lastScrollY ? "down" : "up";
-      const isScrolled = currentScrollY > 10;
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.pageYOffset;
+  //     const direction = currentScrollY > lastScrollY ? "down" : "up";
+  //     const isScrolled = currentScrollY > 10;
 
-      setScrolled(isScrolled);
-      setScrollDirection(direction);
-      setIsScrollingDown(direction === "down");
+  //     setScrolled(isScrolled);
+  //     setScrollDirection(direction);
+  //     setIsScrollingDown(direction === "down");
 
-      lastScrollY = currentScrollY;
-    };
+  //     lastScrollY = currentScrollY;
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   useEffect(() => {
     if (animationStep === 4) {
@@ -326,6 +328,30 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     return () => window.removeEventListener("resize", checkWidescreen);
   }, []);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Autoplay started
+            console.log("Video autoplay started successfully");
+            setIsVideoPlaying(true);
+            // You can add more logic here if needed
+            // For example, you might want to start some animation
+            // or update other parts of your UI
+          })
+          .catch((error) => {
+            // Autoplay was prevented
+            console.log("Autoplay was prevented:", error);
+            setIsVideoPlaying(false);
+            // You might want to show a play button here
+            // or take some other action to encourage user interaction
+          });
+      }
+    }
+  }, []);
+
   return (
     <div className={`relative min-h-screen overflow-hidden bg-[#e7e6e2]`}>
       {/* Hero Section */}
@@ -338,6 +364,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           transition={{ duration: 0.5, ease: smoothEasing }}
         >
           <video
+            ref={videoRef}
             className="absolute inset-0 w-full h-full object-cover scale-110"
             src="MainPages.mp4"
             autoPlay
@@ -348,10 +375,11 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           >
             <source
               src="LV1.mp4"
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline type="video/mp4"
+              playsInline
+              type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
@@ -782,10 +810,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               animate="visible"
               exit="exit"
             >
-              {/* 
-                NOTE: To adjust the scrolling speed on mobile, modify the `duration` prop of the ScrollLink components below. 
-                Higher values will result in slower scrolling. The current value is set to 2000ms (1 second).
-              */}
               <button
                 className="absolute top-6 right-6 text-white"
                 onClick={() => {
@@ -804,7 +828,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   to="philosophy"
                   spy={true}
                   smooth={true}
-                  // Increased duration for slower scrolling on mobile
                   offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {
@@ -819,7 +842,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   to="services"
                   spy={true}
                   smooth={true}
-                  // Increased duration for slower scrolling on mobile
                   offset={-20}
                   className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
                   onClick={() => {

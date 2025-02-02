@@ -186,8 +186,8 @@ export default function TeamPage({ language, setIsSidebarOpen, setPeople }) {
               <ReadMore
                 onClick={() => handleReadBio(member.name)}
                 text={language ? "Read Bio" : "이력 보기"}
-                className={`text-sm${
-                  member.name === "Hee-Dong Konstantin Kim" ? "mt-7" : ""
+                className={`text-sm ${
+                  member.name === "Hee-Dong Konstantin Kim" ? "mt-5" : ""
                 }`}
               />
             </div>
