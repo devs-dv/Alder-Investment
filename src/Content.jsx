@@ -28,7 +28,7 @@ const Content = ({ language }) => (
       </>
     ) : (
       <>
-        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl nest-hub:max-w-2xl p-2 md:p-12 lg:p-4 text-white z-20">
+        <div className="absolute bottom-20  md:bottom-[16px] right-0 lg:mr-10 text-justify md:right-[-18px] left-0 md:left-auto md:max-w-3xl lg:max-w-4xl nest-hub:max-w-2xl p-2 md:p-12 lg:p-4 text-[#898981] z-20">
           <div className="relative">
             <div className="text-base font-light pl-3 pr-3 md:pl-0">
               <div className="lg:flex flex-col text-base">

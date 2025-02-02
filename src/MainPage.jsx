@@ -553,7 +553,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="philosophy"
                       spy={true}
-                      smooth={false}
+                      smooth={true}
                       duration={0}
                       offset={-72}
                       className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
@@ -590,7 +590,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="services"
                       spy={true}
-                      smooth={false}
+                      smooth={true}
                       duration={0}
                       offset={-72}
                       className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
@@ -627,7 +627,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="people"
                       spy={true}
-                      smooth={false}
+                      smooth={true}
                       duration={0}
                       offset={-72}
                       className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
@@ -677,7 +677,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                     <ScrollLink
                       to="contact"
                       spy={true}
-                      smooth={false}
+                      smooth={true}
                       duration={0}
                       offset={-72}
                       className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
