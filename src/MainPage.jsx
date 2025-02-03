@@ -366,7 +366,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           <video
             ref={videoRef}
             className="absolute inset-0 w-full h-full object-cover scale-110"
-            src="MainPages.mp4"
+            src="hero.mp4"
             autoPlay
             playsInline
             loop

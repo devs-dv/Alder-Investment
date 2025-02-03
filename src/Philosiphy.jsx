@@ -76,7 +76,7 @@ const Philosiphy = ({ language }) => {
             playsInline
             preload="auto"
           >
-            <source src="Philosophys.mp4" type="video/mp4" />
+            <source src="philosophy.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

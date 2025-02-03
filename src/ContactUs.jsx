@@ -110,7 +110,7 @@ export default function ContactUs({ language, setLanguage }) {
 
           <div className="lg:w-[30%] lg:h-[26rem] lg:overflow-hidden flex items-end justify-center">
             <img
-              src="https://kingsley-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8oxjw9s3%2Fproduction%2F489a833058dc748b1b1a7e96727526b322b665b9-1348x1800.jpg%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"
+              src="Contact.jpg"
               alt="office-window"
               className="lg:w-[80%] h-auto"
             />

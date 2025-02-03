@@ -20,7 +20,7 @@ export default function ReadMore({ onClick, text, className }) {
     >
       <div className="flex items-center gap-2">
         <span className="text-gray-800">{text}</span>
-        <div
+        {/* <div
           ref={lineRef}
           className="relative h-[1px] w-8 bg-gray-800 overflow-hidden"
         >
@@ -31,7 +31,7 @@ export default function ReadMore({ onClick, text, className }) {
               transform: `translateX(${isHovered ? "0%" : "-100%"})`,
             }}
           />
-        </div>
+        </div> */}
       </div>
     </button>
   );
