@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div>
           <a
-            href="https://www.linkedin.com/in/alder-partners-674336306/"
+            href="https://www.linkedin.com/company/alder-management/?viewAsMember=true"
             className="underline"
             target="_blank"
             rel="noopener noreferrer"
