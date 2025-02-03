@@ -27,6 +27,7 @@ const NavLink = ({
   scrollDirection,
   activeSection,
   isMobile,
+  className,
 }) => {
   const showLink =
     !scrolled ||
@@ -53,7 +54,7 @@ const NavLink = ({
         {...linkProps}
         className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
           isActiveLink && !isMobile ? "text-white" : ""
-        }`}
+        }, ${className}`}
         onClick={onClick}
         style={{ fontWeight: "300" }}
       >
@@ -755,7 +756,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <Logo className="w-24 h-auto text-white" />
                 <DesignLogo className="w-24 h-auto text-white" />
               </a>
-              <nav className="flex flex-col items-start gap-6 w-full">
+              <nav className="flex flex-col items-start gap-3 w-full text-2xl text-left uppercase">
                 {[
                   { name: "Our Philosophy", id: "philosophy" },
                   { name: "Our Services", id: "services" },
@@ -764,6 +765,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   { name: "Contact Us", id: "contact" },
                 ].map((link, index) => (
                   <NavLink
+                    className="text-white "
                     key={link.name}
                     name={language ? link.name : link.name}
                     id={link.id}
