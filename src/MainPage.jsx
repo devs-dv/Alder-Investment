@@ -910,7 +910,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </button>
                 </div>
                 <a
-                  href="https://www.linkedin.com/in/alder-partners-674336306/"
+                  href="https://www.linkedin.com/company/alder-management/?viewAsMember=true"
                   className="underline"
                 >
                   <div className="flex gap-3">

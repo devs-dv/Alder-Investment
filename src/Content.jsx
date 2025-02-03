@@ -6,7 +6,9 @@ const Content = ({ language }) => (
           <div className="relative">
             <div className="text-base text-[#898981] font-light pl-3 pr-3 md:pl-0">
               <div className="lg:flex flex-col text-base">
-                <h2 className="text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
+                <h2 className="text-lg font-medium">
+                  WE ARE ALDER INVESTMENTS
+                </h2>
                 <p
                   className="md:text-base font-light text-sm"
                   style={{ wordBreak: "keep-all" }}
@@ -32,7 +34,9 @@ const Content = ({ language }) => (
           <div className="relative">
             <div className="text-base font-light pl-3 pr-3 md:pl-0">
               <div className="lg:flex flex-col text-base">
-                <h2 className="text-lg font-light">WE ARE ALDER INVESTMENTS</h2>
+                <h2 className="text-lg font-medium">
+                  WE ARE ALDER INVESTMENTS
+                </h2>
                 <p
                   className="md:text-base font-light text-sm"
                   style={{ wordBreak: "keep-all" }}
