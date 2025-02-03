@@ -1,12 +1,38 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Philosiphy = ({ language }) => {
   const videoRef = useRef(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
     const video = document.querySelector("video");
     if (video) {
-      video.play().catch((error) => console.log("Autoplay blocked:", error));
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log("Autoplay started successfully");
+            setIsVideoPlaying(true);
+          })
+          .catch((error) => {
+            console.log("Autoplay was prevented:", error);
+            // Attempt to play again after a user interaction
+            const playButton = document.createElement("button");
+            playButton.textContent = "Play Video";
+            playButton.style.position = "absolute";
+            playButton.style.zIndex = "1000";
+            playButton.style.top = "50%";
+            playButton.style.left = "50%";
+            playButton.style.transform = "translate(-50%, -50%)";
+            document.body.appendChild(playButton);
+
+            playButton.addEventListener("click", () => {
+              video.play();
+              playButton.remove();
+            });
+          });
+      }
     }
   }, []);
 

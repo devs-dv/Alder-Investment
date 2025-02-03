@@ -397,7 +397,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         >
           <video
             ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover scale-110"
+            className="absolute inset-0 w-full h-full object-cover scale-110 pointer-events-none"
             playsInline
             loop
             muted
