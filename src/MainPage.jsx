@@ -7,13 +7,76 @@ import {
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { DesignLogo, Logo } from "./icons";
 import { useActiveSection } from "./utils/useActiveSection";
 
 import Content from "./Content";
 import Heading from "./Heading";
+
+const NavLink = ({
+  name,
+  id,
+  index,
+  isActive,
+  onClick,
+  to,
+  isScrollLink,
+  scrolled,
+  scrollDirection,
+  activeSection,
+  isMobile,
+}) => {
+  const showLink =
+    !scrolled ||
+    scrollDirection === "up" ||
+    activeSection === id ||
+    (activeSection === "home" && id === "philosophy");
+  const showDots = !isMobile && scrolled && scrollDirection === "down";
+  const isActiveLink = isActive && (scrollDirection === "down" || !scrolled);
+
+  const LinkComponent = isScrollLink ? ScrollLink : Link;
+  const linkProps = isScrollLink
+    ? {
+        to: id,
+        spy: true,
+        smooth: true,
+        duration: 0,
+        offset: -72,
+      }
+    : { to: to || `#${id}` };
+
+  return (
+    <div className={`flex items-center gap-2 ${showLink ? "" : "hidden"}`}>
+      <LinkComponent
+        {...linkProps}
+        className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+          isActiveLink && !isMobile ? "text-white" : ""
+        }`}
+        onClick={onClick}
+        style={{ fontWeight: "300" }}
+      >
+        {name}
+      </LinkComponent>
+      {showDots && id !== "news" && (
+        <div className="flex gap-2 items-center ml-3">
+          {[0, 1, 2, 3].map((dotIndex) => (
+            <div
+              key={dotIndex}
+              className={`w-[5px] h-[5px] rounded-full ${
+                isActiveLink &&
+                (id === "contact" ? dotIndex === 3 : dotIndex === index)
+                  ? "bg-white"
+                  : "bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const [animationStep, setAnimationStep] = useState(0);
@@ -26,6 +89,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
   const [scrollDirection, setScrollDirection] = useState("down");
   const location = useLocation();
   const [screenSize, setScreenSize] = useState("default");
+  const navigate = useNavigate();
 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const fullscreenControls = useAnimation();
@@ -328,30 +392,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     return () => window.removeEventListener("resize", checkWidescreen);
   }, []);
 
-  // useEffect(() => {
-  //   if (videoRef.current) {
-  //     const playPromise = videoRef.current.play();
-  //     if (playPromise !== undefined) {
-  //       playPromise
-  //         .then(() => {
-  //           // Autoplay started
-  //           console.log("Video autoplay started successfully");
-  //           setIsVideoPlaying(true);
-  //           // You can add more logic here if needed
-  //           // For example, you might want to start some animation
-  //           // or update other parts of your UI
-  //         })
-  //         .catch((error) => {
-  //           // Autoplay was prevented
-  //           console.log("Autoplay was prevented:", error);
-  //           setIsVideoPlaying(false);
-  //           // You might want to show a play button here
-  //           // or take some other action to encourage user interaction
-  //         });
-  //     }
-  //   }
-  // }, []);
-
   useEffect(() => {
     const video = document.querySelector("video");
     if (video) {
@@ -383,6 +423,35 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
       }
     }
   }, []);
+
+  const handleNavigateAndScroll = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = window.innerWidth < 768 ? 20 : 72;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = window.innerWidth < 768 ? 20 : 72;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
   return (
     <div className={`relative min-h-screen overflow-hidden bg-[#e7e6e2]`}>
@@ -577,7 +646,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
         >
           <div className="flex justify-between items-center w-full">
             <div className="flex items-center gap-4 md:gap-24 nest-hub:gap-2 nest-hub-max:gap-12 widescreen:gap-3">
-              <div className="">
+              <div>
                 <motion.div
                   variants={logoVariants}
                   initial="up"
@@ -586,7 +655,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   transition={{
                     duration: 0.5,
                     ease: smoothEasing,
-                    delay: 2, // Add a delay to make it appear after the black logo has faded out
+                    delay: 2,
                   }}
                   className="flex items-center"
                 >
@@ -604,197 +673,37 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   </a>
                 </motion.div>
               </div>
-              <nav className="hidden custom-lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-1 justify-center mb-0.5 mt-6 max-w-7xl ml-px widescreen:text-left widescreen:text-sm">
+              <nav className="hidden custom-lg:flex items-center nest-hub:text-left nest-hub:text-sm text-center gap-6 justify-center mb-0.5 mt-6 max-w-7xl ml-px widescreen:text-left widescreen:text-sm">
                 <div className="lg:flex justify-center items-center tracking-wide gap-6">
-                  {location.pathname === "/" ? (
-                    <ScrollLink
-                      to="philosophy"
-                      spy={true}
-                      smooth={true}
-                      duration={0}
-                      offset={-72}
-                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "philosophy" ||
-                        (activeSection === "home" &&
-                          "philosophy" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                      style={{ fontWeight: "300" }}
-                    >
-                      {language ? "Our Philosophy" : "Our Philosophy"}
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      to="#philosophy"
-                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "philosophy" ||
-                        (activeSection === "home" &&
-                          "philosophy" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                    >
-                      {language ? "Our Philosophy" : "Our Philosophy"}
-                    </Link>
-                  )}
-
-                  {location.pathname === "/" ? (
-                    <ScrollLink
-                      to="services"
-                      spy={true}
-                      smooth={true}
-                      duration={0}
-                      offset={-72}
-                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "services" ||
-                        (activeSection === "home" &&
-                          "services" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                      style={{ fontWeight: "300" }}
-                    >
-                      {language ? "Our Services" : "Our Services"}
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      to="#services"
-                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "services" ||
-                        (activeSection === "home" &&
-                          "services" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                    >
-                      {language ? "Our Services" : "Our Services"}
-                    </Link>
-                  )}
-
-                  {location.pathname === "/" ? (
-                    <ScrollLink
-                      to="people"
-                      spy={true}
-                      smooth={true}
-                      duration={0}
-                      offset={-72}
-                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "people" ||
-                        (activeSection === "home" && "people" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                      style={{ fontWeight: "300" }}
-                    >
-                      {language ? "Our People" : "Our People"}
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      to="#people"
-                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "people" ||
-                        (activeSection === "home" && "people" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                    >
-                      {language ? "Our People" : "Our People"}
-                    </Link>
-                  )}
-
-                  <Link
-                    to="/news"
-                    className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
-                      !scrolled ||
-                      scrollDirection === "up" ||
-                      activeSection === "news" ||
-                      (activeSection === "home" && "news" === "philosophy")
-                        ? ""
-                        : "hidden"
-                    }`}
-                    style={{ fontWeight: "300" }}
-                  >
-                    {language ? "News" : "News"}
-                  </Link>
-
-                  {location.pathname === "/" ? (
-                    <ScrollLink
-                      to="contact"
-                      spy={true}
-                      smooth={true}
-                      duration={0}
-                      offset={-72}
-                      className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "contact" ||
-                        (activeSection === "home" && "contact" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                      style={{ fontWeight: "300" }}
-                    >
-                      {language ? "Contact Us" : "Contact Us"}
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      to="#contact"
-                      className={`text-[#898981] uppercase hover:text-gray-300 transition-colors duration-200 ${
-                        !scrolled ||
-                        scrollDirection === "up" ||
-                        activeSection === "contact" ||
-                        (activeSection === "home" && "contact" === "philosophy")
-                          ? ""
-                          : "hidden"
-                      }`}
-                    >
-                      {language ? "Contact Us" : "Contact Us"}
-                    </Link>
-                  )}
+                  {[
+                    { name: "Our Philosophy", id: "philosophy" },
+                    { name: "Our Services", id: "services" },
+                    { name: "Our People", id: "people" },
+                    { name: "News", id: "news", to: "/news" },
+                    { name: "Contact Us", id: "contact" },
+                  ].map((link, index) => (
+                    <NavLink
+                      key={link.name}
+                      name={language ? link.name : link.name}
+                      id={link.id}
+                      index={index}
+                      isActive={activeSection === link.id}
+                      onClick={() => {
+                        if (link.to) {
+                          navigate(link.to);
+                        } else {
+                          handleNavigateAndScroll(link.id);
+                        }
+                      }}
+                      to={link.to}
+                      isScrollLink={location.pathname === "/" && !link.to}
+                      scrolled={scrolled}
+                      scrollDirection={scrollDirection}
+                      activeSection={activeSection}
+                      isMobile={false}
+                    />
+                  ))}
                 </div>
-
-                {scrolled && scrollDirection === "down" && (
-                  <div className="hidden lg:flex items-center gap-2 ml-4">
-                    {["philosophy", "services", "people", "contact"].map(
-                      (section) => {
-                        const element = document.getElementById(section);
-                        const isFullyVisible =
-                          element &&
-                          (() => {
-                            const rect = element.getBoundingClientRect();
-                            const visibleHeight =
-                              Math.min(rect.bottom, window.innerHeight) -
-                              Math.max(rect.top, 0);
-                            return visibleHeight >= rect.height * 0.5;
-                          })();
-
-                        return (
-                          <div
-                            key={section}
-                            className={`w-[0.25rem] h-[0.25rem] rounded-full ${
-                              activeSection === section && isFullyVisible
-                                ? "bg-white"
-                                : "bg-gray-400"
-                            }`}
-                          />
-                        );
-                      }
-                    )}
-                  </div>
-                )}
               </nav>
             </div>
             <div className="flex items-center gap-4">
@@ -816,7 +725,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 className="custom-lg:hidden block text-[#898981] mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
-                  // toggleBodyScroll(!mobileMenuOpen);
+                  toggleBodyScroll(true);
                 }}
               >
                 <Menu size={30} />
@@ -846,75 +755,37 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <Logo className="w-24 h-auto text-white" />
                 <DesignLogo className="w-24 h-auto text-white" />
               </a>
-              <nav className="flex flex-col items-start gap-3 w-full">
-                <ScrollLink
-                  to="philosophy"
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "Our Philosophy" : "Our Philosophy"}
-                </ScrollLink>
-
-                <ScrollLink
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "Our Services" : "Our Services"}
-                </ScrollLink>
-
-                <ScrollLink
-                  to="people"
-                  spy={true}
-                  smooth={true}
-                  // Increased duration for slower scrolling on mobile
-                  offset={-20}
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "Our People" : "Our People"}
-                </ScrollLink>
-
-                <Link
-                  to="/news"
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "News" : "News"}
-                </Link>
-
-                <ScrollLink
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  // Increased duration for slower scrolling on mobile
-                  offset={-20}
-                  className="text-white text-2xl uppercase hover:text-gray-300 transition-colors duration-200 w-full"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    toggleBodyScroll(false);
-                  }}
-                >
-                  {language ? "Contact Us" : "Contact Us"}
-                </ScrollLink>
+              <nav className="flex flex-col items-start gap-6 w-full">
+                {[
+                  { name: "Our Philosophy", id: "philosophy" },
+                  { name: "Our Services", id: "services" },
+                  { name: "Our People", id: "people" },
+                  { name: "News", id: "news", to: "/news" },
+                  { name: "Contact Us", id: "contact" },
+                ].map((link, index) => (
+                  <NavLink
+                    key={link.name}
+                    name={language ? link.name : link.name}
+                    id={link.id}
+                    index={index}
+                    isActive={activeSection === link.id}
+                    onClick={() => {
+                      if (link.to) {
+                        navigate(link.to);
+                      } else {
+                        handleNavigateAndScroll(link.id);
+                      }
+                      setMobileMenuOpen(false);
+                      toggleBodyScroll(false);
+                    }}
+                    to={link.to}
+                    isScrollLink={location.pathname === "/" && !link.to}
+                    scrolled={scrolled}
+                    scrollDirection={scrollDirection}
+                    activeSection={activeSection}
+                    isMobile={true}
+                  />
+                ))}
               </nav>
               <div className="text-white gap-2 flex flex-col absolute bottom-10">
                 <div className="text-white">
@@ -924,7 +795,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     ENG
                   </button>
-                  ENG /
+                  /
                   <button
                     className={`pl-1 ${language ? "text-[#90908D]" : ""}`}
                     onClick={() => setLanguage(false)}
@@ -943,9 +814,6 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 <Link to="/privacy" className="underline">
                   PRIVACY POLICY
                 </Link>
-                {/* <Link to="/terms" className="underline">
-                  TERMS OF CONDITIONS
-                </Link> */}
               </div>
             </motion.div>
           )}
