@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const Philosiphy = ({ language }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = document.querySelector("video");
+    if (video) {
+      video.play().catch((error) => console.log("Autoplay blocked:", error));
+    }
+  }, []);
+
   const contentData = [
     {
       english: {
@@ -69,7 +78,8 @@ const Philosiphy = ({ language }) => {
       <div className="lg:sticky lg:top-16 pt-[3rem]">
         <div className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] 2xl:h-[570px] relative">
           <video
-            className="w-full h-full object-cover"
+            ref={videoRef}
+            className="w-full h-full object-cover pointer-events-none"
             autoPlay
             loop
             muted

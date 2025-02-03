@@ -328,25 +328,57 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     return () => window.removeEventListener("resize", checkWidescreen);
   }, []);
 
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     const playPromise = videoRef.current.play();
+  //     if (playPromise !== undefined) {
+  //       playPromise
+  //         .then(() => {
+  //           // Autoplay started
+  //           console.log("Video autoplay started successfully");
+  //           setIsVideoPlaying(true);
+  //           // You can add more logic here if needed
+  //           // For example, you might want to start some animation
+  //           // or update other parts of your UI
+  //         })
+  //         .catch((error) => {
+  //           // Autoplay was prevented
+  //           console.log("Autoplay was prevented:", error);
+  //           setIsVideoPlaying(false);
+  //           // You might want to show a play button here
+  //           // or take some other action to encourage user interaction
+  //         });
+  //     }
+  //   }
+  // }, []);
+
   useEffect(() => {
-    if (videoRef.current) {
-      const playPromise = videoRef.current.play();
+    const video = document.querySelector("video");
+    if (video) {
+      const playPromise = video.play();
+
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            // Autoplay started
-            console.log("Video autoplay started successfully");
+            console.log("Autoplay started successfully");
             setIsVideoPlaying(true);
-            // You can add more logic here if needed
-            // For example, you might want to start some animation
-            // or update other parts of your UI
           })
           .catch((error) => {
-            // Autoplay was prevented
             console.log("Autoplay was prevented:", error);
-            setIsVideoPlaying(false);
-            // You might want to show a play button here
-            // or take some other action to encourage user interaction
+            // Attempt to play again after a user interaction
+            const playButton = document.createElement("button");
+            playButton.textContent = "Play Video";
+            playButton.style.position = "absolute";
+            playButton.style.zIndex = "1000";
+            playButton.style.top = "50%";
+            playButton.style.left = "50%";
+            playButton.style.transform = "translate(-50%, -50%)";
+            document.body.appendChild(playButton);
+
+            playButton.addEventListener("click", () => {
+              video.play();
+              playButton.remove();
+            });
           });
       }
     }
@@ -366,21 +398,12 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
           <video
             ref={videoRef}
             className="absolute inset-0 w-full h-full object-cover scale-110"
-            src="heronew.mp4"
-            autoPlay
             playsInline
             loop
             muted
             preload="auto"
           >
-            <source
-              src="LV1.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              type="video/mp4"
-            />
+            <source src="heronew.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <motion.div
@@ -901,7 +924,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     ENG
                   </button>
-                  /
+                  ENG /
                   <button
                     className={`pl-1 ${language ? "text-[#90908D]" : ""}`}
                     onClick={() => setLanguage(false)}
