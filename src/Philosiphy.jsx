@@ -1,40 +1,46 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Philosiphy = ({ language }) => {
+const Philosophy = ({ language }) => {
   const videoRef = useRef(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
-    const video = document.querySelector("video");
+    const video = videoRef.current;
     if (video) {
-      const playPromise = video.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            console.log("Autoplay started successfully");
-            setIsVideoPlaying(true);
-          })
-          .catch((error) => {
-            console.log("Autoplay was prevented:", error);
-            // Attempt to play again after a user interaction
-            const playButton = document.createElement("button");
-            playButton.textContent = "Play Video";
-            playButton.style.position = "absolute";
-            playButton.style.zIndex = "1000";
-            playButton.style.top = "50%";
-            playButton.style.left = "50%";
-            playButton.style.transform = "translate(-50%, -50%)";
-            document.body.appendChild(playButton);
-
-            playButton.addEventListener("click", () => {
-              video.play();
-              playButton.remove();
+      const playVideo = () => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log("Autoplay started successfully");
+              setIsVideoPlaying(true);
+            })
+            .catch((error) => {
+              console.log("Autoplay was prevented:", error);
+              // Video playback failed, show a play button
+              setIsVideoPlaying(false);
             });
-          });
-      }
+        }
+      };
+
+      playVideo();
+
+      // Add event listener for user interaction
+      const handleUserInteraction = () => {
+        if (!isVideoPlaying) {
+          playVideo();
+        }
+        // Remove the event listener after successful play
+        document.removeEventListener("click", handleUserInteraction);
+      };
+
+      document.addEventListener("click", handleUserInteraction);
+
+      return () => {
+        document.removeEventListener("click", handleUserInteraction);
+      };
     }
-  }, []);
+  }, [isVideoPlaying]);
 
   const contentData = [
     {
@@ -115,6 +121,19 @@ const Philosiphy = ({ language }) => {
             <source src="philosophy.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          {!isVideoPlaying && (
+            <button
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-50 text-black px-4 py-2 rounded-lg"
+              onClick={() => {
+                const video = videoRef.current;
+                if (video) {
+                  video.play();
+                }
+              }}
+            >
+              Play Video
+            </button>
+          )}
         </div>
         <div className="mt-2">
           <p
@@ -151,4 +170,4 @@ const Philosiphy = ({ language }) => {
   );
 };
 
-export default Philosiphy;
+export default Philosophy;

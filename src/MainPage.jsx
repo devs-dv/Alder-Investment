@@ -425,6 +425,44 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
     }
   }, []);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const playVideo = () => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log("Autoplay started successfully");
+              setIsVideoPlaying(true);
+            })
+            .catch((error) => {
+              console.log("Autoplay was prevented:", error);
+              // Video playback failed, show a play button
+              setIsVideoPlaying(false);
+            });
+        }
+      };
+
+      playVideo();
+
+      // Add event listener for user interaction
+      const handleUserInteraction = () => {
+        if (!isVideoPlaying) {
+          playVideo();
+        }
+        // Remove the event listener after successful play
+        document.removeEventListener("click", handleUserInteraction);
+      };
+
+      document.addEventListener("click", handleUserInteraction);
+
+      return () => {
+        document.removeEventListener("click", handleUserInteraction);
+      };
+    }
+  }, [isVideoPlaying]);
+
   const handleNavigateAndScroll = (id) => {
     if (location.pathname !== "/") {
       navigate("/");
@@ -476,6 +514,19 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
             <source src="heronew.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          {!isVideoPlaying && (
+            <button
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-50 text-black px-4 py-2 rounded-lg"
+              onClick={() => {
+                const video = videoRef.current;
+                if (video) {
+                  video.play();
+                }
+              }}
+            >
+              Play Video
+            </button>
+          )}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
