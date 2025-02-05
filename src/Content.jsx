@@ -12,14 +12,14 @@ const Content = ({ language }) => {
           <div className="flex flex-col">
             <h2
               className="font-medium mb-2"
-              style={{ fontSize: "clamp(1.125rem, 2vw, 1.25rem)" }}
+              style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)" }}
             >
               WE ARE ALDER INVESTMENTS
             </h2>
             <p
               className="font-light"
               style={{
-                fontSize: "clamp(0.875rem, 1.2vw, 1rem)",
+                fontSize: "clamp(0.875rem, 1.2vw, 1.25rem)",
                 lineHeight: "1.5",
                 wordBreak: "keep-all",
               }}
