@@ -52,7 +52,7 @@ const NavLink = ({
     <div className={`flex items-center gap-2 ${showLink ? "" : "hidden"}`}>
       <LinkComponent
         {...linkProps}
-        className={`text-[#898981] uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
+        className={`text-white uppercase cursor-pointer hover:text-gray-300 transition-colors duration-200 ${
           isActiveLink && !isMobile ? "text-white" : ""
         }, ${className}`}
         onClick={onClick}
@@ -771,10 +771,10 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                 }}
                 className="hidden custom-lg:block"
               >
-                <DesignLogo className="w-[115px] nest-hub:w-[105px] widescreen:w-[105px] mb-0.5 h-auto text-[#898981]" />
+                <DesignLogo className="w-[115px] nest-hub:w-[105px] widescreen:w-[105px] mb-0.5 h-auto text-white" />
               </motion.div>
               <button
-                className="custom-lg:hidden block text-[#898981] mt-5"
+                className="custom-lg:hidden block text-white mt-5"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
                   toggleBodyScroll(true);
@@ -843,14 +843,14 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
               <div className="text-white gap-2 flex flex-col absolute bottom-10">
                 <div className="text-white">
                   <button
-                    className={`pr-1 ${language ? "" : "text-[#90908D]"}`}
+                    className={`pr-1 ${language ? "" : "text-white"}`}
                     onClick={() => setLanguage(true)}
                   >
                     ENG
                   </button>
                   /
                   <button
-                    className={`pl-1 ${language ? "text-[#90908D]" : ""}`}
+                    className={`pl-1 ${language ? "text-white" : ""}`}
                     onClick={() => setLanguage(false)}
                   >
                     한국어
