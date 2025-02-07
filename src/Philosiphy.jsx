@@ -118,7 +118,7 @@ const Philosophy = ({ language }) => {
             playsInline
             preload="auto"
           >
-            <source src="philosophy.mp4" type="video/mp4" />
+            <source src="LV3N.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {!isVideoPlaying && (
