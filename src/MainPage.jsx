@@ -511,7 +511,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
             muted
             preload="auto"
           >
-            <source src="heronew.mp4" type="video/mp4" />
+            <source src="LV1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {!isVideoPlaying && (
