@@ -718,7 +718,7 @@ const LandingPage = ({ language, setLanguage, loading, setLoading }) => {
                   >
                     <span className="sr-only">Home</span>
                     <img
-                      src="header.png"
+                      src="nav logo_white.png"
                       className="md:w-[300px] w-[250px] mb-0.5 nest-hub:w-[250px] widescreen:w-[220px]"
                       alt="Logo"
                     />
